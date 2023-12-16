@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+    <script src="js/TrangChu.js"></script>
+    <!-- <script src="js/chiTietGiay.js"></script> -->
+    <script src="js/cart.js"></script>
+    <link rel="stylesheet" href="css/chiTietSP_giay.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="css/GioHang.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="top-banner">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/choibongro">
+                        <i class="fa-brands fa-facebook" style="color: #f2f2f2;"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/c/giaybongro">
+                        <i class="fa-brands fa-youtube" style="color: #eeeff2;"></i>
+                        YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://shopee.vn/cbrvn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Shopee
+                    </a>
+                </li>
+                <li style="margin-right: -15px;">
+                    <a href="tel:0989790787">
+                        <button
+                            style="border-radius:50px ; border: none; size: 15px;  background-color:rgb(71, 68, 68);">
+                            <i class="fa-solid fa-phone" style="color: #eeeff2; size: 15px;"></i>
+                        </button>
+                        <span>0989790787</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo shop">
+            </div>
+            <div class="search-sp">
+                <form action="#">
+                    <div style="display: flex;">
+                        <input type="hidden" name="type" value="product">
+                        <form action="#" style="margin:auto;max-width:300px">
+                            <input type="text" placeholder="    Nhập từ khóa sản phẩm cần tìm" name="search2">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </form>
+            </div>
+
+            <div class="dangnhap-gh">
+                <ul>
+                    <li>
+                        <p id="user" style="color: white;" onclick="btnLoginOnClick()"><a href="login.html">
+                                <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                                Đăng nhập
+                            </a></p>
+                    </li>
+                    <li>
+
+                        <a href="/giohang.html" title="Giỏ hàng">
+                            <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
+                            <span>
+                                Giỏ hàng / <span class="cart-price"><span><bdi
+                                            id="price-cart">0<span>VND</span></bdi></span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background-color: rgb(27, 25, 25);width: 100%;height: 41px;">
+            <nav id="menu" onclick="clickMenu()">
+                <ul>
+                    <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
+                    <b>Danh mục sản phẩm</b>
+                    <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Giày bóng rổ Replica xả hàng">Giày bóng rổ Replica xả hàng</a></li>
+                            <li><a href="#" title="Giày bóng rổ Brookie Rookie xả khoa">Giày bóng rổ Brookie Bookie xả
+                                    kho</a></li>
+                            <li><a href="#" title="Giày bóng rổ PEAK xả kho">Giảy bóng rổ PEAK xả kho</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Bóng rổ">Bóng rổ</a></li>
+                    <li><a href="GiayBongRo.html" title="Giày bóng rổ">Giày bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <!-- menu con sổ xuống cấp 1 -->
+                        <ul>
+                            <li><a href="GiayNike.html" title="Giày bóng rổ Adidas chính hãng">Giày bóng rổ Adidas chính
+                                    hãng</a>
+                            </li>
+                            <li><a href="GiayNBA.html" title="Giày bóng rổ NBA">Giày bóng rổ NBA</a></li>
+                            <li><a href="GiayPeak.html" title="Giày bóng rổ PEAK chính hãng">Giày bóng rổ PEAK chính
+                                    hãng</a></li>
+                            <li><a href="GiayAnTa.html" title="Giày bóng rổ ANTA chính hãng">Giày bóng rổ ANTA chính
+                                    hãng</a></li>
+                            <li><a href="GiayTreEm.html" title="Giày bóng rổ trẻ em">Giày bóng rổ trẻ em</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Quần áo bóng rổ">Quần áo bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Bộ quần áo bóng rổ">Bộ quần áo bóng rổ</a></li>
+                            <li><a href="#" title="Áo bóng rổ">Áo bóng rổ</a></li>
+                            <li><a href="#" title="Quần bóng rổ">Quần bóng rổ</a></li>
+                            <li><a href="#" title="Pro Combat">Pro combat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Tất vớ bóng rổ">Tất vớ bóng rổ</a></li>
+                            <li><a href="#" title="Balo, túi bóng rổ">Balo, túi bóng rổ</a></li>
+                            <li><a href="#" title="Phụ kiện bảo hộ">Phụ kiện bảo hộ</a></li>
+                            <li><a href="#" title="Bình nước bóng rổ">Bình nước bóng rổ</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+    </header>
+    <div class="title_GH">GIỎ HÀNG</div>
+    <div>
+        <div style="display: flex;width: 80%;margin-left: 10%; border-bottom: 1px solid #c6c8cb;padding-bottom: 15px;"
+            id="kosp">
+            <div style="width: 60%; border-right: 1px solid #c6c8cb; padding-right: 15px;">
+                <table class="GioHang-sp">
+                    <thead>
+                        <tr style="border-bottom: 3px solid #dfdbdb;">
+                            <th class="product-name" colspan="3">Sản phẩm</th>
+                            <th class="product-name">Giá</th>
+                            <th class="product-name">Số lượng</th>
+                            <th class="product-name">Tạm tính</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="dssp">
+                        <tr>
+                            <td class="btnDel">x</td>
+                            <td class="image-sp">
+                                <img src="img/GiayAdidas/giayAdidas1.1.jpg">
+                            </td>
+                            <td class="name-sp">
+                                <a>UA Lockdown 5 "Halo Grey Quirk Lime" chính hãng 3023949-601</a>
+                                <p>Màu sắc: Ghi xanh</p>
+                                <p>Kích thước: 42</p>
+                            </td>
+                            <td class="price-sp">
+                                <p>680.000đ</p>
+                            </td>
+                            <td class="quantity-sp">
+                                <div style="display: flex;margin-left: -30px;">
+                                    <button onclick="tru()">-</button>
+                                    <input type="text" value="1" id="sl">
+                                    <button onclick="cong()">+</button>
+                                </div>
+
+                            </td>
+                            <td class="subtotal-sp">
+                                <p>680.000đ</p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="btn-Edit-back">
+                    <button id="btn-back" onclick="backHome()">← TIẾP TỤC XEM SẢN PHẨM</button>
+                    <button id="btn-edit" onclick="EditCart()">CẬP NHẬT GIỎ HÀNG</button>
+                </div>
+            </div>
+            <div style="width: 35%;margin-left: 40px; ">
+                <table class="ThanhToan-sp">
+                    <thead>
+                        <tr style="border-bottom: 3px solid #dfdbdb;">
+                            <th class="product-name" colspan="2">CỘNG GIỎ HÀNG</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="dssp" style="width: 30px;">
+                        <tr>
+                            <th class="title-thanhtoan" style="width: 20%;">
+                                <p>Tạm tính</p>
+                            </th>
+                            <td class="price-thanhtoan" style="width: 20%;">
+                                <p id="sum-price" style="font-size: 18px; ">680.000đ</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="title-thanhtoan" style="width: 20%;">
+                                <p>Giao hàng</p>
+                            </th>
+                            <td class="thanhtoan-select">
+                                <p>Best Express - Giao tiêu chuẩn: <span id="ship"
+                                        style="color: black;font-weight: 600;">22,000 đ</span></p>
+                                <p id="diaChi-nhan">Vận chuyển đến: <span id="DCship"
+                                        style="color: black;font-weight: 600;">Ngọc Thanh, Kim Động, Hưng Yên</span></p>
+                                <a onclick="show_dc()">Tính phí giao hàng</a>
+                                <form id="diaChi">
+                                    <select name="country" id="quocGia">
+                                        <option value="VietNam">Việt Nam</option>
+                                        <option value="Khac">Khu vực khác</option>
+                                    </select>
+                                    <select id="city">
+                                        <option value="" selected>Chọn tỉnh thành</option>
+                                    </select>
+
+                                    <select id="district">
+                                        <option value="" selected>Chọn quận huyện</option>
+                                    </select>
+
+                                    <select id="ward">
+                                        <option value="" selected>Chọn phường xã</option>
+                                    </select>
+            </div>
+            <!-- <br>
+                                    <input type="text" name="tinh" id="tinh" placeholder="Tỉnh/Thành phố">
+                                    <br>
+                                    <input type="text" name="tinh" id="huyen" placeholder="Huyện/Phường">
+                                    <br>
+                                    <input type="text" name="tinh" id="xa" placeholder="Xã/Thị trấn">
+                                    <br> -->
+            <button type="button" id="edit" onclick="CapNhatDC()">CẬP NHẬT</button>
+
+            </form>
+            </td>
+            </tr>
+            <tr>
+                <th class="title-thanhtoan" style="width: 20%;">
+                    <p>Tổng</p>
+                </th>
+                <td class="price-thanhtoan">
+                    <p style="font-size: 20px;" id="sum-price-all">680.000đ</p>
+                </td>
+            </tr>
+            </tbody>
+
+            </table>
+            <button id="pay" onclick="thanhToanm()">TIẾN HÀNH THANH TOÁN</button>
+        </div>
+
+    </div>
+    </div>
+
+
+    <footer class="bottom-footer">
+        <div style="width: 25%;">
+            <ul><span>THÔNG TIN CỬA HÀNG</span>
+
+                <li>Hộ kinh doanh Giày bóng rổ – Choibongro.vn</li>
+                <li>Giấy phép đăng ký kinh doanh: 01F8015621</li>
+                <li>Đăng ký lần đầu ngày: 12-06-2020</li>
+                <li>Địa điểm: Số 22 Ngõ 332 đường Nguyễn Trãi, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành Phố Hà
+                    Nội</li>
+                <li>Người đại diện: Phạm Anh Tuấn</li>
+                <li>Điện thoại: 0899178993</li>
+                <li>Mã số thuế: 0109376875</li>
+                <li>Ngày cấp: 13-10-2020</li>
+                <li>Quản lý bởi: Chi cục Thuế Quận Thanh Xuân</li>
+            </ul>
+        </div>
+        <div style="width: 25%;">
+            <ul><span>ĐỊA CHỈ CỬA HÀNG</span>
+                <LI>Số 22 Ngõ 332 Nguyễn Trãi, Thanh Xuân, Hà Nội</LI>
+                <li>Cửa hàng nằm trong ngõ 332 Nguyễn Trãi – ngõ cạnh trường Đại Học Khoa Học Tự Nhiên, đầu ngõ có cây
+                    ATM BIDV
+                </li>
+                <li>
+                    <div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width: 25%;">
+            <ul><span>FACEBOOK FANPAGE</span></ul>
+            <li>
+                <div>
+                    <p>
+                        <iframe style="width: 80%; margin-left: 45px; margin-top: -20px;" loading="lazy"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchoibongro%2F&amp;tabs=timeline&amp;width=340&amp;height=800&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            frameborder="0" scrolling="no">
+                        </iframe>
+                    </p>
+                </div>
+            </li>
+        </div>
+
+        <div>
+            <ul>
+                <span>HƯỚNG DẪN MUA HÀNG</span>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Hướng dẫn mua hàng Freeship trên Shopee</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("district");
+        var wards = document.getElementById("ward");
+        var Parameter = {
+            url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+            method: "GET",
+            responseType: "application/json",
+        };
+        var promise = axios(Parameter);
+        promise.then(function (result) {
+            renderCity(result.data);
+        });
+
+        function renderCity(data) {
+            for (const x of data) {
+                var opt = document.createElement('option');
+                opt.value = x.Name;
+                opt.text = x.Name;
+                opt.setAttribute('data-id', x.Id);
+                citis.options.add(opt);
+            }
+            citis.onchange = function () {
+                district.length = 1;
+                ward.length = 1;
+                if (this.options[this.selectedIndex].dataset.id != "") {
+                    const result = data.filter(n => n.Id === this.options[this.selectedIndex].dataset.id);
+
+                    for (const k of result[0].Districts) {
+                        var opt = document.createElement('option');
+                        opt.value = k.Name;
+                        opt.text = k.Name;
+                        opt.setAttribute('data-id', k.Id);
+                        district.options.add(opt);
+                    }
+                }
+            };
+            district.onchange = function () {
+                ward.length = 1;
+                const dataCity = data.filter((n) => n.Id === citis.options[citis.selectedIndex].dataset.id);
+                if (this.options[this.selectedIndex].dataset.id != "") {
+                    const dataWards = dataCity[0].Districts.filter(n => n.Id === this.options[this.selectedIndex].dataset.id)[0].Wards;
+
+                    for (const w of dataWards) {
+                        var opt = document.createElement('option');
+                        opt.value = w.Name;
+                        opt.text = w.Name;
+                        opt.setAttribute('data-id', w.Id);
+                        wards.options.add(opt);
+                    }
+                }
+            };
+        }
+    </script>
+    <script>
+        load_sp_gio();
+        showLoginData();
+        tinh_tienCart();
+    </script>
+</body>
+
+</html>

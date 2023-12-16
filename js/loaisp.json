@@ -1,0 +1,24 @@
+{
+    "loaisp":[
+        {
+            "id":"Loai1",
+            "name":"Giày",
+            "moTa":"Giày chơi bóng rổ"
+        },
+        {
+            "id":"Loai2",
+            "name":"Quần áo",
+            "moTa":"Quần áo chơi bóng rổ"
+        },
+        {
+            "id":"Loai3",
+            "name":"Phụ kiện",
+            "moTa":"Phụ kiện bóng rổ"
+        },
+        {
+            "id":"Loai4",
+            "name":"Bảo hộ",
+            "moTa":"Đồ bảo hộ chơi bóng rổ"
+        }
+    ]
+}

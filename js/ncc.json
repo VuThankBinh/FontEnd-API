@@ -1,0 +1,22 @@
+[
+    {
+      "ID": "NCC001",
+      "SupplierName": "Nguyễn Đức Phương",
+      "PhoneNumber": "0376401198",
+      "Address": "Duy Tiên, Hà Nam"
+    },
+    {
+      "ID":"NCC002",
+      "SupplierName": "Nguyễn Hoàng Nam",
+      "PhoneNumber": "0936771257",
+      "Address": "Thanh Miện, Hải Dương"
+    },
+    {
+      "ID": "NCC003",
+      "SupplierName": "Lương Tuấn Khang",
+      "PhoneNumber": "0987654123",
+      "Address": "Tiên Lữ, Hưng Yên"
+    }
+    
+  ]
+  

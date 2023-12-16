@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../6. Đồ án 2/WebBanHang"
+		},
+		{
+			"path": "../../../../../Giáo trình năm 2/kỳ 2/3.Thiết kế web cơ bản/WebBongRo"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WebBanHang"
+	}
+}

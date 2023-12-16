@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="css/TrangChu.css">
+    
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/TrangChu.js"></script>
+    <script src="js/loadSP_giayall.js"></script>
+    <script src="js/loadSP_QAB.js"></script>
+    <script src="js/loadSP_phuKien.js"></script>
+    <script src="js/bongro.js"></script>
+    <script src="js/seach_sp.js"></script> 
+</head>
+
+<body>
+    <header>
+        <div class="top-banner">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/choibongro">
+                        <i class="fa-brands fa-facebook" style="color: #f2f2f2;"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/c/giaybongro">
+                        <i class="fa-brands fa-youtube" style="color: #eeeff2;"></i>
+                        YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://shopee.vn/cbrvn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Shopee
+                    </a>
+                </li>
+                <li style="margin-right: -15px;">
+                    <a href="tel:0989790787">
+                        <button
+                            style="border-radius:50px ; border: none; size: 15px;  background-color:rgb(71, 68, 68);">
+                            <i class="fa-solid fa-phone" style="color: #eeeff2; size: 15px;"></i>
+                        </button>
+                        <span>0989790787</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo shop">
+            </div>
+            <div class="search-sp">
+
+                <form style="margin:auto; max-width:350px; display: flex; margin-left: 0px !important;">
+                    <input type="text" id="timsp" onkeypress="timKiem_et(event)" placeholder="    Nhập từ khóa sản phẩm cần tìm">
+                    <button type="submit" onclick="timKiem()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="dangnhap-gh">
+                <ul>
+                    <li>
+                        <p id="user" style="color: white;"><a href="login.html">
+                                <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                                Đăng nhập
+                            </a></p>
+                    </li>
+                    <li>
+
+                        <a href="/giohang.html" title="Giỏ hàng">
+                            <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
+                            <span>
+                                Giỏ hàng / <span class="cart-price"><span><bdi>0<span>VND</span></bdi></span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background-color: rgb(27, 25, 25);width: 100%;height: 41px;">
+            <nav id="menu" onclick="clickMenu()">
+                <ul>
+                    <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
+                    <b>Danh mục sản phẩm</b>
+                    <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Giày bóng rổ Replica xả hàng">Giày bóng rổ Replica xả hàng</a></li>
+                            <li><a href="#" title="Giày bóng rổ Brookie Rookie xả khoa">Giày bóng rổ Brookie Bookie xả
+                                    kho</a></li>
+                            <li><a href="#" title="Giày bóng rổ PEAK xả kho">Giảy bóng rổ PEAK xả kho</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Bóng rổ">Bóng rổ</a></li>
+                    <li><a href="GiayBongRo.html" title="Giày bóng rổ">Giày bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <!-- menu con sổ xuống cấp 1 -->
+                        <ul>
+                            <li><a href="GiayNike.html" title="Giày bóng rổ Adidas chính hãng">Giày bóng rổ Adidas chính
+                                    hãng</a>
+                            </li>
+                            <li><a href="GiayNBA.html" title="Giày bóng rổ NBA">Giày bóng rổ NBA</a></li>
+                            <li><a href="GiayPeak.html" title="Giày bóng rổ PEAK chính hãng">Giày bóng rổ PEAK chính
+                                    hãng</a></li>
+                            <li><a href="GiayAnTa.html" title="Giày bóng rổ ANTA chính hãng">Giày bóng rổ ANTA chính
+                                    hãng</a></li>
+                            <li><a href="GiayTreEm.html" title="Giày bóng rổ trẻ em">Giày bóng rổ trẻ em</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Quần áo bóng rổ">Quần áo bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Bộ quần áo bóng rổ">Bộ quần áo bóng rổ</a></li>
+                            <li><a href="#" title="Áo bóng rổ">Áo bóng rổ</a></li>
+                            <li><a href="#" title="Quần bóng rổ">Quần bóng rổ</a></li>
+                            <li><a href="#" title="Pro Combat">Pro combat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
+                            <i class="fa-solid fa-caret-right"
+                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="#" title="Tất vớ bóng rổ">Tất vớ bóng rổ</a></li>
+                            <li><a href="#" title="Balo, túi bóng rổ">Balo, túi bóng rổ</a></li>
+                            <li><a href="#" title="Phụ kiện bảo hộ">Phụ kiện bảo hộ</a></li>
+                            <li><a href="#" title="Bình nước bóng rổ">Bình nước bóng rổ</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+    </header>
+    <h3 id="kqsearch" style="display: flex;justify-content: center;margin-top: 30px;">
+
+    </h3>
+    <div id="sanpham" style=" width: 70%; margin-left: 20%;height: auto;">
+
+    </div>
+    <!-- <img src="https://firebasestorage.googleapis.com/v0/b/baitaplon-e42e3.appspot.com/o/nikeair.png?alt=media&token=04fbe129-36aa-43da-9848-c0d54344cb1f" alt=""> -->
+    <div id="div-quick"></div>
+    <footer class="bottom-footer">
+        <div style="width: 25%;">
+            <ul><span>THÔNG TIN CỬA HÀNG</span>
+
+                <li>Hộ kinh doanh Giày bóng rổ – Choibongro.vn</li>
+                <li>Giấy phép đăng ký kinh doanh: 01F8015621</li>
+                <li>Đăng ký lần đầu ngày: 12-06-2020</li>
+                <li>Địa điểm: Số 22 Ngõ 332 đường Nguyễn Trãi, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành Phố Hà
+                    Nội</li>
+                <li>Người đại diện: Phạm Anh Tuấn</li>
+                <li>Điện thoại: 0899178993</li>
+                <li>Mã số thuế: 0109376875</li>
+                <li>Ngày cấp: 13-10-2020</li>
+                <li>Quản lý bởi: Chi cục Thuế Quận Thanh Xuân</li>
+            </ul>
+        </div>
+        <div style="width: 25%;">
+            <ul><span>ĐỊA CHỈ CỬA HÀNG</span>
+                <LI>Số 22 Ngõ 332 Nguyễn Trãi, Thanh Xuân, Hà Nội</LI>
+                <li>Cửa hàng nằm trong ngõ 332 Nguyễn Trãi – ngõ cạnh trường Đại Học Khoa Học Tự Nhiên, đầu ngõ có cây
+                    ATM BIDV
+                </li>
+                <li>
+                    <div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width: 25%;">
+            <ul><span>FACEBOOK FANPAGE</span></ul>
+            <li>
+                <div>
+                    <p>
+                        <iframe style="width: 80%; margin-left: 45px; margin-top: -20px;" loading="lazy"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchoibongro%2F&amp;tabs=timeline&amp;width=340&amp;height=800&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            frameborder="0" scrolling="no">
+                        </iframe>
+                    </p>
+                </div>
+            </li>
+        </div>
+
+        <div>
+            <ul>
+                <span>HƯỚNG DẪN MUA HÀNG</span>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Hướng dẫn mua hàng Freeship trên Shopee</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+
+            </ul>
+        </div>
+    </footer>
+    <script>timKiem_sp();showLoginData();</script>
+</body>
+
+</html>

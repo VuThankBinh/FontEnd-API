@@ -1,0 +1,5379 @@
+{
+    "GiayBongRo": [
+        {
+            "Giay_Nike": [
+                {
+                    "id": "Nike1",
+                    "name": "Giày bóng rổ chính hãng Nike Kyrie 8 “Fire and Ice” DC9134-001",
+                    "giaC": 3790000,
+                    "giaM": 1920000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNike\\giayNike1.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNike\\giayNike1.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNike\\giayNike1.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNike\\giayNike1.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayNike\\giayNike1.5.jpg"
+                        },
+                        {
+                            "img6": "img\\GiayNike\\giayNike1.6.jpg"
+                        }
+                    ],
+                    "size": [
+                        42.5,
+                        44.5
+                    ],
+                    "SoLuong": [
+                        10,
+                        5
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "Nike2",
+                    "name": "Giày bóng rổ chính hãng Nike Kyrie 8 “Infinity Bred” DC9134-004",
+                    "giaC": 3590000,
+                    "giaM": 1870000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNike\\giayNike2.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNike\\giayNike2.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNike\\giayNike2.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNike\\giayNike2.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayNike\\giayNike2.5.jpg"
+                        },
+                        {
+                            "img6": "img\\GiayNike\\giayNike2.6.jpg"
+                        }
+                    ],
+                    "size": [
+                        40.5,
+                        41,
+                        42.5,
+                        44
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        5,
+                        4
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                }
+            ],
+            "Giay_Adidas": [
+                {
+                    "id": "AD1",
+                    "name": "Giày bóng rổ chính hãng Adidas Dame 7 “Opponent Advisory” GV9872",
+                    "giaC": 2850000,
+                    "giaM": 1130000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAdidas\\giayAdidas1.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAdidas\\giayAdidas1.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAdidas\\giayAdidas1.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAdidas\\giayAdidas1.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAdidas\\giayAdidas1.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        42.5,
+                        40,
+                        41,
+                        42
+                    ],
+                    "SoLuong": [
+                        0,
+                        10,
+                        5,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "AD2",
+                    "name": "Giày bóng rổ Adidas Explosive Bounce chính hãng BB7301 – Đen đỏ",
+                    "giaC": 1650000,
+                    "giaM": 930000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAdidas\\giayAdidas2.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAdidas\\giayAdidas2.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAdidas\\giayAdidas2.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAdidas\\giayAdidas2.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAdidas\\giayAdidas2.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46
+                    ],
+                    "SoLuong": [
+                        0,
+                        10,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "AD3",
+                    "name": "Giày bóng rổ Adidas Explosive Bounce chính hãng BB7301 – Đen đỏ",
+                    "giaC": 800000,
+                    "giaM": 600000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAdidas\\giayAdidas3.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAdidas\\giayAdidas3.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAdidas\\giayAdidas3.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAdidas\\giayAdidas3.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAdidas\\giayAdidas3.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46
+                    ],
+                    "SoLuong": [
+                        0,
+                        10,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "AD4",
+                    "name": "Adidas Pro Bounce 2018 chính hãng FW5746 – Đen trắng",
+                    "giaC": 2500000,
+                    "giaM": 975000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAdidas\\giayAdidas4.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAdidas\\giayAdidas4.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAdidas\\giayAdidas4.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAdidas\\giayAdidas4.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAdidas\\giayAdidas4.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "AD5",
+                    "name": "Adidas Pro Bounce 2018 chính hãng FW5745 – Trắng",
+                    "giaC": 2500000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAdidas\\giayAdidas5.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAdidas\\giayAdidas5.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAdidas\\giayAdidas5.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAdidas\\giayAdidas5.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAdidas\\giayAdidas5.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                }
+            ],
+            "Giay_Peak": [
+                {
+                    "id": "P1",
+                    "name": "Giày bóng rổ PEAK E11123A – Trắng đen",
+                    "giaC": 1500000,
+                    "giaM": 600000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay1.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay1.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay1.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay1.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P2",
+                    "name": "Giày bóng rổ PEAK E11123A – Xanh",
+                    "giaC": 1500000,
+                    "giaM": 600000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay2.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay2.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay2.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay2.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayPeak\\giay2.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P3",
+                    "name": "Giày bóng rổ PEAK E223001A chính hãng – Đen",
+                    "giaC": 1680000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay3.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay3.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay3.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay3.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P4",
+                    "name": "Giày bóng rổ PEAK E223001A chính hãng – Xanh",
+                    "giaC": 1680000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay4.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay4.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay4.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay4.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P5",
+                    "name": "Giày bóng rổ PEAK E22351A chính hãng – Ghi cam",
+                    "giaC": 1580000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay5.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay5.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay5.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay5.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P6",
+                    "name": "Giày bóng rổ PEAK E223001A chính hãng – Xanh",
+                    "giaC": 1580000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay6.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay6.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay6.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay6.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P7",
+                    "name": "PEAK chính hãng DA120051 – Trắng",
+                    "giaC": 1490000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay7.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay7.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay7.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay7.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P8",
+                    "name": "PEAK chính hãng DA120051 – Trắng xanh",
+                    "giaC": 1490000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay8.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay8.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay8.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay8.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P9",
+                    "name": "PEAK chính hãng DA120051 – Xanh ngọc",
+                    "giaC": 1490000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay9.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay9.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay9.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay9.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P10",
+                    "name": "PEAK chính hãng DA120221 – Đen trắng",
+                    "giaC": 1630000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay10.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay10.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay10.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay10.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P11",
+                    "name": "Giày bóng rổ PEAK chính hãng DA120041 – Đen",
+                    "giaC": 950000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay11.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay11.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay11.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay11.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P12",
+                    "name": "Giày bóng rổ PEAK chính hãng DA120041 – Tím",
+                    "giaC": 950000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay12.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay12.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay12.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay12.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P13",
+                    "name": "Giày bóng rổ PEAK chính hãng DA110111 – Đen",
+                    "giaC": 950000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay13.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay13.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay13.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay13.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P14",
+                    "name": "Giày bóng rổ PEAK chính hãng DA110111 – Ghi tím",
+                    "giaC": 950000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay14.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay14.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay14.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay14.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P15",
+                    "name": "Giày bóng rổ PEAK chính hãng DA120031 – Đen đỏ",
+                    "giaC": 950000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay15.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay15.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay15.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay15.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43
+                    ],
+                    "SoLuong": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P16",
+                    "name": "Giày bóng rổ PEAK chính hãng DA120031 – Trắng",
+                    "giaC": 1740000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay16.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay16.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay16.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay16.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P17",
+                    "name": "Giày bóng rổ PEAK chính hãng DA120221 – Trắng",
+                    "giaC": 1630000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay17.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay17.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay17.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay17.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        5
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P18",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210001 – Đen",
+                    "giaC": 1630000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay18.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay18.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay18.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay18.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        5
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P19",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210001 – Nâu",
+                    "giaC": 1630000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay19.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay19.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay19.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay19.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        5
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P20",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210001 – Trắng tím",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay20.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay20.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay20.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay20.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        1
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P21",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210011 – Đen",
+                    "giaC": 1630000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay21.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay21.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay21.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay21.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        1
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P22",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210011 – Ghi nâu",
+                    "giaC": 1630000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\GIAY22.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\GIAY22.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\GIAY22.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\GIAY22.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        0,
+                        0,
+                        0,
+                        6,
+                        1
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P23",
+                    "name": "Giày bóng rổ PEAK chính hãng DA210301 – Xanh",
+                    "giaC": 1630000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay23.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay23.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay23.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay23.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "P24",
+                    "name": "Giày bóng rổ PEAK chính hãng DA220001 – Trắng xanh",
+                    "giaC": 1630000,
+                    "giaM": 700000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayPeak\\giay24.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayPeak\\giay24.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayPeak\\giay24.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayPeak\\giay24.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        70,
+                        50,
+                        0,
+                        9,
+                        8,
+                        7
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                }
+            ],
+            "Giay_NBA": [
+                {
+                    "id": "NBA1",
+                    "name": "Giày bóng rổ Nike Giannis Immortality 3 – Đen trắng",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay1.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay1.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay1.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay1.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayNBA\\giay1.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA2",
+                    "name": "Giày bóng rổ Nike Freak 5 “Made in Sepolia” Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay2.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay2.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay2.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay2.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA3",
+                    "name": "Giày bóng rổ Nike Kyrie 5 “BHM”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay3.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay3.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay3.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay3.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA4",
+                    "name": "Giày bóng rổ Nike Kyrie 5 “Ikhet”",
+                    "giaC": 1250000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay4.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay4.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay4.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay4.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA5",
+                    "name": "Giày bóng rổ Nike Kyrie 5 “Neon Blends”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay5.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay5.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay5.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay5.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA6",
+                    "name": "Giày bóng rổ Nike Kyrie 5 “Taco” Replica",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay6.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay6.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay6.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay6.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA7",
+                    "name": "Giày bóng rổ Nike Kyrie 6 “Beijing”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay7.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay7.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay7.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay7.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA8",
+                    "name": "Giày bóng rổ Nike Kyrie 6 “Berlin”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay8.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay8.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay8.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay8.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA9",
+                    "name": "Giày bóng rổ Nike Kyrie 6 “Guangzhou”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay9.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay9.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay9.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay9.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA10",
+                    "name": "Giày bóng rổ Nike Kyrie 6 “Heal The World”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay10.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay10.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay10.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay10.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA11",
+                    "name": "Giày bóng rổ Nike Kyrie 6 “NYC”",
+                    "giaC": 850000,
+                    "giaM": 850000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay11.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay11.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay11.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay11.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA12",
+                    "name": "Giày bóng rổ PUMA MB.02 “Flare” Replica",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay12.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay12.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay12.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay12.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA13",
+                    "name": "Giày bóng rổ PUMA MB.02 “Phenom” Replica",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay13.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay13.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay13.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay13.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA14",
+                    "name": "Giày bóng rổ PUMA MB.02 “Super Nova” Replica",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay14.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay14.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay14.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay14.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA15",
+                    "name": "Giày bóng rổ PUMA MB.02 Replica – Đen đỏ",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay15.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay15.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay15.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay15.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA16",
+                    "name": "Nike Air Zoom GT Cut 2 “Devin Booker” Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay16.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay16.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay16.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay16.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA17",
+                    "name": "Nike Air Zoom GT Cut 2 “Industrial Blue” Xanh ghi Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay17.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay17.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay17.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay17.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA18",
+                    "name": "Nike KD 15 “Geode Teal” Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay18.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay18.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay18.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay18.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA19",
+                    "name": "Nike KD 16 “Black Vivid Purple” Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay19.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay19.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay19.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay19.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA20",
+                    "name": "Nike KD 16 “Deep Royal” Replica",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay20.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay20.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay20.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay20.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA21",
+                    "name": "Nike KD 16 Replica – Đen",
+                    "giaC": 900000,
+                    "giaM": 900000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay21.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay21.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay21.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay21.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA22",
+                    "name": "Giày bóng rổ Puma MB.02 “Honeycomb”",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay22.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay22.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay22.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay22.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA23",
+                    "name": "Giày bóng rổ Puma MB.02 “Jade”",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay23.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay23.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay23.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay23.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                },
+                {
+                    "id": "NBA24",
+                    "name": "Giày bóng rổ Puma MB.02 “Rick and Morty”",
+                    "giaC": 950000,
+                    "giaM": 950000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayNBA\\giay24.1.jpeg"
+                        },
+                        {
+                            "img2": "img\\GiayNBA\\giay24.2.jpeg"
+                        },
+                        {
+                            "img3": "img\\GiayNBA\\giay24.3.jpeg"
+                        },
+                        {
+                            "img4": "img\\GiayNBA\\giay24.4.jpeg"
+                        }
+                    ],
+                    "size": [
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45
+                    ],
+                    "SoLuong": [
+                        10,
+                        9,
+                        8,
+                        0,
+                        5,
+                        6
+                    ],
+                    "moTa": "Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )"
+                }
+            ],
+            "Giay_AnTa": [
+                {
+                    "id": "AT1",
+                    "name": "Giày bóng rổ ANTA Attack 3 112131609 – 2",
+                    "giaC": 1350000,
+                    "giaM": 730000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAnTa\\giayAnTa1.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAnTa\\giayAnTa1.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAnTa\\giayAnTa1.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAnTa\\giayAnTa1.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAnTa\\giayAnTa1.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        42.5,
+                        43,
+                        44
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2,
+                        0
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "AT2",
+                    "name": "Giày bóng rổ ANTA KT The Mountain 2.0 Mid 112241601 – 1",
+                    "giaC": 1350000,
+                    "giaM": 830000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAnTa\\giayAnTa2.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAnTa\\giayAnTa2.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAnTa\\giayAnTa2.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAnTa\\giayAnTa2.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAnTa\\giayAnTa2.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        42.5,
+                        43,
+                        44
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2,
+                        0
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Giày bóng rổ ANTA KT The Mountain Mid 2.0",
+                        "Nguồn gốc: Chính hãng, xách tay",
+                        "Mã sản phẩm: AT2",
+                        "Thương hiệu: ANTA",
+                        "Sử dụng : Mọi mặt sân",
+                        "Kiểu dáng : Cổ trung",
+                        "Chất liệu thân giày : Vải + Lưới + Da tổng hợp",
+                        "Chất liệu đế : Cao su chống mòn",
+                        "Bộ đệm: A-Flashedge",
+                        "Giới tính : Nam / nữ",
+                        "Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm"
+                    ],
+                    "review": ""
+                },
+                {
+                    "id": "AT3",
+                    "name": "Giày bóng rổ ANTA Shock The Game 2.0 ” Warhorse ” chính hãng 11931601 – 8",
+                    "giaC": 1350000,
+                    "giaM": 830000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAnTa\\giayAnTa3.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAnTa\\giayAnTa3.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAnTa\\giayAnTa3.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAnTa\\giayAnTa3.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAnTa\\giayAnTa3.5.jpg"
+                        },
+                        {
+                            "img6": "img\\GiayAnTa\\giayAnTa3.6.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        42.5,
+                        43,
+                        44
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2,
+                        0
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Giày bóng rổ ANTA Shock The Game 2.0 ” Warhorse ”",
+                        "Nguồn gốc: Chính hãng, xách tay",
+                        "Mã sản phẩm: AT3",
+                        "Thương hiệu: ANTA",
+                        "Sử dụng : Mọi mặt sân",
+                        "Kiểu dáng : Cổ trung",
+                        "Chất liệu : Vải lưới & da tổng hợp",
+                        "Chức năng : Đệm êm, chống trượt, chống trơn, ôm chân, bảo vệ chân, bám sân",
+                        "Giới tính : Nam / nữ",
+                        "Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm"
+                    ],
+                    "review": "https://youtu.be/5v6HMkWtZOk"
+                },
+                {
+                    "id": "AT4",
+                    "name": "Giày bóng rổ ANTA chính hãng 112011607 – 11",
+                    "giaC": 1890000,
+                    "giaM": 550000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAnTa\\giayAnTa4.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAnTa\\giayAnTa4.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAnTa\\giayAnTa4.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAnTa\\giayAnTa4.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAnTa\\giayAnTa4.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        42.5,
+                        43,
+                        44.5
+                    ],
+                    "SoLuong": [
+                        0,
+                        5,
+                        4,
+                        0,
+                        2,
+                        0
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Giày bóng rổ ANTA chính hãng 112011607 – 11",
+                        "Nguồn gốc: Chính hãng, xách tay",
+                        "Mã sản phẩm: AT4",
+                        "Thương hiệu: ANTA",
+                        "Sử dụng : Mọi mặt sân",
+                        "Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm"
+                    ],
+                    "review": ""
+                },
+                {
+                    "id": "AT5",
+                    "name": "Giày bóng rổ ANTA chính hãng 112011607 – 7",
+                    "giaC": 1890000,
+                    "giaM": 550000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayAnTa\\giayAnTa5.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayAnTa\\giayAnTa5.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayAnTa\\giayAnTa5.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayAnTa\\giayAnTa5.4.jpg"
+                        },
+                        {
+                            "img5": "img\\GiayAnTa\\giayAnTa5.5.jpg"
+                        }
+                    ],
+                    "size": [
+                        40,
+                        41,
+                        42,
+                        42.5,
+                        43,
+                        44.5
+                    ],
+                    "SoLuong": [
+                        0,
+                        5,
+                        4,
+                        0,
+                        2,
+                        0
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Giày bóng rổ ANTA chính hãng 112011607 – 11",
+                        "Nguồn gốc: Chính hãng, xách tay",
+                        "Mã sản phẩm: AT4",
+                        "Thương hiệu: ANTA",
+                        "Sử dụng : Mọi mặt sân",
+                        "Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm"
+                    ],
+                    "review": ""
+                }
+            ],
+            "Giay_Tre_Em": [
+                {
+                    "id": "TE1",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng C111 – Xanh",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm1.1.png"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm1.2.png"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm1.3.png"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm1.4.png"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE2",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng C111 – Đen",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm2.1.png"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm2.2.png"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm2.3.png"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm2.4.png"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE3",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng C111 – Ghi",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm3.1.png"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm3.2.png"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm3.3.png"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm3.4.png"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE4",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng C112 – Xanh",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm4.1.png"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm4.2.png"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm4.3.png"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm4.4.png"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE5",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng C112 – Ghi",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm5.1.png"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm5.2.png"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm5.3.png"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm5.4.png"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE6",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng #8088",
+                    "giaC": 350000,
+                    "giaM": 350000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm6.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm6.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm6.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm6.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                },
+                {
+                    "id": "TE7",
+                    "name": "Giày bóng rổ trẻ em chuyên dụng #8588",
+                    "giaC": 410000,
+                    "giaM": 410000,
+                    "img": [
+                        {
+                            "img1": "img\\GiayTreEm\\giayTreEm7.1.jpg"
+                        },
+                        {
+                            "img2": "img\\GiayTreEm\\giayTreEm7.2.jpg"
+                        },
+                        {
+                            "img3": "img\\GiayTreEm\\giayTreEm7.3.jpg"
+                        },
+                        {
+                            "img4": "img\\GiayTreEm\\giayTreEm7.4.jpg"
+                        }
+                    ],
+                    "size": [
+                        31,
+                        32,
+                        33,
+                        34,
+                        35
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "moTa": "Sản phẩm chính hãng"
+                }
+            ]
+        }
+    ],
+    "QuanAo": [
+        {
+            "QuanAo_bo": [
+                {
+                    "id": "QA1",
+                    "name": "Bộ quần áo bóng rổ Curry",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\QuanAo\\ao1.1.jpg",
+                            "img2": "img\\QuanAo\\ao1.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao1.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\QuanAo\\ao1.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA2",
+                    "name": "Bộ quần áo bóng rổ Jordan",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\QuanAo\\ao2.1.jpg",
+                            "img2": "img\\QuanAo\\ao2.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\QuanAo\\ao2.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao2.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA3",
+                    "name": "Bộ quần áo bóng rổ Kevin Durant Brooklyn Nets",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\QuanAo\\ao3.1.jpg",
+                            "img2": "img\\QuanAo\\ao3.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\QuanAo\\ao3.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao3.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA4",
+                    "name": "Bộ quần áo bóng rổ Kobe Bryant",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Vàng",
+                            "img1": "img\\QuanAo\\ao4.1.jpg",
+                            "img2": "img\\QuanAo\\ao4.2.jpg",
+                            "img3": "img\\QuanAo\\ao4.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao4.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA5",
+                    "name": "Bộ quần áo bóng rổ Kyrie Irving Brooklyn Nets",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\QuanAo\\ao5.1.png",
+                            "img2": "img\\QuanAo\\ao5.2.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao5.3.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\QuanAo\\ao5.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng 2",
+                            "img1": "img\\QuanAo\\ao5.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen 3",
+                            "img1": "img\\QuanAo\\ao5.6.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng 3",
+                            "img1": "img\\QuanAo\\ao5.7.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\QuanAo\\ao5.8.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA6",
+                    "name": "Bộ quần áo bóng rổ Lebron James",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Vàng",
+                            "img1": "img\\QuanAo\\ao6.1.jpg",
+                            "img2": "img\\QuanAo\\ao6.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao6.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                },
+                {
+                    "id": "QA7",
+                    "name": "Bộ quần áo bóng rổ Wade Miami Heats",
+                    "price": 180000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\QuanAo\\ao7.1.jpg",
+                            "img2": "img\\QuanAo\\ao7.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\QuanAo\\ao7.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\QuanAo\\ao7.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Hồng",
+                            "img1": "img\\QuanAo\\ao7.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Bộ quần áo thi đấu bóng rổ",
+                        "Dành cho : Người lớn, trẻ em",
+                        "Giới tính : Unisex",
+                        "Chất liệu : Polyester",
+                        "Kiểu : In tên số cầu thủ 2 mặt"
+                    ]
+                }
+            ],
+            "Ao": [
+                {
+                    "id": "A1",
+                    "name": "Áo bóng rổ Boston Celtics – Kyrie Irving",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\Ao\\ao1.1.jpg",
+                            "img2": "img\\Ao\\ao1.2.jpg",
+                            "img3": "img\\Ao\\ao1.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao1.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                9,
+                                7,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao1.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                5,
+                                8,
+                                9,
+                                7,
+                                10
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A2",
+                    "name": "Áo bóng rổ Brooklyn Nets – Kevin Durant",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\Ao\\ao2.1.jpg",
+                            "img2": "img\\Ao\\ao2.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\Ao\\ao2.3.jpg",
+                            "img2": "img\\Ao\\ao2.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao2.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                8,
+                                9,
+                                7,
+                                10
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A3",
+                    "name": "Áo bóng rổ Brooklyn Nets – Kyrie Irving",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao3.1.jpg",
+                            "img2": "img\\Ao\\ao3.2.jpg",
+                            "img3": "img\\Ao\\ao3.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\Ao\\ao3.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                9,
+                                7,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao3.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                9,
+                                7,
+                                10
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A4",
+                    "name": "Áo bóng rổ Chicago Bulls – Michael Jordan",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao4.1.jpg",
+                            "img2": "img\\Ao\\ao4.2.jpg",
+                            "img3": "img\\Ao\\ao4.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\Ao\\ao4.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                9,
+                                7,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao4.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                9,
+                                7,
+                                10
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A5",
+                    "name": "Áo bóng rổ Golden State Warriors – Stephen Curry",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\Ao\\ao5.1.jpg",
+                            "img2": "img\\Ao\\ao5.2.jpg",
+                            "img3": "img\\Ao\\ao5.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao5.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao5.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                7
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A6",
+                    "name": "Áo bóng rổ Los Angeles Lakers – Kobe Bryant",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Vàng",
+                            "img1": "img\\Ao\\ao6.1.jpg",
+                            "img2": "img\\Ao\\ao6.2.jpg",
+                            "img3": "img\\Ao\\ao6.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao6.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Tím",
+                            "img1": "img\\Ao\\ao6.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao6.6.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                7
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A7",
+                    "name": "Áo bóng rổ Los Angeles Lakers – Lebron James",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Tím",
+                            "img1": "img\\Ao\\ao7.1.jpg",
+                            "img2": "img\\Ao\\ao7.2.jpg",
+                            "img3": "img\\Ao\\ao7.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\Ao\\ao7.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao7.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Vàng",
+                            "img1": "img\\Ao\\ao7.6.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                7
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A8",
+                    "name": "Áo bóng rổ Miami Heats – Dwyane Wade",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Hồng",
+                            "img1": "img\\Ao\\ao8.1.jpg",
+                            "img2": "img\\Ao\\ao8.2.jpg",
+                            "img3": "img\\Ao\\ao8.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao8.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "trắng",
+                            "img1": "img\\Ao\\ao8.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                },
+                {
+                    "id": "A9",
+                    "name": "Áo bóng rổ Tank Top #800",
+                    "price": 90000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Ao\\ao9.1.jpg",
+                            "img2": "img\\Ao\\ao9.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Họa tiết: In",
+                        "Dành cho: Nam / nữ",
+                        "Kích cỡ: L – 5XL"
+                    ]
+                }
+            ],
+            "Quan": [
+                {
+                    "id": "Q1",
+                    "name": "Quần bóng rổ Curry Splash",
+                    "price": 150000,
+                    "img": [
+                        {
+                            "color": "Xanh ngọc",
+                            "img1": "img\\Quan\\quan1.1.png",
+                            "size": [
+                                "S(1m6-1m65)",
+                                "M(1m65-1m7)",
+                                "L(1m7-1m75)",
+                                "XL(1m75-1m80)",
+                                "XXL(1m8-1m85)"
+                            ],
+                            "SoLuong": [
+                                2,
+                                3,
+                                6,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Xanh dương",
+                            "img1": "img\\Quan\\quan1,2.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Xanh lá",
+                            "img1": "img\\Quan\\quan1.3.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Xanh dương đậm",
+                            "img1": "img\\Quan\\quan1.4.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                7
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Kiểu: Trên gối",
+                        "Túi quần: Túi hai bên, không khóa",
+                        "Dành cho: Nam / Nữ",
+                        "Họa tiết: In",
+                        "Kích cỡ: S – 2XL"
+                    ]
+                },
+                {
+                    "id": "Q2",
+                    "name": "Quần bóng rổ #6004",
+                    "price": 130000,
+                    "size": [
+                        "S(1m6-1m65)",
+                        "M(1m65-1m7)",
+                        "L(1m7-1m75)",
+                        "XL(1m75-1m80)",
+                        "XXL(1m8-1m85)"
+                    ],
+                    "SoLuong": [
+                        2,
+                        3,
+                        6,
+                        9,
+                        0
+                    ],
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Quan\\quan2.1.jpg",
+                            "size": [
+                                "S(1m6-1m65)",
+                                "M(1m65-1m7)",
+                                "L(1m7-1m75)",
+                                "XL(1m75-1m80)",
+                                "XXL(1m8-1m85)"
+                            ],
+                            "SoLuong": [
+                                2,
+                                3,
+                                6,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Kiểu: Trên gối",
+                        "Túi quần: Túi hai bên, không khóa",
+                        "Dành cho: Nam / Nữ",
+                        "Họa tiết: In",
+                        "Kích cỡ: S – 2XL"
+                    ]
+                },
+                {
+                    "id": "Q3",
+                    "name": "Quần bóng rổ Boston Celtics",
+                    "price": 100000,
+                    "size": [
+                        "S(1m6-1m65)",
+                        "M(1m65-1m7)",
+                        "L(1m7-1m75)",
+                        "XL(1m75-1m80)",
+                        "XXL(1m8-1m85)"
+                    ],
+                    "SoLuong": [
+                        2,
+                        3,
+                        6,
+                        9,
+                        0
+                    ],
+                    "img": [
+                        {
+                            "color": "Xanh lá",
+                            "img1": "img\\Quan\\quan3.1.jpg",
+                            "size": [
+                                "S(1m6-1m65)",
+                                "M(1m65-1m7)",
+                                "L(1m7-1m75)",
+                                "XL(1m75-1m80)",
+                                "XXL(1m8-1m85)"
+                            ],
+                            "SoLuong": [
+                                2,
+                                3,
+                                6,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\Quan\\quan3.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Xanh dương đậm",
+                            "img1": "img\\Quan\\quan3.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                7
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu: Polyester",
+                        "Kiểu: Trên gối",
+                        "Túi quần: Túi hai bên, không khóa",
+                        "Dành cho: Nam / Nữ",
+                        "Họa tiết: In",
+                        "Kích cỡ: S – 2XL"
+                    ]
+                }
+            ],
+            "Pro_Combat": [
+                {
+                    "id": "PC1",
+                    "name": "Áo bóng rổ Pro Combat ba lỗ quai nhỏ #1001",
+                    "price": 100000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\ProCombat\\pc1.1.png",
+                            "img2": "img\\ProCombat\\pc1.3.jpg",
+                            "img3": "img\\ProCombat\\pc1.4.jpg",
+                            "img4": "img\\ProCombat\\pc1.5.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\ProCombat\\pc1.2.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                },
+                {
+                    "id": "PC2",
+                    "name": "Áo Pro Combat cộc tay #1003",
+                    "price": 100000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\ProCombat\\pc2.1.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\ProCombat\\pc2.2.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\ProCombat\\pc2.3.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\ProCombat\\pc2.4.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\ProCombat\\pc2.5.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\ProCombat\\pc2.6.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                },
+                {
+                    "id": "PC3",
+                    "name": "Áo bóng rổ Pro Combat dài tay #1019",
+                    "price": 130000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\ProCombat\\pc3.1.jpg",
+                            "img2": "img\\ProCombat\\pc3.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\ProCombat\\pc3.3.jpg",
+                            "img2": "img\\ProCombat\\pc3.4.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                },
+                {
+                    "id": "PC4",
+                    "name": "Áo bóng rổ Pro Combat dài tay, hệ thống lỗ thoát khí #1029",
+                    "price": 150000,
+                    "img": [
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\ProCombat\\pc4.1.jpg",
+                            "img2": "img\\ProCombat\\pc4.2.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                },
+                {
+                    "id": "PC5",
+                    "name": "Quần bóng rổ Pro Combat 1/2 #1004",
+                    "price": 100000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\ProCombat\\pc5.1.jpg",
+                            "img2": "img\\ProCombat\\pc5.2.jpg",
+                            "img3": "img\\ProCombat\\pc5.3.jpg",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                },
+                {
+                    "id": "PC6",
+                    "name": "Quần bóng rổ Pro Combat 3/4 #1050",
+                    "price": 100000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\ProCombat\\pc6.1.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                9
+                            ]
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\ProCombat\\pc6.2.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\ProCombat\\pc6.3.png",
+                            "size": [
+                                "L",
+                                "XL",
+                                "XXL",
+                                "XXXL",
+                                "4XL",
+                                "5XL"
+                            ],
+                            "SoLuong": [
+                                0,
+                                2,
+                                5,
+                                8,
+                                9,
+                                0
+                            ]
+                        }
+                    ],
+                    "moTa": [
+                        "Chất liệu:  90% Polyester 10% Spandex",
+                        "Tính năng : Giữ nhiệt, làm nóng & khởi động cơ, tăng hiệu suất vận động, tăng thẩm mỹ",
+                        "Dành cho: Nam / Nữ",
+                        "Kích cỡ: S M L XL 2XL 3XL"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Bong": [
+        {
+            "id": "B1",
+            "name": "Bóng rổ chính hãng da PU Li-ning Bad Five LBQK412",
+            "giaM": 470000,
+            "giaC": 470000,
+            "img": [
+                {
+                    "color": "Hồng",
+                    "img1": "img\\Bong\\bong1.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Đen",
+                    "img1": "img\\Bong\\bong1.5.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        0
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B2",
+            "name": "Bóng rổ da PU chính hãng Crossway 2LQ010",
+            "giaM": 300000,
+            "giaC": 300000,
+            "img": [
+                {
+                    "color": "Đen",
+                    "img1": "img\\Bong\\bong2.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Trắng",
+                    "img1": "img\\Bong\\bong2.4.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        0
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B3",
+            "name": "Bóng rổ da PU chính hãng Crossway 2LQ012",
+            "giaM": 300000,
+            "giaC": 300000,
+            "img": [
+                {
+                    "color": "Tím",
+                    "img1": "img\\Bong\\bong4.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B4",
+            "name": "Bóng rổ da PU Kobe Bryant Dynamic",
+            "giaM": 250000,
+            "giaC": 250000,
+            "img": [
+                {
+                    "color": "Xanh lá",
+                    "img1": "img\\Bong\\bong3.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Hồng",
+                    "img1": "img\\Bong\\bong3.2.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Xanh dương",
+                    "img1": "img\\Bong\\bong3.3.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Trắng",
+                    "img1": "img\\Bong\\bong3.5.jpg",
+                    "img2": "img\\Bong\\bong3.6.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B5",
+            "name": "Bóng rổ da PU PEAK chính hãng Clutch Shot QW09014",
+            "giaC": 490000,
+            "giaM": 449000,
+            "img": [
+                {
+                    "color": "Đỏ trắng",
+                    "img1": "img\\Bong\\bong5.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B6",
+            "name": "Bóng rổ da PU PEAK chính hãng Excesss Q174060",
+            "giaC": 490000,
+            "giaM": 449000,
+            "img": [
+                {
+                    "color": "Xanh đỏ trắng",
+                    "img1": "img\\Bong\\bong6.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B7",
+            "name": "Bóng rổ da Geru Star Federation chính hãng – Bóng thi đấu chính thức toàn quốc",
+            "giaM": 349000,
+            "giaC": 349000,
+            "img": [
+                {
+                    "color": "Cam",
+                    "img1": "img\\Bong\\bong7.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B8",
+            "name": "Bóng rổ cao su",
+            "giaM": 80000,
+            "giaC": 80000,
+            "img": [
+                {
+                    "color": "Nâu",
+                    "img1": "img\\Bong\\bong8.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Đen",
+                    "img1": "img\\Bong\\bong8.2.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Cam",
+                    "img1": "img\\Bong\\bong8.3.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        },
+        {
+            "id": "B9",
+            "name": "Bóng rổ da Crossway Big Players chính hãng",
+            "giaM": 290000,
+            "giaC": 300000,
+            "img": [
+                {
+                    "color": "Hồng",
+                    "img1": "img\\Bong\\bong9.1.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Xám",
+                    "img1": "img\\Bong\\bong9.2.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Xanh",
+                    "img1": "img\\Bong\\bong9.3.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "color": "Da",
+                    "img1": "img\\Bong\\bong9.4.jpg",
+                    "size": [
+                        5,
+                        6,
+                        7
+                    ],
+                    "SoLuong": [
+                        0,
+                        2,
+                        5
+                    ]
+                }
+            ],
+            "moTa": [
+                "Chất liệu: Da PU",
+                "Sử dụng: Trong nhà / ngoài trời",
+                "Tặng kèm: Bơm. túi rút, kim bơm & túi lưới đựng bóng",
+                "Bảo hành: 07 ngày lỗi 1 đổi 1"
+            ]
+        }
+    ],
+    "PhuKien": [
+        {
+            "Tat": [ 
+                {
+                    "id": "T1",
+                    "name": "Tất bóng rổ Nike Elite Quick Crew City Editions",
+                    "giaC": 125000,
+                    "giaM": 75000,
+                    "img": [
+                        {
+                            "color": "Trắng 1",
+                            "img1": "img\\PhuKien\\tat\\tat1.1.jpg"
+                        },
+                        {
+                            "color": "Trắng đỏ",
+                            "img1": "img\\PhuKien\\tat\\tat1.2.jpg"
+                        },
+                        {
+                            "color": "Trắng 3",
+                            "img1": "img\\PhuKien\\tat\\tat1.3.jpg"
+                        },
+                        {
+                            "color": "Trắng xanh 1",
+                            "img1": "img\\PhuKien\\tat\\tat1.4.jpg"
+                        },
+                        {
+                            "color": "Trắng đen",
+                            "img1": "img\\PhuKien\\tat\\tat1.5.jpg"
+                        },
+                        {
+                            "color": "Xanh lá",
+                            "img1": "img\\PhuKien\\tat\\tat1.6.jpg"
+                        },
+                        {
+                            "color": "Trắng xanh 2",
+                            "img1": "img\\PhuKien\\tat\\tat1.7.jpg"
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\tat\\tat1.8.jpg"
+                        }
+                    ],
+                    "SoLuong": [
+                        9,
+                        8,
+                        7,
+                        6,
+                        5,
+                        4,
+                        3,
+                        0
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T2",
+                    "name": "Tất bóng rổ Nike Elite Crew Gradient",
+                    "giaC": 125000,
+                    "giaM": 75000,
+                    "img": [
+                        {
+                            "color": "Hồng đỏ",
+                            "img1": "img\\PhuKien\\tat\\tat2.1.jpg"
+                        },
+                        {
+                            "color": "Hồng đỏ 2",
+                            "img1": "img\\PhuKien\\tat\\tat2.2.jpg"
+                        },
+                        {
+                            "color": "Xanh trắng",
+                            "img1": "img\\PhuKien\\tat\\tat2.3.jpg"
+                        }
+                    ],
+                    "SoLuong": [
+                        9,
+                        5,
+                        10
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T3",
+                    "name": "Tất vớ bóng rổ Stance",
+                    "giaC": 125000,
+                    "giaM": 75000,
+                    "img": [
+                        {
+                            "color": "Trắng đen 1",
+                            "img1": "img\\PhuKien\\tat\\tat3.1.jpg"
+                        },
+                        {
+                            "color": "Trắng đen 2",
+                            "img1": "img\\PhuKien\\tat\\tat3.2.jpg"
+                        },
+                        {
+                            "color": "Trắng đen 3",
+                            "img1": "img\\PhuKien\\tat\\tat3.3.jpg"
+                        }
+                    ],
+                    "SoLuong": [
+                        0,
+                        5,
+                        9
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T4",
+                    "name": "Tất vớ bóng rổ Nike Elite Crew 18",
+                    "giaC": 125000,
+                    "giaM": 75000,
+                    "img": [
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\tat\\tat4.1.jpg"
+                        },
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\PhuKien\\tat\\tat4.2.jpg"
+                        },
+                        {
+                            "color": "Đen 2",
+                            "img1": "img\\PhuKien\\tat\\tat4.3.jpg"
+                        }
+                    ],
+                    "SoLuong": [
+                        5,
+                        5,
+                        5
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T5",
+                    "name": "Tất vớ bóng rổ 8 Series Gradient",
+                    "giaC": 32000,
+                    "giaM": 32000,
+                    "img": [
+                        {
+                            "color": "Xám",
+                            "img1": "img\\PhuKien\\tat\\tat5.1.png"
+                        },
+                        {
+                            "color": "Đen vàng",
+                            "img1": "img\\PhuKien\\tat\\tat5.2.png"
+                        },
+                        {
+                            "color": "Hồng",
+                            "img1": "img\\PhuKien\\tat\\tat5.3.png"
+                        },
+                        {
+                            "color": "Tím",
+                            "img1": "img\\PhuKien\\tat\\tat5.4.png"
+                        },
+                        {
+                            "color": "Đỏ trắng",
+                            "img1": "img\\PhuKien\\tat\\tat5.5.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        9,
+                        8,
+                        7,
+                        6,
+                        5
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T6",
+                    "name": "Tất vớ bóng rổ 8 Series Graffity Elite Crew",
+                    "giaC": 35000,
+                    "giaM": 35000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\tat\\tat6.1.png"
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\PhuKien\\tat\\tat6.2.png"
+                        },
+                        {
+                            "color": "Xanh dương",
+                            "img1": "img\\PhuKien\\tat\\tat6.3.png"
+                        },
+                        {
+                            "color": "Trắng hồng",
+                            "img1": "img\\PhuKien\\tat\\tat6.4.png"
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\PhuKien\\tat\\tat6.5.png"
+                        },
+                        {
+                            "color": "Xanh hồng",
+                            "img1": "img\\PhuKien\\tat\\tat6.6.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T7",
+                    "name": "Tất vớ bóng rổ 8 Series 3D-V",
+                    "giaC": 32000,
+                    "giaM": 32000,
+                    "img": [
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\tat\\tat7.1.jpg"
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\tat\\tat7.2.png"
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\PhuKien\\tat\\tat7.3.png"
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\PhuKien\\tat\\tat7.4.png"
+                        },
+                        {
+                            "color": "Hồng",
+                            "img1": "img\\PhuKien\\tat\\tat7.5.png"
+                        },
+                        {
+                            "color": "Xanh dương",
+                            "img1": "img\\PhuKien\\tat\\tat7.6.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        9,
+                        7,
+                        5,
+                        3,
+                        7,
+                        0
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                },
+                {
+                    "id": "T8",
+                    "name": "Tất bóng rổ 8 Series Elite Medium",
+                    "giaC": 25000,
+                    "giaM": 25000,
+                    "img": [
+                        {
+                            "color": "Xám 1",
+                            "img1": "img\\PhuKien\\tat\\tat8.1.jpg"
+                        },
+                        {
+                            "color": "Vàng",
+                            "img1": "img\\PhuKien\\tat\\tat8.2.png"
+                        },
+                        {
+                            "color": "Xanh dương",
+                            "img1": "img\\PhuKien\\tat\\tat8.3.png"
+                        },
+                        {
+                            "color": "Xám 2",
+                            "img1": "img\\PhuKien\\tat\\tat8.4.png"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\tat\\tat8.5.png"
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\PhuKien\\tat\\tat8.6.png"
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\tat\\tat8.7.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        6,
+                        5,
+                        4,
+                        3,
+                        2,
+                        1,
+                        0
+                    ],
+                    "moTa": [
+                        "Vừa nhất với cỡ 39 – 45, cỡ khác vẫn sử dụng được",
+                        "Độ dài: 17cm  từ mắt cá chân",
+                        "Chất liệu: Polyester, nylon, cotton"
+                    ]
+                }
+            ],
+            "Balo": [
+                {
+                    "id": "BL1",
+                    "name": "Balo bóng rổ Jordan #2278",
+                    "giaC": 270000,
+                    "giaM": 270000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\balo\\balo1.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo1.2.png",
+                            "img3": "img\\PhuKien\\balo\\balo1.3.png",
+                            "img4": "img\\PhuKien\\balo\\balo1.4.png"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\balo\\balo1.5.png"
+                        }
+                    ],
+                    "SoLuong": [10,0],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL2",
+                    "name": "Balo bóng rổ Nike Elite #29152 – Đệm Air",
+                    "giaM": 350000,
+                    "giaC": 350000,
+                    "img": [
+                        {
+                            "color": "Đen 1",
+                            "img1": "img\\PhuKien\\balo\\balo2.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo2.2.png"
+                        },
+                        {
+                            "color": "Đen đỏ",
+                            "img1": "img\\PhuKien\\balo\\balo2.3.png",
+                            "img2": "img\\PhuKien\\balo\\balo2.4.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5
+                    ],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL3",
+                    "name": "Balo bóng rổ Nike Kobe #4635 – Đệm Air",
+                    "giaM": 350000,
+                    "giaC": 350000,
+                    "img": [
+                        {
+                            "color": "Đen ",
+                            "img1": "img\\PhuKien\\balo\\balo3.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo3.2.png",
+                            "img3": "img\\PhuKien\\balo\\balo3.3.png"
+                        },
+                        {
+                            "color": "Xanh lá",
+                            "img1": "img\\PhuKien\\balo\\balo3.4.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5
+                    ],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL4",
+                    "name": "Balo bóng rổ Air Jordan #3487",
+                    "giaM": 320000,
+                    "giaC": 320000,
+                    "img": [
+                        {
+                            "color": "Đen ",
+                            "img1": "img\\PhuKien\\balo\\balo4.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo4.2.png",
+                            "img3": "img\\PhuKien\\balo\\balo4.3.png"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\balo\\balo4.4.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5
+                    ],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL5",
+                    "name": "Balo bóng rổ Nike Elite #4266",
+                    "giaM": 320000,
+                    "giaC": 320000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\balo\\balo5.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo5.2.png",
+                            "img3": "img\\PhuKien\\balo\\balo5.3.png"
+                        },
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\PhuKien\\balo\\balo5.4.png"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\balo\\balo5.5.png"
+                        },
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\PhuKien\\balo\\balo5.6.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        6,
+                        8
+                    ],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL6",
+                    "name": "Balo bóng rổ Jordan #2278",
+                    "giaM": 270000,
+                    "giaC": 270000,
+                    "img": [
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\PhuKien\\balo\\balo7.1.png",
+                            "img2": "img\\PhuKien\\balo\\balo7.2.png"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\balo\\balo7.4.png"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5
+                    ],
+                    "moTa": ""
+                },
+                {
+                    "id": "BL7",
+                    "name": "Balo túi bóng rổ Air Jordan loại cao cấp #25491",
+                    "giaM": 320000,
+                    "giaC": 320000,
+                    "img": [
+                        {
+                            "color": "Đỏ",
+                            "img1": "img\\PhuKien\\balo\\balo8.1.jpeg"
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\balo\\balo8.2.jpeg"
+                        },
+                        {
+                            "color": "Xám",
+                            "img1": "img\\PhuKien\\balo\\balo8.3.jpeg"
+                        },
+                        {
+                            "color": "Đen",
+                            "img1": "img\\PhuKien\\balo\\balo8.4.jpeg"
+                        },
+                        {
+                            "color": "Xanh lá",
+                            "img1": "img\\PhuKien\\balo\\balo8.5.jpeg"
+                        },
+                        {
+                            "color": "Xanh",
+                            "img1": "img\\PhuKien\\balo\\balo8.6.jpeg"
+                        }
+                    ],
+                    "SoLuong": [
+                        10,
+                        5,
+                        0,
+                        6,
+                        3,
+                        9
+                    ],
+                    "moTa":""
+                }
+            ],
+            "BaoHo": [
+                {
+                    "id": "BH1",
+                    "name": "Băng gối đệm dạng tổ ong",
+                    "giaM": 49000,
+                    "giaC": 49000,
+                    "img": [
+                        {
+                            "color": "Đen",
+                            
+                                
+                                    "img1": "img\\PhuKien\\baoHo\\bh1.1.jpg",
+                                
+                                
+                                    "img2": "img\\PhuKien\\baoHo\\bh1.2.jpg",
+                                
+                                
+                                    "img3:": "img\\PhuKien\\baoHo\\bh1.3.jpg"
+                                
+                            
+                        },
+                        {
+                            "color": "Trắng",
+                            "img1": "img\\PhuKien\\baoHo\\bh1.4.jpg"
+                        }
+                    ],
+                    "SoLuong": [
+                        9,
+                        0
+                    ],
+                    "moTa": [
+                        "Sản phẩm : Băng đeo gối đệm tổ ong",
+                        "Thương hiệu : Không",
+                        "Kiểu : Dài từ giữa đùi đến bắp chân",
+                        "Cấu trúc đệm : Dạng tổ ong",
+                        "Chất liệu : 80% Polyester 20% Spandex",
+                        "Màu sắc : Đen / Trắng",
+                        "Đơn vị: cái"
+                    ]
+                }
+            ]
+        }
+    ]
+}

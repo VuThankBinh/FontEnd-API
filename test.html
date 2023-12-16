@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/html2pdf.bundle.js"></script>
+    
+    <title>Create PDF</title>
+</head>
+<body>
+    <div id="pdfContent">
+        <!-- Your content goes here -->
+        <h1>Hello, this is the content of your PDF!</h1>
+        <p>Additional information...</p>
+    </div>
+
+    <button id="downloadBtn">Download PDF</button>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Get the content you want to convert to PDF
+            var pdfContent = document.getElementById('pdfContent');
+
+            // Set options for the PDF
+            var options = {
+                margin: 10,
+                filename: 'hoadon.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Generate the PDF
+            html2pdf(pdfContent, options);
+        });
+    </script>
+</body>
+</html>
