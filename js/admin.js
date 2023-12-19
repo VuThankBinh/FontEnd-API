@@ -1,4 +1,4 @@
-fetch('./js/SanPham.json')
+fetch('./js/SanPham.json') 
     .then(function (res) {
         return res.json();
     })

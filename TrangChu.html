@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css//slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <script src="js/slick.js"></script>
-    
+
 </head>
 
 <body>
@@ -63,7 +63,8 @@
             <div class="search-sp">
 
                 <form style="margin:auto; max-width:350px; display: flex;">
-                    <input type="text" id="timsp" onkeypress="timKiem_et(event)" placeholder="    Nhập từ khóa sản phẩm cần tìm">
+                    <input type="text" id="timsp" onkeypress="timKiem_et(event)"
+                        placeholder="    Nhập từ khóa sản phẩm cần tìm">
                     <button type="submit" onclick="timKiem()">
                         <i class="fa fa-search"></i>
                     </button>
@@ -82,7 +83,7 @@
 
                         <a onclick="giohangpage()" title="Giỏ hàng">
                             <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
-                            <span >
+                            <span>
                                 Giỏ hàng / <span class="cart-price"><span><bdi>0<span>VND</span></bdi></span></span>
                             </span>
                         </a>
@@ -132,7 +133,7 @@
                             <i class="fa-solid fa-caret-right"
                                 style="color: #9297a0; float: right;margin-top: 20px;"></i>
                         </a>
-                        
+
                     </li>
                     <li><a href="PhuKien.html" target="_blank" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
                             <i class="fa-solid fa-caret-right"
@@ -168,54 +169,54 @@
             <h2 class="title-group">Hàng Mới Về</h2>
         </div>
     </div>
+    <div id="sanpham" style="width: 70%;margin-left: 15%;">
 
+    </div>
+    <div style="margin-left: 10%; width: 80%;display: flex;">
+        
+    </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
             <h2 class="title-group">Giày bóng rổ cơ bản</h2>
         </div>
     </div>
+    <div id="sanpham1" style="width: 70%;margin-left: 15%;">
+
+    </div>
     <div style="margin-left: 10%; width: 80%;display: flex;">
-        <!-- <button id="backbt2" onclick="backPage()">&lt</button> -->
-
-        <div id="panel">
-        </div>
-
-        <!-- <button id="nextbt2" onclick="nextPage()">&gt</button> -->
+        
     </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
             <h2 class="title-group">Quần áo bóng rổ NBA </h2>
         </div>
     </div>
+    <div id="sanpham2" style="width: 70%;margin-left: 15%;">
 
+    </div>
+    <div style="margin-left: 10%; width: 80%;display: flex;">
+        
+    </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
             <h2 class="title-group"> Bóng rổ </h2>
         </div>
     </div>
+    <div id="sanpham3" style="width: 70%;margin-left: 15%;">
+
+    </div>
     <script>
-    showLoginData();
-    showSlideBody1TimeOut();
-    loadSP_tt();
-
-    $(document).ready(function () {
-            $('#panel').slick({
-                accessibility: true,
-                arrows: true,
-                slidesToShow: 5,
-                appendArrows: $("#panel"),
-                // prev arrow
-                prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 1000;left: -25px; height: 100px; opacity: 0.5;"></button>',
-
-                // next arrow
-                nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 1000;right: -25px;height: 100px; opacity: 0.6;"></button>',
-                autoplay: true,
-                autoplaySpeed: 2500,
-                draggable: true,
-
-            });
-        });
+        showLoginData();
+        showSlideBody1TimeOut();
+        load10spGiay();
+        load8spQA();
+        load8bong();
+        loadspMoiVe();
     </script>
+    <div id="div-quick">
+
+
+    </div>
     <footer class="bottom-footer">
         <div style="width: 25%;">
             <ul><span>THÔNG TIN CỬA HÀNG</span>

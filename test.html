@@ -1,38 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/html2pdf.bundle.js"></script>
-    
-    <title>Create PDF</title>
-</head>
-<body>
-    <div id="pdfContent">
-        <!-- Your content goes here -->
-        <h1>Hello, this is the content of your PDF!</h1>
-        <p>Additional information...</p>
-    </div>
+    <style>
+        .container {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
 
-    <button id="downloadBtn">Download PDF</button>
+        .nested-container {
+            margin-left: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    </style>
+    <title>Product Information Form</title>
+</head>
+
+<body>
+    <img src="http://192.168.1.102/tranh-ve-den-vau-1-1140x661.jpg" alt="">
+    <form id="productForm">
+        <div class="container">
+            <label><strong>maSanPham:</strong> <input type="text" name="maSanPham" value="0"></label><br>
+            <label><strong>maThuongHieu:</strong> <input type="text" name="maThuongHieu" value="0"></label><br>
+            <label><strong>tenSanPham:</strong> <input type="text" name="tenSanPham" value="string"></label><br>
+            <label><strong>hinhAnhDaiien:</strong> <input type="text" name="hinhAnhDaiien" value="string"></label>
+
+            <div class="nested-container" id="mauContainer">
+                <strong>mau:</strong>
+                <button onclick="addMau('mauContainer')">Add </button>
+                <div class="nested-container" id="mau">
+                    <label><strong>id:</strong> <input type="text" name="mau[0][id]" value="string"></label><br>
+                    <label><strong>idsp:</strong> <input type="text" name="mau[0][idsp]" value="string"></label><br>
+                    <label><strong>mausac:</strong> <input type="text" name="mau[0][mausac]" value="string"></label>
+
+                    <div class="nested-container" id="listContainer">
+                        <strong>list:</strong>
+                        <button onclick="addSize('listContainer')">Add</button>
+                        <div class="nested-container" id="list">
+                            <label><strong>id:</strong> <input type="text" name="mau[0][list][0][id]"
+                                    value="string"></label><br>
+                            <label><strong>idmau:</strong> <input type="text" name="mau[0][list][0][idmau]"
+                                    value="string"></label><br>
+                            <label><strong>kichthuoc:</strong> <input type="text" name="mau[0][list][0][kichthuoc]"
+                                    value="string"></label><br>
+                            <label><strong>soluong:</strong> <input type="text" name="mau[0][list][0][soluong]"
+                                    value="string"></label>
+                        </div>
+                        <!-- Additional rows for "list" array -->
+                    </div>
+
+                    <div class="nested-container" id="hinhAnhModelsContainer">
+                        <strong>hinhAnhModels:</strong>
+                        <button onclick="addHinhAnh('hinhAnhModelsContainer')">add</button>
+                        <div class="nested-container" id="frmHA">
+                            <label><strong>id:</strong> <input type="text" name="mau[0][hinhAnhModels][0][id]"
+                                    value="string"></label><br>
+                            <label><strong>idMau:</strong> <input type="text" name="mau[0][hinhAnhModels][0][idMau]"
+                                    value="string"></label><br>
+                            <label><strong>hinhanh_url:</strong> <input type="text"
+                                    name="mau[0][hinhAnhModels][0][hinhanh_url]" value="string"></label>
+                        </div>
+                        <!-- Additional rows for "hinhAnhModels" array -->
+                    </div>
+                </div>
+                <!-- Additional rows for "mau" array -->
+            </div>
+
+            <label><strong>giaBans:</strong> <input type="text" name="giaBans" value="string"></label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
 
     <script>
-        document.getElementById('downloadBtn').addEventListener('click', function() {
-            // Get the content you want to convert to PDF
-            var pdfContent = document.getElementById('pdfContent');
-
-            // Set options for the PDF
-            var options = {
-                margin: 10,
-                filename: 'hoadon.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-
-            // Generate the PDF
-            html2pdf(pdfContent, options);
+        document.getElementById('productForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var formData = new FormData(event.target);
+            var jsonObject = {};
+            formData.forEach(function (value, key) {
+                if (key.includes('[')) {
+                    var keys = key.split(/\[(.+?)\]/g).filter(Boolean);
+                    keys.reduce(function (acc, cur, index, arr) {
+                        if (!acc[cur]) {
+                            acc[cur] = index === arr.length - 1 ? value : {};
+                        }
+                        return acc[cur];
+                    }, jsonObject);
+                } else {
+                    jsonObject[key] = value;
+                }
+            });
+            console.log(JSON.stringify(jsonObject, null, 200));
         });
+
+
+        function addField(containerId, fieldName) {
+            const container = document.getElementById(containerId);
+            const newField = document.createElement('div');
+            newField.classList.add('nested-container');
+            newField.innerHTML = document.getElementById(fieldName).innerHTML;
+            container.appendChild(newField);
+        }
+
+        var soHinhAnh = 1;
+        var somau = 1;
+        var sokthuoc = 1;
+        function addMau(id) {
+            const container = document.getElementById(id);
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('nested-container');
+            newDiv.innerHTML =
+                `<button type="button" onclick="deleteList(this)">Delete</button><br>
+                <div class="nested-container">
+                    <label><strong>id:</strong> <input type="text" name="mau[${somau}][id]" value="string"></label><br>
+                    <label><strong>idsp:</strong> <input type="text" name="mau[${somau}][idsp]" value="string"></label><br>
+                    <label><strong>mausac:</strong> <input type="text" name="mau[${somau}][mausac]" value="string"></label>
+
+                    <div class="nested-container" id="listContainer${somau}">
+                        <strong>list:</strong>
+                        <button onclick="addSize('listContainer${somau}')">Add</button>
+                        <div class="nested-container" >
+                            <label><strong>id:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][id]"
+                                    value="string"></label><br>
+                            <label><strong>idmau:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][idmau]"
+                                    value="string"></label><br>
+                            <label><strong>kichthuoc:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][kichthuoc]"
+                                    value="string"></label><br>
+                            <label><strong>soluong:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][soluong]"
+                                    value="string"></label>
+                        </div>
+                        <!-- Additional rows for "list" array -->
+                    </div>
+
+                    <div class="nested-container" id="hinhAnhModelsContainer${somau}">
+                        <strong>hinhAnhModels:</strong>
+                        <button onclick="addHinhAnh('hinhAnhModelsContainer${somau}')">add</button>
+                        <div class="nested-container">
+                            <label><strong>id:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][id]"
+                                    value="string"></label><br>
+                            <label><strong>idMau:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][idMau]"
+                                    value="string"></label><br>
+                            <label><strong>hinhanh_url:</strong> <input type="text"
+                                    name="mau[${somau}][hinhAnhModels][${soHinhAnh}][hinhanh_url]" value="string"></label>
+                        </div>
+                        <!-- Additional rows for "hinhAnhModels" array -->
+                    </div>
+                </div>`
+            container.appendChild(newDiv);
+            somau++;
+        }
+        function addSize(id) {
+            const container = document.getElementById(id);
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('nested-container');
+            newDiv.innerHTML =
+                `<button type="button" onclick="deleteList(this)">Delete</button><br>
+                <div class="nested-container" >
+
+                            <label><strong>id:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][id]"
+                                    value="string"></label><br>
+                            <label><strong>idmau:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][idmau]"
+                                    value="string"></label><br>
+                            <label><strong>kichthuoc:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][kichthuoc]"
+                                    value="string"></label><br>
+                            <label><strong>soluong:</strong> <input type="text" name="mau[${somau}][list][${sokthuoc}][soluong]"
+                                    value="string"></label>
+                        </div>`
+            container.appendChild(newDiv);
+            sokthuoc++;
+        }
+        function addHinhAnh(id) {
+            // console.log(soHinhAnh)
+            const container = document.getElementById(id);
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('nested-container');
+
+            // Add the content to the new div
+            newDiv.innerHTML = `
+            <button type="button" onclick="deleteList(this)">Delete</button><br>
+        <label><strong>id:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][id]" value="string"></label><br>
+        <label><strong>idMau:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][idMau]" value="string"></label><br>
+        <label><strong>hinhanh_url:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][hinhanh_url]" value="string"></label>
+    `;
+
+            // Append the new div to the container
+            container.appendChild(newDiv);
+
+            // Increment the counter
+            soHinhAnh++;
+        }
+        function deleteList(button) {
+            const container = button.parentNode; // Get the parent container (the div to be deleted)
+            container.parentNode.removeChild(container); // Remove the div from its parent
+        }
+
     </script>
-</body>
-</html>
