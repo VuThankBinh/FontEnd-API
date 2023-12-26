@@ -33,7 +33,17 @@ fetch('./js/ncc.json')
     .catch(function (err) {
         console.log(err);
     })
-
+    fetch('./js/ctkm.json')
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        localStorage.setItem("CTKMAdmin", JSON.stringify(data));
+        console.log("saved");
+    })
+    .catch(function (err) {
+        console.log(err);
+    })
 //thêm sửa xóa sản phẩm
 var menuVisible = true;
 function showhide() {
@@ -1088,6 +1098,326 @@ function AddNCC() {
         alert('Thêm nhà cung cấp thành công');
         loadDSNCC();
         closeForm();
+    }
+}
+
+//chương trình khuyến mãi
+function loadDSCTKM() {
+    document.getElementById('tbody-ctkm').innerHTML = ``;
+    var nccAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
+    for (var i = 0; i < nccAD.length; i++) {
+        loadTTchungctkm(i + 1, nccAD[i])
+    }
+}
+function loadTTchungctkm(stt,obj){
+    document.getElementById('tbody-ctkm').innerHTML+=`<tr>
+    <td>${stt}</td>
+    <td>${obj.ID}</td>
+    <td style="width: 300px;">
+        ${obj.noiDung}
+    </td>
+    <td>${obj.ThoiGianBatDau} - ${obj.ThoiGianKetThuc}</td>
+
+    <td>
+        <i class="fa-regular fa-pen-to-square" onclick="showFormEditCTKM('${obj.ID}','${obj.noiDung}','${obj.ThoiGianBatDau}','${obj.ThoiGianKetThuc}')"></i>
+        <i class="fa-solid fa-trash" onclick="delCTKM('${obj.ID}')"></i>
+    </td>
+</tr>`
+}
+function delCTKM(objID){
+    swal({
+        title: "Are you sure?",
+        text: "Bạn có muốn xóa chương trình khuyến mại này không",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then((confirm) => {
+        if (confirm) {
+            var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
+            for (var i = 0; i < lspAD.length; i++) {
+                console.log(objID)
+                console.log(lspAD[i].ID)
+                console.log('-------------------------')
+                if (lspAD[i].ID.toLowerCase() == objID.toLowerCase()) {
+                    // Sử dụng filter để tạo danh sách mới không chứa đối tượng cần xóa
+                    var updatedProducts = lspAD.filter(obj => obj.ID != objID);
+                    lspAD = updatedProducts;
+                    localStorage.setItem('CTKMAdmin', JSON.stringify(lspAD));
+                    alert("Xóa chương trình khuyến mại có mã: " + objID + " thành công")
+                    loadDSCTKM();
+                }
+
+            }
+
+        } else {
+            // swal("The status has not changed.");
+        }
+    });
+}
+function showFormEditCTKM(id,nd,minN,maxN){
+    console.log(minN>maxN);
+    // Chuyển đổi định dạng xâu ngày tháng năm
+    var parts = minN.split("/");
+    var formattedDate1 = parts[2] + "-" + parts[1].padStart(2, '0') + "-" + parts[0].padStart(2, '0');
+    var parts2 = maxN.split("/");
+    var formattedDate2 = parts2[2] + "-" + parts2[1].padStart(2, '0') + "-" + parts2[0].padStart(2, '0');
+    console.log(formattedDate1);
+    document.getElementById('panelChung').innerHTML += `<div  style="
+    display: block;
+line-height: 25.6px;
+top: 0;
+left: 0;
+text-align: left;
+width: 100%;
+position: fixed;
+height: 100%;
+z-index: 1000;
+background-color: rgba(5, 5, 5, 0.3);
+">
+
+    <div style="
+    background-color: white;
+    width: 35%;
+    height: 50%;
+    margin-top: 18%;
+    margin-left: 35%;
+    position: absolute;">
+        <div style="    position: fixed;
+        
+        width: 30px;
+        height: 30px;
+        margin-left: 34%;
+        background-color: #ccc;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    " onclick="closeForm()">×</div>
+        <table style="border: none !important;
+        margin-top-70px;">
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Mã chương trình khuyến mại:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="text" id="mactkmview" style="padding: 5px;border-radius: 5px;" placeholder="${id}" readonly>
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Nội dung chương trình khuyến mại:</h4>
+                </td>
+
+                <td style="border: none !important">
+                    <textarea name="" id="ndctkmview" cols="30" rows="5" style="padding: 5px;border-radius: 5px;">${nd}</textarea>
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Thời gian bắt đầu:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="date" id="ngayminview" style="padding: 5px;border-radius: 5px;" value="${formattedDate1}">
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Thời gian kết thúc:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="date" id="ngaymaxview" style="padding: 5px;border-radius: 5px;" value="${formattedDate2}">
+                </td>
+            </tr>
+        </table>
+        <button style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer" onclick="Editctkm()">Update</button>
+    </div>
+</div>`
+}
+function formatDate(date) {
+    var day = date.getDate().toString().padStart(2, '0');
+    var month = (date.getMonth() + 1).toString().padStart(2, '0'); // Tháng trong JavaScript bắt đầu từ 0
+    var year = date.getFullYear();
+    return day + '/' + month + '/' + year;
+  }
+function Editctkm() {
+    id = document.getElementById('mactkmview').placeholder;
+    ndl = document.getElementById('ndctkmview').value;
+    minl = document.getElementById('ngayminview').value;
+    maxl = document.getElementById('ngaymaxview').value;
+
+    if (ndl === ""  || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
+        alert("Thông tin chưa hợp lệ");
+    }
+    else{
+        var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
+        console.log(lspAD)
+        for (var i = 0; i < lspAD.length; i++) {
+            if (lspAD[i].ID === id) {
+                lspAD[i] = { ID: id, noiDung: ndl, ThoiGianBatDau: formatDate(new Date(minl)), ThoiGianKetThuc: formatDate(new Date(maxl)) };
+                localStorage.setItem('CTKMAdmin', JSON.stringify(lspAD));
+                alert('Update thành công')
+                loadDSCTKM();
+                closeForm();
+                break;
+            }
+    
+        }
+    }    
+    
+}
+function showFormAddCTKM(){
+    document.getElementById('panelChung').innerHTML += `<div  style="
+    display: block;
+line-height: 25.6px;
+top: 0;
+left: 0;
+text-align: left;
+width: 100%;
+position: fixed;
+height: 100%;
+z-index: 1000;
+background-color: rgba(5, 5, 5, 0.3);
+">
+
+    <div style="
+    background-color: white;
+    width: 35%;
+    height: 50%;
+    margin-top: 18%;
+    margin-left: 35%;
+    position: absolute;">
+        <div style="    position: fixed;
+        
+        width: 30px;
+        height: 30px;
+        margin-left: 34%;
+        background-color: #ccc;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    " onclick="closeForm()">×</div>
+        <table style="border: none !important;
+        margin-top-70px;">
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Mã chương trình khuyến mại:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="text" id="mactkmview" style="padding: 5px;border-radius: 5px;" placeholder="nhập mã CTKM">
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Nội dung chương trình khuyến mại:</h4>
+                </td>
+
+                <td style="border: none !important">
+                    <textarea name="" id="ndctkmview" cols="30" rows="5" style="padding: 5px;border-radius: 5px;" placeholder="nhập nội dung chương trình khuyến mại"></textarea>
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Thời gian bắt đầu:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="date" id="ngayminview" style="padding: 5px;border-radius: 5px;" value="">
+                </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Thời gian kết thúc:</h4>
+                </td>
+                <td style="border: none !important">
+                    <input type="date" id="ngaymaxview" style="padding: 5px;border-radius: 5px;" value="">
+                </td>
+            </tr>
+        </table>
+        <button style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer" onclick="AddCTKM()">Add</button>
+    </div>
+</div>`
+}
+function AddCTKM() {
+    id = document.getElementById('mactkmview').value;
+    ndl = document.getElementById('ndctkmview').value;
+    minl = document.getElementById('ngayminview').value;
+    maxl = document.getElementById('ngaymaxview').value;
+
+    if (ndl === ""|| minl.trim()==""||maxl.trim()=="" || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
+        alert("Thông tin chưa hợp lệ");
+    }
+    else{
+        var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
+         // Kiểm tra xem id đã tồn tại hay chưa
+         var existingLoai = lspAD.find(function (loai) {
+            return loai.ID.toLowerCase() === id.toLowerCase();
+        });
+
+        // Nếu id đã tồn tại, thông báo lỗi
+        if (existingLoai) {
+            alert('ID đã tồn tại. Vui lòng chọn ID khác.');
+            return;
+        }
+        // Thêm loại sản phẩm mới vào mảng loaisp
+        lspAD.push({ ID: id, noiDung: ndl, ThoiGianBatDau: formatDate(new Date(minl)), ThoiGianKetThuc: formatDate(new Date(maxl)) });
+
+        // Lưu dữ liệu đã cập nhật vào local storage
+        localStorage.setItem('CTKMAdmin', JSON.stringify(lspAD));
+
+        // Thông báo thành công và làm mới danh sách loại sản phẩm
+        alert('Thêm thành công');
+        loadDSCTKM();
+        closeForm();
+        
+    }    
+    if (id.trim() == "" || namel.trim() == "" || sdtl.trim() == "" || diachil.trim() == "") {
+        alert("Bạn chưa nhập đầy đủ thông tin")
+        return;
+    }
+    else {
+        // Kiểm tra xem id đã tồn tại hay chưa
+        var existingLoai = lspAD.find(function (loai) {
+            return loai.ID.toLowerCase() === id.toLowerCase();
+        });
+
+        // Nếu id đã tồn tại, thông báo lỗi
+        if (existingLoai) {
+            alert('ID đã tồn tại. Vui lòng chọn ID khác.');
+            return;
+        }
+
+        // Thêm loại sản phẩm mới vào mảng loaisp
+        lspAD.push({ ID: id, SupplierName: namel, PhoneNumber: sdtl, Address: diachil });
+
+        // Lưu dữ liệu đã cập nhật vào local storage
+        localStorage.setItem('NhaCungCapAdmin', JSON.stringify(lspAD));
+
+        // Thông báo thành công và làm mới danh sách loại sản phẩm
+        alert('Thêm nhà cung cấp thành công');
+        loadDSNCC();
+        closeForm();
+    }
+}
+function TimKiemctkm() {
+    ma = document.getElementById('mactkm').value;
+    console.log(ma)
+    document.getElementById('tbody-ctkm').innerHTML = ``;
+
+    var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
+    console.log(lspAD)
+    for (var i = 0; i < lspAD.length; i++) {
+        if(ma.trim!=""){
+            if (lspAD[i].ID.toLowerCase().includes(ma.toLowerCase())) {
+                loadTTchungctkm(i + 1, lspAD[i]);
+            }
+        }
+        else{
+            loadDSCTKM();
+        }
     }
 }
 // import jsPDF from 'jspdf';

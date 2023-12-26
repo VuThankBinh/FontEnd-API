@@ -1,0 +1,20 @@
+[
+    {
+        "ID": "CTKM001",
+        "noiDung": "Giảm 10% cho hóa đơn từ 2 triệu",
+        "ThoiGianBatDau": "1/11/2023",
+        "ThoiGianKetThuc": "31/12/2023"
+    },
+    {
+        "ID": "CTKM002",
+        "noiDung": "Giảm 20% cho hóa đơn từ 3 triệu",
+        "ThoiGianBatDau": "1/11/2023",
+        "ThoiGianKetThuc": "31/12/2023"
+    },
+    {
+        "ID": "CTKM003",
+        "noiDung": "Giảm 500.000đ cho hóa đơn mua 1 đôi giày, 1 bộ quần áo, 1 quả bóng",
+        "ThoiGianBatDau": "1/11/2023",
+        "ThoiGianKetThuc": "31/12/2023"
+    }
+]
