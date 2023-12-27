@@ -1,4 +1,4 @@
-fetch('./js/SanPham.json') 
+fetch('./js/SanPham.json')
     .then(function (res) {
         return res.json();
     })
@@ -33,7 +33,7 @@ fetch('./js/ncc.json')
     .catch(function (err) {
         console.log(err);
     })
-    fetch('./js/ctkm.json')
+fetch('./js/ctkm.json')
     .then(function (res) {
         return res.json();
     })
@@ -241,7 +241,7 @@ function loadDSSP() {
 }
 function loadttChungSp(i, obj) {
 
-
+    var newPath = obj.img[0].img1.replace(/\\/g, '/');
     var html = `<tr>
     <td>${i}</td>
     <td>${obj.id}</td>
@@ -253,53 +253,66 @@ function loadttChungSp(i, obj) {
        ${obj.moTa}
     </td>
     <td>
-        <i class="fa-regular fa-pen-to-square" onclick="EditSanPham('${obj}')"></i>
+        <i class="fa-regular fa-pen-to-square" onclick="showFormEditSanPham('${obj.id}','${obj.name}','${newPath}','${obj.moTa}')"></i>
         <i class="fa-solid fa-trash" onclick="DelSanPham('${obj.id}')"></i>
     </td>
 </tr>`
     document.getElementById('tbody-sanpham').innerHTML += html;
 }
 function showFormAddSanPham() {
-    document.getElementById('panelChung').innerHTML += `<div  style="
+    document.getElementById('panelChung').innerHTML += `<div style="
     display: block;
-line-height: 25.6px;
-top: 0;
-left: 0;
-text-align: left;
-width: 100%;
-position: fixed;
-height: 100%;
-z-index: 1000;
-background-color: rgba(5, 5, 5, 0.3);
-">
+    line-height: 25.6px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.3);">
 
     <div style="
-    background-color: white;
-    width: 60%;
-    height: 50%;
-    margin-top: 15%;
-    margin-left: 20%;
-    position: absolute;">
+background-color: white;
+width: 50%;
+height: 65%;
+margin-top: 10%;
+margin-left: 30%;
+position: absolute;">
         <div style="    position: fixed;
-        
-        width: 30px;
-        height: 30px;
-        margin-left: 58%;
-        background-color: #ccc;
-        border-radius: 50%;
-        font-size: 20px;
-        color: #fff;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-    " onclick="closeForm()">×</div>
-        <table style="border: none !important">
+
+width: 30px;
+height: 30px;
+margin-left: 48%;
+background-color: #ccc;
+border-radius: 50%;
+font-size: 20px;
+color: #fff;
+text-align: center;
+line-height: 30px;
+cursor: pointer;
+" onclick="closeForm()">×</div>
+        <table style="border: none !important;margin-left: 100px;">
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Hình ảnh minh họa:</h4>
+                </td>
+                <td style="border: none !important">
+                    <img src="" id="imgminhhoaView" style="width: 80px;height: 80px;">
+                    <div>
+                        <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+                        
+                    </div>
+                </td>
+                
+            </tr>
             <tr style="border: none !important">
                 <td style="border: none !important">
                     <h4>Mã sản phẩm:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="maloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập mã loại sản phẩm">
+                    <input type="text" id="maloaiview" style="padding: 5px;border-radius: 5px; color:gray"
+                        placeholder="Nhập mã sản phẩm" >
                 </td>
             </tr>
             <tr style="border: none !important">
@@ -307,7 +320,8 @@ background-color: rgba(5, 5, 5, 0.3);
                     <h4>Tên sản phẩm:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="tenloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập tên loại sản phẩm">
+                    <input type="text" id="tenloaiview" style="padding: 5px;border-radius: 5px;word-wrap: break-word;width: 300px;" 
+                        placeholder="Nhập tên sản phẩm">
                 </td>
             </tr>
             <tr style="border: none !important">
@@ -315,55 +329,74 @@ background-color: rgba(5, 5, 5, 0.3);
                     <h4>Mô tả:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="moTaloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập mô tả loại sản phẩm">
+                    <textarea name="" id="moTaspview" cols="30" rows="10"
+                        style="padding: 5px;border-radius: 5px;" placeholder="Nhập mô tả sản phẩm"
+                        ></textarea>
+
                 </td>
             </tr>
         </table>
-        <button style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer" onclick="ThemLoaiSP()">Add</button>
+        <button
+            style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer"
+            onclick="AddSanPham()">Add</button>
     </div>
 </div>`
 }
-function showFormEditSanPham() {
-    document.getElementById('panelChung').innerHTML += `<div  style="
+function showFormEditSanPham(ID, name, img, mota) {
+    console.log(img);
+    document.getElementById('panelChung').innerHTML += `<div style="
     display: block;
-line-height: 25.6px;
-top: 0;
-left: 0;
-text-align: left;
-width: 100%;
-position: fixed;
-height: 100%;
-z-index: 1000;
-background-color: rgba(5, 5, 5, 0.3);
-">
+    line-height: 25.6px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.3);">
 
     <div style="
-    background-color: white;
-    width: 60%;
-    height: 50%;
-    margin-top: 15%;
-    margin-left: 20%;
-    position: absolute;">
+background-color: white;
+width: 50%;
+height: 65%;
+margin-top: 10%;
+margin-left: 30%;
+position: absolute;">
         <div style="    position: fixed;
-        
-        width: 30px;
-        height: 30px;
-        margin-left: 58%;
-        background-color: #ccc;
-        border-radius: 50%;
-        font-size: 20px;
-        color: #fff;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-    " onclick="closeForm()">×</div>
-        <table style="border: none !important">
+
+width: 30px;
+height: 30px;
+margin-left: 48%;
+background-color: #ccc;
+border-radius: 50%;
+font-size: 20px;
+color: #fff;
+text-align: center;
+line-height: 30px;
+cursor: pointer;
+" onclick="closeForm()">×</div>
+        <table style="border: none !important;margin-left: 100px;">
+            <tr style="border: none !important">
+                <td style="border: none !important">
+                    <h4>Hình ảnh minh họa:</h4>
+                </td>
+                <td style="border: none !important">
+                    <img src="${img}" id="imgminhhoaView" style="width: 80px;height: 80px;">
+                    <div>
+                        <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+                        
+                    </div>
+                </td>
+                
+            </tr>
             <tr style="border: none !important">
                 <td style="border: none !important">
                     <h4>Mã sản phẩm:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="maloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập mã loại sản phẩm">
+                    <input type="text" id="maloaiview" style="padding: 5px;border-radius: 5px; color:gray"
+                        placeholder="${ID}" readonly>
                 </td>
             </tr>
             <tr style="border: none !important">
@@ -371,7 +404,8 @@ background-color: rgba(5, 5, 5, 0.3);
                     <h4>Tên sản phẩm:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="tenloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập tên loại sản phẩm">
+                    <input type="text" id="tenloaiview" style="padding: 5px;border-radius: 5px;word-wrap: break-word;width: 300px;" 
+                        placeholder="Nhập tên sản phẩm" value="${name}">
                 </td>
             </tr>
             <tr style="border: none !important">
@@ -379,20 +413,133 @@ background-color: rgba(5, 5, 5, 0.3);
                     <h4>Mô tả:</h4>
                 </td>
                 <td style="border: none !important">
-                    <input type="text" id="moTaloaiview" style="padding: 5px;border-radius: 5px;" placeholder="Nhập mô tả loại sản phẩm">
+                    <textarea name="" id="moTaspview" cols="30" rows="10"
+                        style="padding: 5px;border-radius: 5px;" placeholder="Nhập mô tả sản phẩm"
+                        >${mota}</textarea>
+
                 </td>
             </tr>
         </table>
-        <button style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer" onclick="ThemLoaiSP()">Add</button>
+        <button
+            style="margin-left: 40%;padding: 5px;color: white;background-color: rgb(34, 34, 34);border-radius: 5px;cursor:pointer"
+            onclick="EditSanPham()">Update</button>
     </div>
 </div>`
 }
-function EditSanPham(obj) {
+function EditSanPham() {
+    img2 = document.getElementById('imgminhhoaView').getAttribute('src')
+    id = document.getElementById('maloaiview').placeholder;
+    console.log(id);
+    namel = document.getElementById('tenloaiview').value;
+    motal = document.getElementById('moTaspview').value;
+    var spAD = JSON.parse(localStorage.getItem('sanphamAdmin'));
+    for (var loai in spAD) {
+        // console.log(loai)
+        if (loai !== 'Bong') {
+
+
+            for (const brand in spAD[loai][0]) {
+
+                var products = spAD[loai][0][brand];
+
+                for (var i = 0; i < products.length; i++) {
+
+                    if (products[i].id === id) {
+                        imgList = products[i].img;
+                        imgList[0].img1 = img2;
+                        products[i] = { id, name: namel, img: imgList, moTa: motal }
+                        localStorage.setItem('sanphamAdmin', JSON.stringify(spAD));
+                        alert('Update thành công')
+                        loadDSSP();
+                        closeForm();
+                        break;
+                    }
+                }
+            }
+        } else {
+            for (var brand in spAD[loai]) {
+                var br = spAD[loai][brand];
+
+            }
+        }
+        // console.log('------------')
+    }
+}
+function previewImage() {
+    var input = document.getElementById('imageInput');
+    var preview = document.getElementById('imgminhhoaView');
+
+    // Kiểm tra xem người dùng đã chọn ảnh chưa
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            // Hiển thị ảnh xem trước
+            preview.src = e.target.result;
+        };
+
+        // Đọc dữ liệu từ file ảnh đã chọn
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function AddSanPham() {
+    img2 = document.getElementById('imgminhhoaView').getAttribute('src')
+    id = document.getElementById('maloaiview').value;
+    console.log(id);
+    namel = document.getElementById('tenloaiview').value;
+    motal = document.getElementById('moTaspview').value;
+    
+    var spAD = JSON.parse(localStorage.getItem('sanphamAdmin'));
+    if (id.trim() == "" || namel.trim() == "" || img2.trim() == "") {
+        alert("Bạn chưa nhập đầy đủ thông tin")
+        return;
+    }
+    else {
+        // Kiểm tra xem id đã tồn tại hay chưa
+        
+        for (var loai in spAD) {
+            // console.log(loai)
+            if (loai !== 'Bong') {
+
+
+                for (const brand in spAD[loai][0]) {
+                    var products = spAD[loai][0][brand];
+                    var existingLoai = products.find(function (products) {
+                        return products.id.toLowerCase() === id.toLowerCase();
+                    });
+
+                    // Nếu id đã tồn tại, thông báo lỗi
+                    if (existingLoai) {
+                        alert('ID đã tồn tại. Vui lòng chọn ID khác.');
+                        return;
+                    }
+                    var products = spAD[loai][0][brand];
+
+                    var imgList = [];
+                    imgList[0] = { img1: img2 };
+
+
+                    products.push({ id, name: namel, img: imgList, moTa: motal });
+                    localStorage.setItem('sanphamAdmin', JSON.stringify(spAD));
+                    alert('thêm thành công thành công')
+                    loadDSSP();
+                    closeForm();
+                    return;
+                    break;
+                }
+
+            } else {
+                for (var brand in spAD[loai]) {
+                    var br = spAD[loai][brand];
+
+                }
+            }
+        }
+        // console.log('------------')
+    }
 
 }
-function AddtSanPham(obj) {
 
-}
 function DelSanPham(objID) {
 
     swal({
@@ -454,6 +601,10 @@ function TimKiemSanPham() {
     document.getElementById('tbody-sanpham').innerHTML = ``;
     var stt = 0;
     var spAD = JSON.parse(localStorage.getItem('sanphamAdmin'));
+    if (ma.trim() == "" && ten.trim() == "") {
+        loadDSSP();
+        return;
+    }
     for (var loai in spAD) {
         // console.log(loai)
         if (loai !== 'Bong') {
@@ -484,9 +635,7 @@ function TimKiemSanPham() {
                             stt++;
                         }
                     }
-                    if (ma.trim() == "" && ten.trim() == "") {
-                        loadDSSP();
-                    }
+
                     if (ma.trim() == "" && ten.trim() != "") {
                         if (sp.name.toLowerCase().includes(ten.toLowerCase())) {
                             loadttChungSp(stt + 1, sp)
@@ -790,15 +939,17 @@ function TimKiemLoaiSanPham() {
 
     var lspAD = JSON.parse(localStorage.getItem('LoaisanphamAdmin'));
     console.log(lspAD)
+    if (ma.trim() == "" && ten.trim() == "") {
+        loaddsLoai();
+        return;
+    }
     for (var i = 0; i < lspAD.loaisp.length; i++) {
         if (ma.trim() != "" && ten.trim() != "") {
             if (lspAD.loaisp[i].name.toLowerCase().includes(ten.toLowerCase()) && lspAD.loaisp[i].id.toLowerCase().includes(ma.toLowerCase())) {
                 loadttChunglSp(i + 1, lspAD.loaisp[i]);
             }
         }
-        if (ma.trim() == "" && ten.trim() == "") {
-            loaddsLoai();
-        }
+
         if (ma.trim() == "" && ten.trim() != "") {
             if (lspAD.loaisp[i].name.toLowerCase().includes(ten.toLowerCase())) {
                 lloadttChunglSp(i + 1, lspAD.loaisp[i]);
@@ -1109,8 +1260,8 @@ function loadDSCTKM() {
         loadTTchungctkm(i + 1, nccAD[i])
     }
 }
-function loadTTchungctkm(stt,obj){
-    document.getElementById('tbody-ctkm').innerHTML+=`<tr>
+function loadTTchungctkm(stt, obj) {
+    document.getElementById('tbody-ctkm').innerHTML += `<tr>
     <td>${stt}</td>
     <td>${obj.ID}</td>
     <td style="width: 300px;">
@@ -1124,7 +1275,7 @@ function loadTTchungctkm(stt,obj){
     </td>
 </tr>`
 }
-function delCTKM(objID){
+function delCTKM(objID) {
     swal({
         title: "Are you sure?",
         text: "Bạn có muốn xóa chương trình khuyến mại này không",
@@ -1154,8 +1305,8 @@ function delCTKM(objID){
         }
     });
 }
-function showFormEditCTKM(id,nd,minN,maxN){
-    console.log(minN>maxN);
+function showFormEditCTKM(id, nd, minN, maxN) {
+    console.log(minN > maxN);
     // Chuyển đổi định dạng xâu ngày tháng năm
     var parts = minN.split("/");
     var formattedDate1 = parts[2] + "-" + parts[1].padStart(2, '0') + "-" + parts[0].padStart(2, '0');
@@ -1240,17 +1391,17 @@ function formatDate(date) {
     var month = (date.getMonth() + 1).toString().padStart(2, '0'); // Tháng trong JavaScript bắt đầu từ 0
     var year = date.getFullYear();
     return day + '/' + month + '/' + year;
-  }
+}
 function Editctkm() {
     id = document.getElementById('mactkmview').placeholder;
     ndl = document.getElementById('ndctkmview').value;
     minl = document.getElementById('ngayminview').value;
     maxl = document.getElementById('ngaymaxview').value;
 
-    if (ndl === ""  || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
+    if (ndl === "" || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
         alert("Thông tin chưa hợp lệ");
     }
-    else{
+    else {
         var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
         console.log(lspAD)
         for (var i = 0; i < lspAD.length; i++) {
@@ -1262,12 +1413,12 @@ function Editctkm() {
                 closeForm();
                 break;
             }
-    
+
         }
-    }    
-    
+    }
+
 }
-function showFormAddCTKM(){
+function showFormAddCTKM() {
     document.getElementById('panelChung').innerHTML += `<div  style="
     display: block;
 line-height: 25.6px;
@@ -1347,13 +1498,13 @@ function AddCTKM() {
     minl = document.getElementById('ngayminview').value;
     maxl = document.getElementById('ngaymaxview').value;
 
-    if (ndl === ""|| minl.trim()==""||maxl.trim()=="" || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
+    if (ndl === "" || minl.trim() == "" || maxl.trim() == "" || formatDate(new Date(minl)) > formatDate(new Date(maxl))) {
         alert("Thông tin chưa hợp lệ");
     }
-    else{
+    else {
         var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
-         // Kiểm tra xem id đã tồn tại hay chưa
-         var existingLoai = lspAD.find(function (loai) {
+        // Kiểm tra xem id đã tồn tại hay chưa
+        var existingLoai = lspAD.find(function (loai) {
             return loai.ID.toLowerCase() === id.toLowerCase();
         });
 
@@ -1372,8 +1523,8 @@ function AddCTKM() {
         alert('Thêm thành công');
         loadDSCTKM();
         closeForm();
-        
-    }    
+
+    }
     if (id.trim() == "" || namel.trim() == "" || sdtl.trim() == "" || diachil.trim() == "") {
         alert("Bạn chưa nhập đầy đủ thông tin")
         return;
@@ -1410,12 +1561,12 @@ function TimKiemctkm() {
     var lspAD = JSON.parse(localStorage.getItem('CTKMAdmin'));
     console.log(lspAD)
     for (var i = 0; i < lspAD.length; i++) {
-        if(ma.trim!=""){
+        if (ma.trim != "") {
             if (lspAD[i].ID.toLowerCase().includes(ma.toLowerCase())) {
                 loadTTchungctkm(i + 1, lspAD[i]);
             }
         }
-        else{
+        else {
             loadDSCTKM();
         }
     }
@@ -1462,22 +1613,22 @@ function loadTTchungHDchuaXn() {
     }
 
 }
-function loadTTChiTietHD(mahd, tenkh, sdtkh, dckh, sumbilll,ngayTao, dssp) {
+function loadTTChiTietHD(mahd, tenkh, sdtkh, dckh, sumbilll, ngayTao, dssp) {
     var trdssp = ``;
     var sumbill = 0;
     // console.log(dssp)
-    for(var i=0;i<dssp.length;i++){
-        trdssp+=`<tr>
-        <td>${i+1}</td>
+    for (var i = 0; i < dssp.length; i++) {
+        trdssp += `<tr>
+        <td>${i + 1}</td>
         <td>${dssp[i].id}</td>
-        <td style="width: 250px;">${dssp[i].name + ' '+dssp[i].color}
+        <td style="width: 250px;">${dssp[i].name + ' ' + dssp[i].color}
         </td>
         <td>${dssp[i].size}</td>
         <td>${dssp[i].quantity}</td>
         <td>${format1.format(dssp[i].price)}đ</td>
-        <td>${format1.format(dssp[i].price*dssp[i].quantity)}đ</td>
+        <td>${format1.format(dssp[i].price * dssp[i].quantity)}đ</td>
     </tr>`
-    // sumbill+=dssp[i].price*dssp[i].quantity;
+        // sumbill+=dssp[i].price*dssp[i].quantity;
     }
     document.getElementById('panelChung').innerHTML = `
     <div style="
@@ -1578,19 +1729,19 @@ function loadTTChiTietHD(mahd, tenkh, sdtkh, dckh, sumbilll,ngayTao, dssp) {
 
 function XacNhan123() {
     alert('Xác nhận thành công')
-    document.getElementById('panelChung').innerHTML=``
-//   const content = document.getElementById('panelChung');
+    document.getElementById('panelChung').innerHTML = ``
+    //   const content = document.getElementById('panelChung');
 
-//   // Set options for the PDF
-//   var options = {
-//       margin: 10,
-//       filename: 'DonHang.pdf',
-//       image: { type: 'jpeg', quality: 0.98 },
-//       html2canvas: { scale: 2 },
-//       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-//   };
+    //   // Set options for the PDF
+    //   var options = {
+    //       margin: 10,
+    //       filename: 'DonHang.pdf',
+    //       image: { type: 'jpeg', quality: 0.98 },
+    //       html2canvas: { scale: 2 },
+    //       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    //   };
 
-//   html2pdf(content, options);
+    //   html2pdf(content, options);
     //là del khỏi đơn hàng và add vào đơn đã xác nhận
 
 }
