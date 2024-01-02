@@ -16,7 +16,7 @@
     <script src="js/login.js"></script>
     <!-- <script src="js/extm.js"></script> -->
     <script src="js/TrangChu.js"></script>
-    <script src="js/chiTietQA.js"></script>
+    <script src="js/chiTietGiay.js"></script>
     <link rel="stylesheet" href="css/chiTietSP_giay.css">
     <link rel="stylesheet" href="css/sanpham.css">
     <link rel="stylesheet" href="css//slick.css">
@@ -79,19 +79,19 @@
             <div class="dangnhap-gh">
                 <ul>
                     <li>
-                        <p>
+
+                        <a href="login.html" id="user" style="color: white;">
                             <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                            <a id="user" style="color: white;" onclick="btnLoginOnClick()">
-                                Đăng nhập
-                            </a>
-                        </p>
+                            <span>Đăng nhập</span>
+                        </a>
+
                     </li>
-                    <li>
+                    <li style="margin-top: 5px;">
 
                         <a onclick="giohangpage()" title="Giỏ hàng">
-                            <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"><span id="countSP"></span></i>
+                            <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
                             <span>
-                                Giỏ hàng / <span class="cart-price"><span><bdi id="price-cart">0<span>VND</span></bdi></span></span>
+                                Giỏ hàng / <span class="cart-price"><span><bdi>0<span>VND</span></bdi></span></span>
                             </span>
                         </a>
                     </li>
@@ -163,7 +163,7 @@
     <div class="linkCTSP">
         <ul id="link">
             <li><a href="TrangChu.html">TRANG CHỦ </a></li>
-            / <li> <a href="QA_bo.html">QUẦN ÁO BÓNG RỔ </a></li>
+            / <li> <a href="GiayBongRo.html">GIÀY BÓNG RỔ </a></li>
 
         </ul>
     </div>
@@ -183,12 +183,13 @@
                 <h3>Thông số và tính năng</h3>
                 <ul>
                     <li>Mã sản phẩm : <span id="maSP">AT01</span></li>
-                   
-                    <li>Tính năng nổi bật :Mặc thoáng mát, thấm hút tốt</li>
-                    <li>Chất liệu: Polyester</li>
-                    <li>Họa tiết: In</li>
-                    <li>Kích cỡ : <span id="Size">L, XL, XXL, XXXL, XXXXL</span></li>
+                    <li>Sử dụng : Mọi mặt sân</li>
+                    <li>Tính năng nổi bật : Hỗ trợ cổ chân, êm chân, bám sân</li>
+                    <li>Chất liệu thân giày : Vải + Da tổng hợp</li>
+                    <li>Chất liệu đế : Cao su + MD</li>
+                    <li>Kích cỡ : <span id="Size">36, 37, 38, 39, 40, 41, 42, 43, 44, 45</span></li>
                     <li>Giới tính : Nam / nữ</li>
+                    <li>Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm</li>
                 </ul>
             </div>
 
@@ -199,10 +200,7 @@
 
             <div id="BangSize" class="tabcontent">
                 <h3>Bảng kích cỡ</h3>
-                <h4>Bảng kích cỡ quần</h4>
-                <img src="img/sizeQuan.jpg" alt="Mạng lag">
-                <h4>Bảng kích cỡ áo</h4>
-                <img src="img/sizeAo.png" alt="Mạng lag" width="400px" height="360px">
+                <img src="img/bangSize.png" alt="Mạng lag">
             </div>
         </div>
     </div>
@@ -283,7 +281,7 @@
         </div>
     </footer>
     <script>
-
+        
         showLoginData();
         loadSPCT();
         loadSP_tt();
@@ -312,7 +310,6 @@
             });
         });
         addSP_seen();
-        tinhtien_Cart();
         openInfo(event, 'ThongSo');
 
     </script>
