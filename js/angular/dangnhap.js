@@ -6,12 +6,12 @@ function Login123() {
     if (check.checked) {
         $.ajax({
             type: "POST",
-            url: "https://localhost:44343/api/PhiChucNang/login-admin",
+            url: current_urlAdmin+"/api/PhiChucNang/login-admin",
             dataType: "json",
             contentType: 'application/json',
             data: JSON.stringify(item)
         }).done(function (data) {
-            debugger;
+            // debugger;
             if (data != null && data.message != null && data.message != 'undefined') {
                 alert(data.message);
             } else {
@@ -27,7 +27,7 @@ function Login123() {
     {
         $.ajax({
             type: "POST",
-            url: "https://localhost:44343/api/User/login",
+            url: current_url+"/api/User/login",
             dataType: "json",
             contentType: 'application/json',
             data: JSON.stringify(item)

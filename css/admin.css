@@ -45,7 +45,45 @@
     margin-left: 15px;
     margin-top: 20px;
 }
-#maloai,#tenloai,#masp,#tensp,#tenncc,#mancc,#ngaytaohdn,#mahdn,#mactkm{
+#user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
+    /* margin-top: -20px; */
+    display: none;
+    width: 150px;
+    height: 70px;
+    padding: 5px;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: -17px;
+    background-color: #fff;
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.user-dropdown li> a{
+    color: rgb(218, 32, 32) !important;
+}
+
+.user-menu:hover .user-dropdown {
+    display: block !important;
+}
+.container {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.nested-container {
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 5px;
+}
+#maloai,#tenloai,#masp,#tensp,#tenncc,#mancc,#ngaytaohdn,#mahdn,#mactkm,#mathuonghieu1,#tenthuonghieu1,#moTaloai{
     padding-top: 7px;
     padding-left: 5px;
     width: 200px;
@@ -54,13 +92,13 @@
     border-radius: 5px;
     border: 1px solid #8d8c8c;
 }
-#tkLoai,#tkSP,#tkncc,#tkhdn {
+#tkLoai,#tkSP,#tkncc,#tkhdn,#tkthghieu {
     margin-left: 25%;
 }
 #tkLoai table{
     border: none;
 }
-#TkLoaiBtn,#TkspBtn,#TknccBtn,#TkhdnBtn,#TkctkmBtn{
+#TkLoaiBtn,#TkspBtn,#TknccBtn,#TkhdnBtn,#TkctkmBtn,#TkThgHieuBtn{
     margin-left: 40%;
     margin-top: 10px;
     padding: 3px;

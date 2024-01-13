@@ -13,13 +13,19 @@
     <script src="js/login.js"></script>
     <script src="js/TrangChu.js"></script>
     <script src="js/chiTietGiay.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/API-JS/cart.js"></script>
     <link rel="stylesheet" href="css/chiTietSP_giay.css">
     <link rel="stylesheet" href="css/sanpham.css">
     <link rel="stylesheet" href="css/GioHang.css">
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/API-JS/TrangChu.js"></script>
+    <script src="js/angular/thanhtoan.js"></script>
+    <!-- <script src="js/angular/danhmuc.js"></script> -->
+    <script src="js/API-JS/Chung.js"></script>
 </head>
 
-<body>
+<body ng-app="AppBanHang" ng-controller="ThanhToanCtrl">
     <header>
         <div class="top-banner">
             <ul>
@@ -75,7 +81,7 @@
                     <li>
                         <p id="user" style="color: white;"><a href="login.html">
                                 <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                                Đăng nhập
+                                <span id="useracc">Đăng nhập</span>
                             </a></p>
                     </li>
                     <li>
@@ -151,8 +157,9 @@
                 </ul>
             </nav>
     </header>
+    <!-- <h4 id="kosp"></h4> -->
     <div class="title_GH">THANH TOÁN</div>
-    <div style="display: flex;width: 80%;margin-left: 10%; border-bottom: 1px solid #c6c8cb;padding-bottom: 15px;">
+    <div style="display: flex;width: 80%;margin-left: 10%; border-bottom: 1px solid #c6c8cb;padding-bottom: 15px;" id="kosp">
         <div style="width: 60%; border-right: 1px solid #c6c8cb; padding-right: 15px;">
             <div class="title-info">Thông tin thanh toán</div>
             <table class="tttt">
@@ -338,7 +345,7 @@
 
             </table>
             <p style="margin-top: 10px;">Thanh toán khi nhận hàng</p>
-            <button class="datHang" id="dathangbtn" onclick="datHang()">ĐẶT HÀNG</button>
+            <button class="datHang" id="dathangbtn" ng-click="thanhtoan1()">ĐẶT HÀNG</button>
         </div>
 
     </div>
@@ -479,7 +486,7 @@
     </script>
 
     <script>
-        showLoginData();
+        load_user();
         showHD();
     </script>
 </body>

@@ -28,7 +28,15 @@ app.controller("HomeCtrl", function ($scope, $http) {
     document.getElementById('kqsearch').textContent="Kết quả của tìm kiếm sản phẩm có chứa: " + decodedQuery 
     $scope.listSanPhamMoi;
     $scope.listDanhMuc;
-    
+    $scope.LoadDanhMuc = function () {
+        $http({
+            method: 'GET',
+            url: current_url + '/api/SanPham/get-danhmuc',
+        }).then(function (response) {
+            $scope.listDanhMuc = response.data;
+            console.log(response.data);
+        });
+    };
     $scope.LoadSanPhamMoi = function () {
         
         
@@ -50,4 +58,5 @@ app.controller("HomeCtrl", function ($scope, $http) {
     
     // Call the function to load data
     $scope.LoadSanPhamMoi();
+    $scope.LoadDanhMuc();
 });

@@ -11,21 +11,32 @@
     <!-- <script src="js/extm.min.js"></script> -->
     <link rel="stylesheet" href="css/login.css" type="text/css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
     <!-- <script src="js/extm.js"></script> -->
     <script src="js/TrangChu.js"></script>
-    <script src="js/chiTietGiay.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- <script src="js/chiTietGiay.js"></script> -->
     <link rel="stylesheet" href="css/chiTietSP_giay.css">
     <link rel="stylesheet" href="css/sanpham.css">
     <link rel="stylesheet" href="css//slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <script src="js/slick.js"></script>
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/API-JS/chitietsp.js"></script>
+    <script src="js/angular/chitietsp.js"></script>
+    <script src="js/API-JS/Chung.js"></script>
+    <!-- <script src="js/angular/timkiem.js"></script> -->
 
 </head>
 
-<body>
+<body ng-app="AppBanHang" ng-controller="ChitietCtrl">
     <header>
         <div class="top-banner">
             <ul>
@@ -82,7 +93,7 @@
 
                         <a href="login.html" id="user" style="color: white;">
                             <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                            <span>Đăng nhập</span>
+                            <span id="useracc">Đăng nhập</span>
                         </a>
 
                     </li>
@@ -104,58 +115,19 @@
                 <ul>
                     <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
                     <b>Danh mục sản phẩm</b>
-                    <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Giày bóng rổ Replica xả hàng">Giày bóng rổ Replica xả hàng</a></li>
-                            <li><a href="#" title="Giày bóng rổ Brookie Rookie xả khoa">Giày bóng rổ Brookie Bookie xả
-                                    kho</a></li>
-                            <li><a href="#" title="Giày bóng rổ PEAK xả kho">Giảy bóng rổ PEAK xả kho</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Bóng rổ">Bóng rổ</a></li>
-                    <li><a href="GiayBongRo.html" title="Giày bóng rổ">Giày bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <!-- menu con sổ xuống cấp 1 -->
-                        <ul>
-                            <li><a href="GiayNike.html" title="Giày bóng rổ Adidas chính hãng">Giày bóng rổ Adidas chính
-                                    hãng</a>
-                            </li>
-                            <li><a href="GiayNBA.html" title="Giày bóng rổ NBA">Giày bóng rổ NBA</a></li>
-                            <li><a href="GiayPeak.html" title="Giày bóng rổ PEAK chính hãng">Giày bóng rổ PEAK chính
-                                    hãng</a></li>
-                            <li><a href="GiayAnTa.html" title="Giày bóng rổ ANTA chính hãng">Giày bóng rổ ANTA chính
-                                    hãng</a></li>
-                            <li><a href="GiayTreEm.html" title="Giày bóng rổ trẻ em">Giày bóng rổ trẻ em</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Quần áo bóng rổ">Quần áo bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Bộ quần áo bóng rổ">Bộ quần áo bóng rổ</a></li>
-                            <li><a href="#" title="Áo bóng rổ">Áo bóng rổ</a></li>
-                            <li><a href="#" title="Quần bóng rổ">Quần bóng rổ</a></li>
-                            <li><a href="#" title="Pro Combat">Pro combat</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Tất vớ bóng rổ">Tất vớ bóng rổ</a></li>
-                            <li><a href="#" title="Balo, túi bóng rổ">Balo, túi bóng rổ</a></li>
-                            <li><a href="#" title="Phụ kiện bảo hộ">Phụ kiện bảo hộ</a></li>
-                            <li><a href="#" title="Bình nước bóng rổ">Bình nước bóng rổ</a></li>
-                        </ul>
-                    </li>
+                    <li ng-repeat="x1 in listDanhMuc">
 
+                        <a>{{x1.tenLoai}}</a>
+
+                        <ul>
+                            <li ng-repeat="x in x1.dsth">
+
+                                <a>{{x.tenThuongHieu}}</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
                 </ul>
             </nav>
     </header>
@@ -168,56 +140,107 @@
         </ul>
     </div>
     <div id="anhCTSP">
+        <div class="silde" style="width: 40%; margin-top: 50px; margin-left: 100px;">
 
-    </div>
-    <div style="display: flex;">
-        <div id="info">
-            <ul>Thông tin sản phẩm
-                <li><button class="tablinks" onclick="openInfo(event, 'ThongSo')">Thông số & Tính năng</button></li>
-                <li><button class="tablinks" onclick="openInfo(event, 'Anh')">Hình ảnh sản phẩm</button></li>
-                <li><button class="tablinks" onclick="openInfo(event, 'BangSize')">Hướng dẫn chọn size</button></li>
+            <img class="silde-div1" id="anhgio" style="display: block;" src="{{sanpham.hinhAnhDaiien}}" alt="">
+
+            <div class="image-list" style="display: flex;">
+                <div ng-repeat="mau1 in sanpham.mau">
+                        <button class="image-list_item" 
+                                style="background-image: url('{{ mau1.hinhAnhModels[0].hinhanh_url }}');" 
+                                onclick="chonbtn(this)">
+                        </button>
+                    
+                </div>
+                
+                <!-- <div ng-repeat="mau in sanpham.mau">
+                    <div class="slick-carousel" data-slick="{slidesToShow: 1, slidesToScroll: 1}">
+                        <div ng-repeat="hinhanh in mau.hinhAnhModels">
+                            <button class="image-list_item" style="background-image: url('{{ hinhanh.hinhanh_url }}');">
+
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <div class="ttsp">
+            <h3 id="nname-sp"> {{sanpham.tenSanPham}}</h3>
+            <p style="color: #df601b;" id="prrice-sp">{{sanpham.giaBans}} đ</p>
+            <ul>
+                <li>Bảo hành trọn đời sản phẩm</li>
+                <li>Giao hàng nhanh</li>
+                <li>Tặng box cùng tất dệt kim</li>
+                <li>Thông tin sản phẩm bên dưới</li>
             </ul>
-        </div>
-        <div style="border-left: 1px solid black;">
-            <div id="ThongSo" class="tabcontent">
-                <h3>Thông số và tính năng</h3>
-                <ul>
-                    <li>Mã sản phẩm : <span id="maSP">AT01</span></li>
-                    <li>Sử dụng : Mọi mặt sân</li>
-                    <li>Tính năng nổi bật : Hỗ trợ cổ chân, êm chân, bám sân</li>
-                    <li>Chất liệu thân giày : Vải + Da tổng hợp</li>
-                    <li>Chất liệu đế : Cao su + MD</li>
-                    <li>Kích cỡ : <span id="Size">36, 37, 38, 39, 40, 41, 42, 43, 44, 45</span></li>
-                    <li>Giới tính : Nam / nữ</li>
-                    <li>Bộ sản phẩm bao gồm : Giày, hộp giày & giấy gói chống ẩm</li>
-                </ul>
-            </div>
+            <h5>Màu sắc</h5>
+            <div id="mauDiv" class="chon-size ctsp" style="display:flex ;">
+                <div ng-repeat="maus in sanpham.mau" >
+                    <!-- <h3>{{maus.mausac}}</h3> -->
+                    <button onclick="chonsize(this,'mauDiv')" ng-click="hiensize(maus.id,maus.mausac)"
+                        style="background-image: url('{{maus.hinhAnhModels[0].hinhanh_url}}') ;background-size: cover;"></button>
 
-            <div id="Anh" class="tabcontent">
-                <h3>Hình ảnh của sản phẩm</h3>
-                <p>Paris is the capital of France.</p>
+                </div>
             </div>
+            <h5 id="div_bong4">Kích cỡ</h5>
+            <!-- <div class="chon-size ctsp" id="sizeDiv">
+                <button onclick="chonsize(this,'sizeDiv')" ng-repeat="size in listSize">{{size.kichThuocsp}}</button>
+            </div> -->
+            <div class="chon-size ctsp" id="sizeDiv">
+                <button onclick="chonsize(this,'sizeDiv')"
+                        ng-repeat="size in listSize"
+                        ng-click="getSL(size)"
+                        ng-class="{'anButton': size.soLuong <= 0 ;'clicked': sizeSelected === size.kichThuocsp}"}">
+                    {{ size.kichThuocsp }}
+                </button>
+            </div>
+            
 
-            <div id="BangSize" class="tabcontent">
-                <h3>Bảng kích cỡ</h3>
-                <img src="img/bangSize.png" alt="Mạng lag">
+            <div>
+                <p id="solg">{{ selectedSizeQuantity }}</p>
+            </div>
+            <div class="item-sl">
+                <button onclick="tru()">-</button>
+                <input type="text" value="1" id="sl">
+                <button onclick="cong()">+</button>
+            </div>
+            <div class="but-add" style="margin-top: -48px;" ng-disabled="isButtonDisabled">
+                <button ng-click="addToCart(sanpham.maSanPham)">THÊM VÀO GIỎ HÀNG</button>
+                <!-- <a href="BTL.html"><button>MUA NGAY</button></a> -->
             </div>
         </div>
     </div>
 
-    <div class="sptt object" style="margin-top: 20px;">
+
+    <div class="sptt object " style="margin-top: 20px;">
         <h2>Sản phẩm tương tự</h2>
     </div>
-    <!-- <div id="product-slide">
-        
-
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div> -->
     <div style="margin-left: 10%; width: 80%;display: flex;">
-        <!-- <button id="backbt2" onclick="backPage()">&lt</button> -->
 
-        <div id="panel"></div>
+        <div id="panel">
+            <div ng-repeat="x in sanpham.dsspTT">
+
+                <div class="col-2 col-s-6"><br>
+                    <div class="sanpham ">
+                        <div class="img-sanpham">
+                            <div class="box-img">
+
+                                <img src="{{x.hinhAnhDaiien}}" alt="">
+                            </div>
+
+                        </div>
+                        <h4 class="ten-sanpham"><a style="color: black;text-decoration: none;"
+                                href="ChiTietSanPham.html?id={{x.maSanPham}}">{{x.tenSanPham}}</a></h4>
+                        <p class="gia-tien">{{x.donGia}} ₫</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
 
         <!-- <button id="nextbt2" onclick="nextPage()">&gt</button> -->
     </div>
@@ -281,37 +304,52 @@
         </div>
     </footer>
     <script>
-        
-        showLoginData();
-        loadSPCT();
-        loadSP_tt();
-        loadLink();
-        loadTT();
-        loadInfo();
-        // zoomSlideProduct();
-        loadImgInfo();
-        // showProducts(0);
+
+        // showLoginData();
+        // loadSPCT();
+        // loadSP_tt();
+        // loadLink();
+        // loadTT();
+        // loadInfo();
+        // // zoomSlideProduct();
+        // loadImgInfo();
+        // // showProducts(0);
         // $('.mainImg').extm();
-        $(document).ready(function () {
-            $('#panel').slick({
-                accessibility: true,
-                arrows: true,
-                slidesToShow: 5,
-                appendArrows: $("#panel"),
-                // prev arrow
-                prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 1000;left: -25px; height: 100px; opacity: 0.5;"></button>',
+        // $(document).ready(function () {
+        //     $('#panel').slick({
+        //         accessibility: true,
+        //         arrows: true,
+        //         slidesToShow: 5,
+        //         appendArrows: $("#panel"),
+        //         // prev arrow
+        //         prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 1000;left: -25px; height: 100px; opacity: 0.5;"></button>',
 
-                // next arrow
-                nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 1000;right: -25px;height: 100px; opacity: 0.6;"></button>',
-                autoplay: true,
-                autoplaySpeed: 2500,
-                draggable: true,
+        //         // next arrow
+        //         nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 1000;right: -25px;height: 100px; opacity: 0.6;"></button>',
+        //         autoplay: true,
+        //         autoplaySpeed: 2500,
+        //         draggable: true,
 
-            });
-        });
-        addSP_seen();
-        openInfo(event, 'ThongSo');
+        //     });
+        // });
+        // $(document).ready(function () {
+        //     $('.image-list').slick({
+        //         accessibility: true,
+        //         arrows: true,
+        //         slidesToShow: 4,
+        //         appendArrows: $(".image-list"),
+        //         // prev arrow
+        //         prevArrow: '<button type="button" data-role="none" class="slick-prev" style="left: -25px; height: 30px; opacity: 0.5;width:0px !important"></button>',
 
+        //         // next arrow
+        //         nextArrow: '<button type="button" data-role="none" class="slick-next" style="right: -25px;height: 30px; opacity: 0.6;width:0px !important"></button>',
+        //         // autoplay: true,
+        //         autoplaySpeed: 2500,
+        //         draggable: true,
+
+        //     });
+        // });
+        load_user();
     </script>
 
 

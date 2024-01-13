@@ -110,26 +110,31 @@ function showLoaiSP() {
     document.querySelector('#thongtinchung li:nth-child(1)').classList.add('selected');
     showView("danhmucsp")
 }
-
-function showSanPham() {
+function showThuongHieu() {
 
     resetNavItems();
     document.querySelector('#thongtinchung li:nth-child(2)').classList.add('selected');
+    showView("thuonghieusp")
+}
+function showSanPham() {
+
+    resetNavItems();
+    document.querySelector('#thongtinchung li:nth-child(3)').classList.add('selected');
     showView("sanpham")
 }
 function showNhaCungCap() {
     resetNavItems();
-    document.querySelector('#thongtinchung li:nth-child(3)').classList.add('selected');
+    document.querySelector('#thongtinchung li:nth-child(4)').classList.add('selected');
     showView('ncc')
 }
 function showHDN() {
     resetNavItems();
-    document.querySelector('#thongtinchung li:nth-child(4)').classList.add('selected');
+    document.querySelector('#thongtinchung li:nth-child(5)').classList.add('selected');
     showView('HoaDonNhap')
 }
 function showCTKM() {
     resetNavItems();
-    document.querySelector('#thongtinchung li:nth-child(5)').classList.add('selected');
+    document.querySelector('#thongtinchung li:nth-child(6)').classList.add('selected');
     showView('ctkm')
 }
 function resetNavItems() {

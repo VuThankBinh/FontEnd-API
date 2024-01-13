@@ -22,48 +22,44 @@
 </head>
 
 <body>
-    <img src="http://192.168.1.102/tranh-ve-den-vau-1-1140x661.jpg" alt="">
+    <!-- <img src="http://192.168.1.102/tranh-ve-den-vau-1-1140x6611.jpg" alt=""> -->
     <form id="productForm">
         <div class="container">
-            <label><strong>maSanPham:</strong> <input type="text" name="maSanPham" value="0"></label><br>
-            <label><strong>maThuongHieu:</strong> <input type="text" name="maThuongHieu" value="0"></label><br>
-            <label><strong>tenSanPham:</strong> <input type="text" name="tenSanPham" value="string"></label><br>
-            <label><strong>hinhAnhDaiien:</strong> <input type="text" name="hinhAnhDaiien" value="string"></label>
+            <label><strong>maSanPham:</strong> <input type="text" id="maSanPham" value="0"></label><br>
+            <label><strong>maThuongHieu:</strong> <input type="text" id="maThuongHieu" value="0"></label><br>
+            <label><strong>tenSanPham:</strong> <input type="text" id="tenSanPham" value="string"></label><br>
+            <label><strong>mota:</strong> <input type="text" id="mota" value="string"></label><br>
+            <label><strong>hinhAnhDaiien:</strong> <input type="text" id="hinhAnhDaiien" value="string"></label>
 
             <div class="nested-container" id="mauContainer">
                 <strong>mau:</strong>
-                <button onclick="addMau('mauContainer')">Add </button>
+                <button onclick="addMau('mauContainer')">Add</button>
                 <div class="nested-container" id="mau">
-                    <label><strong>id:</strong> <input type="text" name="mau[0][id]" value="string"></label><br>
-                    <label><strong>idsp:</strong> <input type="text" name="mau[0][idsp]" value="string"></label><br>
-                    <label><strong>mausac:</strong> <input type="text" name="mau[0][mausac]" value="string"></label>
+                    <label><strong>id:</strong> <input type="text" id="mauId" value="string"></label><br>
+                    <label><strong>idsp:</strong> <input type="text" id="mauIdsp" value="string"></label><br>
+                    <label><strong>mausac:</strong> <input type="text" id="mauMausac" value="string"></label>
 
                     <div class="nested-container" id="listContainer">
                         <strong>list:</strong>
                         <button onclick="addSize('listContainer')">Add</button>
                         <div class="nested-container" id="list">
-                            <label><strong>id:</strong> <input type="text" name="mau[0][list][0][id]"
-                                    value="string"></label><br>
-                            <label><strong>idmau:</strong> <input type="text" name="mau[0][list][0][idmau]"
-                                    value="string"></label><br>
-                            <label><strong>kichthuoc:</strong> <input type="text" name="mau[0][list][0][kichthuoc]"
-                                    value="string"></label><br>
-                            <label><strong>soluong:</strong> <input type="text" name="mau[0][list][0][soluong]"
-                                    value="string"></label>
+                            <label><strong>id:</strong> <input type="text" id="listId" value="string"></label><br>
+                            <label><strong>idmau:</strong> <input type="text" id="listIdmau" value="string"></label><br>
+                            <label><strong>kichthuoc:</strong> <input type="text" id="listKichthuoc" value="40"></label><br>
+                            <label><strong>soluong:</strong> <input type="text" id="listSoluong" value="100"></label>
                         </div>
                         <!-- Additional rows for "list" array -->
                     </div>
 
                     <div class="nested-container" id="hinhAnhModelsContainer">
                         <strong>hinhAnhModels:</strong>
-                        <button onclick="addHinhAnh('hinhAnhModelsContainer')">add</button>
+                        <button onclick="addHinhAnh('hinhAnhModelsContainer')">Add</button>
                         <div class="nested-container" id="frmHA">
-                            <label><strong>id:</strong> <input type="text" name="mau[0][hinhAnhModels][0][id]"
-                                    value="string"></label><br>
-                            <label><strong>idMau:</strong> <input type="text" name="mau[0][hinhAnhModels][0][idMau]"
-                                    value="string"></label><br>
-                            <label><strong>hinhanh_url:</strong> <input type="text"
-                                    name="mau[0][hinhAnhModels][0][hinhanh_url]" value="string"></label>
+                            <label><strong>id:</strong> <input type="text" id="hinhAnhModelsId" value="string"></label><br>
+                            <label><strong>idMau:</strong> <input type="text" id="hinhAnhModelsIdMau" value="string"></label><br>
+                            <img src="" id="previewImage1" alt="" style="width: 100px;height: 100px;"><br>
+                            <label><strong>hinhanh_url:</strong> <input id="fileanh"></label>
+                            <input type="file" id="anh1" onchange="previewFile('anh1', 'previewImage1')">
                         </div>
                         <!-- Additional rows for "hinhAnhModels" array -->
                     </div>
@@ -71,32 +67,104 @@
                 <!-- Additional rows for "mau" array -->
             </div>
 
-            <label><strong>giaBans:</strong> <input type="text" name="giaBans" value="string"></label>
+            <label><strong>giaBans:</strong> <input type="text" id="giaBans" value="1000000"></label>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="button" onclick="submitForm()">Submit</button>
     </form>
 
     <script>
-        document.getElementById('productForm').addEventListener('submit', function (event) {
+        function displayFileName() {
+            var fileInput = document.getElementById('anh1');
+            var fileNameDisplay = document.getElementById('fileanh');
+
+            // Check if any file is selected
+            if (fileInput.files.length > 0) {
+                // Access the first file (in case multiple files are allowed)
+                var fileName = fileInput.files[0].name;
+                fileNameDisplay.value = fileName;
+
+            } else {
+                fileNameDisplay.textContent = 'No file selected';
+            }
+        }
+
+        function submitForm() {
             event.preventDefault();
-            var formData = new FormData(event.target);
-            var jsonObject = {};
-            formData.forEach(function (value, key) {
-                if (key.includes('[')) {
-                    var keys = key.split(/\[(.+?)\]/g).filter(Boolean);
-                    keys.reduce(function (acc, cur, index, arr) {
-                        if (!acc[cur]) {
-                            acc[cur] = index === arr.length - 1 ? value : {};
-                        }
-                        return acc[cur];
-                    }, jsonObject);
-                } else {
-                    jsonObject[key] = value;
+            // var formData = new FormData(event.target);
+            // var jsonObject = {};
+            // formData.forEach(function (value, key) {
+            //     if (key.includes('[')) {
+            //         var keys = key.split(/\[(.+?)\]/g).filter(Boolean);
+            //         keys.reduce(function (acc, cur, index, arr) {
+            //             if (!acc[cur]) {
+            //                 acc[cur] = index === arr.length - 1 ? value : {};
+            //             }
+            //             return acc[cur];
+            //         }, jsonObject);
+            //     } else {
+            //         jsonObject[key] = value;
+            //     }
+            // });
+            // console.log(JSON.stringify(jsonObject, null, 2));
+            var formData = {
+                maSanPham: document.getElementById("maSanPham").value,
+                maThuongHieu: document.getElementById("maThuongHieu").value,
+                tenSanPham: document.getElementById("tenSanPham").value,
+                mota: document.getElementById("mota").value,
+                hinhAnhDaiien: document.getElementById("hinhAnhDaiien").value,
+                mau: [],
+                giaBans: document.getElementById("giaBans").value
+            };
+
+            // Create an object for mau
+            var mauData = {
+                id: document.getElementById("mauId").value,
+                idsp: document.getElementById("mauIdsp").value,
+                mausac: document.getElementById("mauMausac").value,
+                list: [],
+                hinhAnhModels: []
+            };
+
+            // Create an object for list
+            var listData = {
+                id: document.getElementById("listId").value,
+                idmau: document.getElementById("listIdmau").value,
+                kichthuoc: document.getElementById("listKichthuoc").value,
+                soluong: document.getElementById("listSoluong").value
+            };
+
+            // Push listData into mauData
+            mauData.list.push(listData);
+
+            // Create an object for hinhAnhModels
+            var hinhAnhModelData = {
+                id: document.getElementById("hinhAnhModelsId").value,
+                idMau: document.getElementById("hinhAnhModelsIdMau").value,
+                hinhanh_url: document.getElementById("fileanh").value
+            };
+
+            // Push hinhAnhModelData into mauData
+            mauData.hinhAnhModels.push(hinhAnhModelData);
+
+            // Push mauData into formData.mau as an array
+            formData.mau.push(mauData);
+
+            // Log the final data object
+            console.log(JSON.stringify(formData, null, 2));
+        };
+        function removeNullValues(obj) {
+            for (var prop in obj) {
+                if (obj[prop] === null) {
+                    delete obj[prop];
+                } else if (typeof obj[prop] === 'object') {
+                    obj[prop] = removeNullValues(obj[prop]);
                 }
-            });
-            console.log(JSON.stringify(jsonObject, null, 200));
-        });
+            }
+            return obj;
+        }
+
+
 
 
         function addField(containerId, fieldName) {
@@ -147,7 +215,7 @@
                                     value="string"></label><br>
                             <label><strong>idMau:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][idMau]"
                                     value="string"></label><br>
-                            <label><strong>hinhanh_url:</strong> <input type="text"
+                            <label><strong>hinhanh_url:</strong> <input type="file"
                                     name="mau[${somau}][hinhAnhModels][${soHinhAnh}][hinhanh_url]" value="string"></label>
                         </div>
                         <!-- Additional rows for "hinhAnhModels" array -->
@@ -187,12 +255,12 @@
             newDiv.classList.add('nested-container');
 
             // Add the content to the new div
-            newDiv.innerHTML = `
-            <button type="button" onclick="deleteList(this)">Delete</button><br>
-        <label><strong>id:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][id]" value="string"></label><br>
-        <label><strong>idMau:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][idMau]" value="string"></label><br>
-        <label><strong>hinhanh_url:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][hinhanh_url]" value="string"></label>
-    `;
+            newDiv.innerHTML = `<div class="nested-container" id="frmHA">
+                    <label><strong>id:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][id]" value="string"></label><br>
+                    <label><strong>idMau:</strong> <input type="text" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][idMau]" value="string"></label><br>
+                            <img src="" id="previewImageh${soHinhAnh}" alt="" style="width: 100px;height: 100px;"><br>
+                            <label><strong>hinhanh_url:</strong> <input type="file" id="inputanh${soHinhAnh}" name="mau[${somau}][hinhAnhModels][${soHinhAnh}][hinhanh_url]" onchange="previewFile('inputanh${soHinhAnh}','previewImageh${soHinhAnh}')"></label>
+                        </div>`;
 
             // Append the new div to the container
             container.appendChild(newDiv);
@@ -204,5 +272,24 @@
             const container = button.parentNode; // Get the parent container (the div to be deleted)
             container.parentNode.removeChild(container); // Remove the div from its parent
         }
+        function previewFile(inputId, previewId) {
+            var input = document.getElementById(inputId);
+            var preview = document.getElementById(previewId);
+
+            var file = input.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+                displayFileName();
+            } else {
+                preview.src = "";
+            }
+        }
+
 
     </script>

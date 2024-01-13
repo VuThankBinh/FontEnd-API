@@ -9,6 +9,17 @@
 .sanpham img {
     width: 100%;
 }
+.image-list_item{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-right: 20px; /* Adjust this value to set the spacing between buttons */
+}
+
+/* .image-list_item:first-child {
+    margin-left: 200px;
+} */
+
 #size-option{
     width: 50px;
     font-size: 16px;
@@ -340,7 +351,6 @@
     width: 50px;
     height: 40px;
 }
-
 .but-add {
     margin-left: 165px;
     margin-top: -40px;
@@ -354,6 +364,7 @@
     text-align: center;
     background-color: red;
     padding: 10px;
+    
 }
 
 .but-add button:hover {

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách đơn hàng</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="css/TrangChu.css">
+    <script src="js/TrangChu.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/loadSP_giayall.js"></script>
+    <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/API-JS/TrangChu.js"></script>
+    <script src="js/angular/donhang.js"></script>
+    <script src="js/API-JS/Chung.js"></script>
+
+</head>
+
+<body ng-app="AppBanHang" ng-controller="DonHangCtrl">
+    <header>
+        <div class="top-banner">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/choibongro">
+                        <i class="fa-brands fa-facebook" style="color: #f2f2f2;"></i>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/c/giaybongro">
+                        <i class="fa-brands fa-youtube" style="color: #eeeff2;"></i>
+                        YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://shopee.vn/cbrvn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Shopee
+                    </a>
+                </li>
+                <li style="margin-right: -15px;">
+                    <a href="tel:0989790787">
+                        <button
+                            style="border-radius:50px ; border: none; size: 15px;  background-color:rgb(71, 68, 68);">
+                            <i class="fa-solid fa-phone" style="color: #eeeff2; size: 15px;"></i>
+                        </button>
+                        <span>0989790787</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo shop">
+            </div>
+            <div class="search-sp">
+
+                <form style="margin:auto; max-width:350px; display: flex;">
+                    <input type="text" id="timsp" onkeypress="timKiem_et(event)"
+                        placeholder="    Nhập từ khóa sản phẩm cần tìm">
+                    <button type="submit" onclick="timKiem()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="dangnhap-gh">
+                <ul>
+                    <li>
+
+                        <a href="login.html" id="user" style="color: white;">
+                            <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                            <span id="useracc">Đăng nhập</span>
+                        </a>
+
+                    </li>
+                    <li style="margin-top: 5px;">
+
+                        <a onclick="giohangpage()" title="Giỏ hàng">
+                            <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
+                            <span>
+                                Giỏ hàng / <span class="cart-price"><span><bdi>0<span>VND</span></bdi></span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background-color:black;">
+            <nav id="menu">
+                <ul>
+                    <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
+                    <b>Danh mục sản phẩm</b>
+                    <li ng-repeat="x1 in listDanhMuc">
+
+                        <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}" target="_blank"
+                            ng-click="LoadSanPhamPhanTrang(x1.tenLoai)">{{x1.tenLoai}}</a>
+
+                        <ul>
+                            <li ng-repeat="x in x1.dsth">
+
+                                <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}&MaThuongHieu={{x.maThuongHieu}}"
+                                    target="_blank"
+                                    ng-click="LoadSanPhamPhanTrang(x.tenThuongHieu)">{{x.tenThuongHieu}}</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <div style="display: flex;justify-content: center;width: 100%;">
+        <div class="silde">
+            <img class="silde-div" style="display: block;" src="img/bn1.webp" alt="" width="90%">
+            <img class="silde-div" style="display: none;" src="img/bn2.webp" alt="" width="90%">
+            <a href="https://phiten.vn/en/news/bi-quyet-phong-ngua-chan-thuong-khi-choi-bong-ro" target="_blank"><img
+                    class="silde-div" style="display: none;" src="img/bn3.jpeg" alt="" width="90%"></a>
+            <div style="text-align:center">
+                <span class="dot" onclick="setIndexSlideBody1(0)"></span>
+                <span class="dot" onclick="setIndexSlideBody1(1)"></span>
+                <span class="dot" onclick="setIndexSlideBody1(2)"></span>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="scrollToTop()" class="Scroll"><i class="fa-solid fa-angle-up"></i></button>
+    <div class="title-block object" style="margin-top: 20px;">
+        <div class="wrap-content">
+            <h2 class="title-group">Đơn hàng chờ xác nhận</h2>
+        </div>
+    </div>
+    <div class="tablechung" id="tablechuaxn">
+        <table id="#tabledhchuaxn">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày tạo</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Tổng hóa đơn</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-dhchuaxn">
+                <!-- Example rows, you can dynamically generate these based on your data -->
+                <tr ng-repeat="x in listDonChuaXN">
+                    <td>{{$index+1}}</td>
+                    <td>{{x.maDonHang}}</td>
+                    <td>
+                        {{x.tenKhachHang}}
+                    </td>
+                    <td>
+                        {{x.ngayTao}}
+                    </td>
+                    <td>{{x.soDienThoai}}</td>
+                    <td style="max-width: 200px;">{{x.diaChi}}</td>
+                    <td>{{x.tongHoaDon}}</td>
+                    <td style="border: none !important;">
+                        <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
+                        <i class="fa-solid fa-trash" ng-click="HuyDon(x.maDonHang)"></i>
+                    </td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    <div class="title-block object" style="margin-top: 20px;">
+        <div class="wrap-content">
+            <h2 class="title-group">Đơn hàng đã xác nhận</h2>
+        </div>
+    </div>
+    <div class="tablechung" id="tabledaxn">
+        <table id="#tabledhchuaxn">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày tạo</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Tổng hóa đơn</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-dhchuaxn">
+                <!-- Example rows, you can dynamically generate these based on your data -->
+                <tr ng-repeat="x in listDonDaXacNhan">
+                    <td>{{$index+1}}</td>
+                    <td>{{x.maDonHang}}</td>
+                    <td>
+                        {{x.tenKhachHang}}
+                    </td>
+                    <td>
+                        {{x.ngayTao}}
+                    </td>
+                    <td>{{x.soDienThoai}}</td>
+                    <td>{{x.diaChi}}</td>
+                    <td>{{x.tongHoaDon}}</td>
+                    <td style="border: none !important;">
+                        <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
+                    </td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="title-block object" style="margin-top: 20px;">
+        <div class="wrap-content">
+            <h2 class="title-group">Đơn hàng đang giao</h2>
+        </div>
+    </div>
+    <div class="tablechung" id="tabledanggiao">
+        <table id="#tabledhchuaxn">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày giao</th>
+                    <th>Ngày nhận</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Tổng hóa đơn</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-dhchuaxn">
+                <!-- Example rows, you can dynamically generate these based on your data -->
+                <tr ng-repeat="x in listDonDangGiao">
+                    <td>{{$index+1}}</td>
+                    <td>{{x.maDonHang}}</td>
+                    <td>
+                        {{x.tenKhachHang}}
+                    </td>
+                    <td>
+                        {{x.ngayTao}}
+                    </td>
+                    <td>{{x.ngayGui}}</td>
+                    <td><a href="" ng-click="XacNhanNhanHang(x.maDonHang)">Xác nhận</a></td>
+                    <td>{{x.soDienThoai}}</td>
+                    <td style="max-width: 150px; overflow: hidden;  word-wrap: break-word; text-overflow: ellipsis;">{{x.diaChi}}</td>
+                    <td>{{x.tongHoaDon}}</td>
+                    <td style="border: none !important;">
+                        <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
+                    </td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    <div class="title-block object" style="margin-top: 20px;">
+        <div class="wrap-content">
+            <h2 class="title-group">Đơn hàng đã nhận</h2>
+        </div>
+    </div>
+    <div class="tablechung" id="tabledagiao">
+        <table id="#tabledhchuaxn">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày giao</th>
+                    <th>Ngày nhận</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Tổng hóa đơn</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-dhchuaxn">
+                <!-- Example rows, you can dynamically generate these based on your data -->
+                <tr ng-repeat="x in listDonDaNhan">
+                    <td>{{$index+1}}</td>
+                    <td>{{x.maDonHang}}</td>
+                    <td>
+                        {{x.tenKhachHang}}
+                    </td>
+                    <td>
+                        {{x.ngayTao}}
+                    </td>
+                    <td>{{x.ngayGui}}</td>
+                    <td>{{x.ngayNhan}}</td>
+                    <td>{{x.soDienThoai}}</td>
+                    <td style="max-width: 150px; overflow: hidden;  word-wrap: break-word; text-overflow: ellipsis;">{{x.diaChi}}</td>
+                    <td>{{x.tongHoaDon}}</td>
+                    <td style="border: none !important;">
+                        <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
+                    </td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    <div id="panelchung" style="display: none;">
+        <div style="
+        display: block;
+    line-height: 25.6px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.3);
+    ">
+
+            <div style="
+        background-color: white;
+        width: 60%;
+        height: 80%;
+        margin-top: 5%;
+        margin-left: 20%;
+        position: absolute;">
+                <div style="    position: fixed;
+            
+            width: 30px;
+            height: 30px;
+            margin-left: 58%;
+            background-color: #ccc;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        " onclick="closeForm()">×</div>
+                <h2 style="width: 100%; text-align: center; margin-top: 10px;">Thông tin Hóa đơn</h2>
+
+                <!-- Thông tin chung -->
+                <div style="margin-left: 30px;margin-top: 20px;">
+                    <strong style="font-size: 18px;">Mã hóa đơn: </strong> <span style="font-size: 18px;"
+                        id="invoiceCode">{{donhang.maDonHang}}</span>
+                </div>
+
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Tên khách hàng: </strong> <span style="font-size: 18px;"
+                        id="customerName">{{donhang.tenKhachHang}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày đặt: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayTao}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày gửi: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayGui}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày nhận: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayNhan}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Số điện thoại: </strong> <span style="font-size: 18px;"
+                        id="phoneNumber">{{donhang.soDienThoai}}</span>
+                </div>
+
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Địa chỉ: </strong> <span style="font-size: 18px;"
+                        id="address">{{donhang.diaChi}}</span>
+                </div>
+
+
+                <!-- Tổng hóa đơn -->
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Tổng hóa đơn: </strong> <span style="font-size: 18px;"
+                        id="totalAmount">{{donhang.tongHoaDon}}đ</span>
+                </div>
+
+                <!-- Danh sách chi tiết hóa đơn -->
+                <h3 style="margin-left: 11%;margin-top: 10px;">Danh sách chi tiết hóa đơn</h3>
+
+                <div id="productList"
+                    style="margin-left: 10px;display: flex;justify-content: center; max-height: 303px; overflow-y: auto;">
+                    <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+                    <table id="#tablesanpham">
+                        <thead style="position: sticky;">
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Màu sắc</th>
+                                <th>Kích thước</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Tổng</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-sanphamHD">
+                            <!-- Example rows, you can dynamically generate these based on your data -->
+
+                            <tr ng-repeat="x in donhang.ct">
+                                <td>{{$index +1}}</td>
+                                <td style="width: 50px;">{{x.maSanPham}}</td>
+                                <td style="width: 200px;">{{x.tenSanPham}}
+                                </td>
+                                <td>{{x.mauSac}}</td>
+                                <td>{{x.kichThuoc.trim()}}</td>
+                                <td>{{x.soLuong}}</td>
+                                <td>{{x.donGia}}đ</td>
+                                <td>{{x.tong}}đ</td>
+                            </tr>
+
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <div style="display: flex;justify-content: center;">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bottom-footer">
+        <div style="width: 25%;">
+            <ul><span>THÔNG TIN CỬA HÀNG</span>
+
+                <li>Hộ kinh doanh Giày bóng rổ – Choibongro.vn</li>
+                <li>Giấy phép đăng ký kinh doanh: 01F8015621</li>
+                <li>Đăng ký lần đầu ngày: 12-06-2020</li>
+                <li>Địa điểm: Số 22 Ngõ 332 đường Nguyễn Trãi, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành Phố Hà
+                    Nội</li>
+                <li>Người đại diện: Phạm Anh Tuấn</li>
+                <li>Điện thoại: 0899178993</li>
+                <li>Mã số thuế: 0109376875</li>
+                <li>Ngày cấp: 13-10-2020</li>
+                <li>Quản lý bởi: Chi cục Thuế Quận Thanh Xuân</li>
+            </ul>
+        </div>
+        <div style="width: 25%;">
+            <ul><span>ĐỊA CHỈ CỬA HÀNG</span>
+                <LI>Số 22 Ngõ 332 Nguyễn Trãi, Thanh Xuân, Hà Nội</LI>
+                <li>Cửa hàng nằm trong ngõ 332 Nguyễn Trãi – ngõ cạnh trường Đại Học Khoa Học Tự Nhiên, đầu ngõ có cây
+                    ATM BIDV
+                </li>
+                <li>
+                    <div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width: 25%;">
+            <ul><span>FACEBOOK FANPAGE</span></ul>
+            <li>
+                <div>
+                    <p>
+                        <iframe style="width: 80%; margin-left: 45px; margin-top: -20px;" loading="lazy"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchoibongro%2F&amp;tabs=timeline&amp;width=340&amp;height=800&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            frameborder="0" scrolling="no">
+                        </iframe>
+                    </p>
+                </div>
+            </li>
+        </div>
+
+        <div>
+            <ul>
+                <span>HƯỚNG DẪN MUA HÀNG</span>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Hướng dẫn mua hàng Freeship trên Shopee</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+
+            </ul>
+        </div>
+    </footer>
+    <script>
+        showSlideBody1TimeOut(); load_user();
+    </script>
+</body>
+
+</html>

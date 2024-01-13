@@ -21,9 +21,15 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <script src="js/slick.js"></script>
 
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/API-JS/TrangChu.js"></script>
+    <script src="js/angular/TrangChu.js"></script>
+    <script src="js/API-JS/Chung.js"></script>
+
 </head>
 
-<body>
+<body ng-app="AppBanHang" ng-controller="TrangChuCtrl">
     <header>
         <div class="top-banner">
             <ul>
@@ -73,13 +79,22 @@
 
             <div class="dangnhap-gh">
                 <ul>
-                    <li>
-                        <p id="user" style="color: white;" onclick="btnLoginOnClick()"><a href="login.html">
-                                <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                                Đăng nhập
-                            </a></p>
+                    <li id="user-menu">
+                        <a href="login.html" id="user" style="color: white;">
+                            <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                            <span id="useracc">Đăng nhập</span>
+                        </a>
+                        <ul class="user-dropdown">
+                            <li>
+                                <a href="" onclick="DangXuat()">Đăng xuất</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="DonHang.html">Đơn hàng của bạn</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                     
+                    <li style="margin-top: -25px;">
 
                         <a onclick="giohangpage()" title="Giỏ hàng">
                             <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
@@ -93,60 +108,25 @@
         </div>
 
         <div style="background-color:black;">
-            <nav id="menu" onclick="clickMenu()">
+            <nav id="menu">
                 <ul>
                     <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
                     <b>Danh mục sản phẩm</b>
-                    <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
+                    <li ng-repeat="x1 in listDanhMuc">
+
+                        <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}" target="_blank"
+                            ng-click="LoadSanPhamPhanTrang(x1.tenLoai)">{{x1.tenLoai}}</a>
+
                         <ul>
-                            <li><a href="#" title="Giày bóng rổ Replica xả hàng">Giày bóng rổ Replica xả hàng</a></li>
-                            <li><a href="#" title="Giày bóng rổ Brookie Rookie xả khoa">Giày bóng rổ Brookie Bookie xả
-                                    kho</a></li>
-                            <li><a href="#" title="Giày bóng rổ PEAK xả kho">Giảy bóng rổ PEAK xả kho</a></li>
+                            <li ng-repeat="x in x1.dsth">
+
+                                <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}&MaThuongHieu={{x.maThuongHieu}}"
+                                    target="_blank" ng-click="LoadSanPhamPhanTrang(x.tenThuongHieu)">{{x.tenThuongHieu}}</a>
+
+                            </li>
+
                         </ul>
                     </li>
-                    <li><a href="#" title="Bóng rổ">Bóng rổ</a></li>
-                    <li><a href="GiayBongRo.html" target="_blank" title="Giày bóng rổ">Giày bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <!-- menu con sổ xuống cấp 1 -->
-                        <ul>
-                            <li><a href="GiayNike.html" target="_blank"
-                                    title="Giày bóng rổ Nike, Adidas chính hãng">Giày bóng rổ Nike, Adidas chính
-                                    hãng</a>
-                            </li>
-                            <li><a href="GiayNBA.html" target="_blank" title="Giày bóng rổ NBA">Giày bóng rổ NBA</a>
-                            </li>
-                            <li><a href="GiayPeak.html" target="_blank" title="Giày bóng rổ PEAK chính hãng">Giày bóng
-                                    rổ PEAK chính hãng</a></li>
-                            <li><a href="GiayAnTa.html" target="_blank" title="Giày bóng rổ ANTA chính hãng">Giày bóng
-                                    rổ ANTA chính hãng</a></li>
-                            <li><a href="GiayTreEm.html" target="_blank" title="Giày bóng rổ trẻ em">Giày bóng rổ trẻ
-                                    em</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="QA_bo.html" target="_blank" title="Quần áo bóng rổ">Quần áo bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-
-                    </li>
-                    <li><a href="PhuKien.html" target="_blank" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <!-- <ul>
-                            <li><a href="#" title="Tất vớ bóng rổ">Tất vớ bóng rổ</a></li>
-                            <li><a href="#" title="Balo, túi bóng rổ">Balo, túi bóng rổ</a></li>
-                            <li><a href="#" title="Phụ kiện bảo hộ">Phụ kiện bảo hộ</a></li>
-                            <li><a href="#" title="Bình nước bóng rổ">Bình nước bóng rổ</a></li>
-                        </ul> -->
-                    </li>
-
                 </ul>
             </nav>
     </header>
@@ -173,7 +153,7 @@
 
     </div>
     <div style="margin-left: 10%; width: 80%;display: flex;">
-        
+
     </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
@@ -184,7 +164,7 @@
 
     </div>
     <div style="margin-left: 10%; width: 80%;display: flex;">
-        
+
     </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
@@ -195,7 +175,7 @@
 
     </div>
     <div style="margin-left: 10%; width: 80%;display: flex;">
-        
+
     </div>
     <div class="title-block object" style="margin-top: 20px;">
         <div class="wrap-content">
@@ -206,12 +186,27 @@
 
     </div>
     <script>
-        showLoginData();
         showSlideBody1TimeOut();
         load10spGiay();
         load8spQA();
         load8bong();
         loadspMoiVe();
+        load_user();
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            var userMenu = document.getElementById("user-menu");
+            var value=JSON.parse(localStorage.getItem('user'));
+            console.log(value)
+           if(value == null || value === undefined || value == ''){
+            userMenu.innerHTML=`<a href="login.html" id="user" style="color: white;">
+                            <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                            <span id="useracc">Đăng nhập</span>
+                        </a>`
+           }
+            
+        });
     </script>
     <div id="div-quick">
 

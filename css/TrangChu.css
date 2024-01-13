@@ -193,12 +193,38 @@ nav>ul li>ul {
     border-radius: 50%;
     border: none;
 }
+#user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
+    /* margin-top: -20px; */
+    display: none;
+    width: 150px;
+    height: 70px;
+    padding: 5px;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: -17px;
+    background-color: #fff;
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.user-dropdown li> a{
+    color: rgb(218, 32, 32) !important;
+}
+
+.user-menu:hover .user-dropdown {
+    display: block !important;
+}
 
 .silde {
     width: 900px;
     height: 450px;
     /* position: relative; */
-    margin-top: -243px;
+    /* margin-top: -243px; */
     float: left;
     margin-left: 234px;
 }

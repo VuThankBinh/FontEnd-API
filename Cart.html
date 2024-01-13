@@ -13,13 +13,13 @@
     <script src="js/login.js"></script>
     <script src="js/TrangChu.js"></script>
     <!-- <script src="js/chiTietGiay.js"></script> -->
-    <script src="js/cart.js"></script>
+    <script src="js/API-JS/cart.js"></script>
     <link rel="stylesheet" href="css/chiTietSP_giay.css">
     <link rel="stylesheet" href="css/sanpham.css">
     <link rel="stylesheet" href="css/GioHang.css">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="js/API-JS/Chung.js"></script>
 </head>
 
 <body>
@@ -78,7 +78,7 @@
                     <li>
                         <p id="user" style="color: white;" onclick="btnLoginOnClick()"><a href="login.html">
                                 <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                                Đăng nhập
+                               <span id="useracc">Đăng nhập</span> 
                             </a></p>
                     </li>
                     <li>
@@ -392,7 +392,7 @@
     </script>
     <script>
         load_sp_gio();
-        showLoginData();
+        load_user();
         tinh_tienCart();
     </script>
 </body>

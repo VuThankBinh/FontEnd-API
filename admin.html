@@ -17,13 +17,20 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="js/html2pdf.bundle.js"></script>
+    <!-- <script src="js/html2pdf.bundle.js"></script> -->
     <!-- <script src="js/pdf.js"></script> -->
+
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/admin.js"></script>
+    <script src="js/API-JS/admin.js"></script>
+    <script src="js/API-JS/Chung.js"></script>
 
 </head>
 
-<body>
+<body ng-app="AppBanHang" ng-controller="AdminCtrl">
     <header>
         <div class="top-banner">
             <ul>
@@ -72,11 +79,16 @@
 
             <div class="dangnhap-gh">
                 <ul>
-                    <li>
-                        <p id="user" style="color: white;margin-top: 10px;"><a href="#">
-                                <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                                ThankThankBinh
-                            </a></p>
+                    <li id="user-menu">
+                        <a href="login.html" id="user" style="color: white;">
+                            <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                            <span id="useracc">Đăng nhập</span>
+                        </a>
+                        <ul class="user-dropdown">
+                            <li>
+                                <a href="" onclick="DangXuat()">Đăng xuất</a>
+                            </li>
+                        </ul>
                     </li>
 
                 </ul>
@@ -115,11 +127,12 @@
                         <i class="fa-solid fa-angle-down" onclick="showHideInfo()"></i>
                         <ul id="thongtinchung">
                             <li onclick="showLoaiSP()"><i class="fa-brands fa-artstation"></i>Quản lý loại sản phẩm</li>
+                            <li onclick="showThuongHieu()"><i class="fa-brands fa-artstation"></i>Quản lý Thương hiệu
+                            </li>
                             <li onclick="showSanPham()"><i class="fa-solid fa-desktop"></i>Quản lý sản phẩm</li>
                             <li onclick="showNhaCungCap()"><i class="fa-solid fa-address-card"></i>Quản lý nhà cung cấp
                             </li>
                             <li onclick="showHDN()"><i class="fa-solid fa-newspaper"></i>Quản lý hóa đơn nhập</li>
-                            <li onclick="showCTKM()"><i class="fa-solid fa-bullhorn"></i>Quản lý CTKM</li>
                         </ul>
                     </li>
                     <li style="width: 100%;padding-right: 15px !important;">
@@ -132,7 +145,6 @@
                             <li onclick="showDonHangDaXN()">-- Đơn hàng đã xác nhận</li>
                             <li onclick="showDonHangDangGiao()">-- Đơn hàng đang giao</li>
                             <li onclick="showDonHangDaGiao()">-- Đơn hàng đã giao thành công</li>
-                            <li onclick="showDonHangHoanTra()">-- Đơn hàng hoàn trả</li>
                         </ul>
                     </li>
                 </ul>
@@ -140,21 +152,26 @@
 
         </div>
         <div id="danhmucview">
-            <div id="homeview" class="hidden">
+            <div id="homeview" class="visiable">
                 Hello
             </div>
             <div id="thongkeview" class="hidden">
                 <b>Thống kê</b>
                 <div style="display: flex;margin-top: 20px;">
                     <div>
-                        <p style="margin-left: 100px;">Doanh thu từ đầu năm đến nay</p>
+                        <p style="margin-left: 100px;"><b style="font-size: 16px;">Doanh thu từ đầu năm đến nay</b></p>
                         <div style="width: 400px; height: 200px;">
                             <!-- Create a canvas element to draw the chart -->
                             <canvas id="myLineChart" width="400" height="200"></canvas>
                         </div>
+                        <div style="display: flex;">
+                            <h3>Doanh thu hôm nay:</h3>
+                            <button
+                                style="border-radius: 5px; width: 150px; padding: 5px; margin-left: 20px;">{{doanhthuhomnay}}đ</button>
+                        </div>
                     </div>
                     <div style="margin-left: 8%;">
-                        <p style="margin-left: 180px;">Danh sách sản phẩm tồn</p>
+                        <p style="margin-left: 180px;"><b style="font-size: 16px;">Danh sách sản phẩm bán chạy</b></p>
                         <div class="table-container">
                             <table>
                                 <thead>
@@ -162,29 +179,18 @@
                                         <th>STT</th>
                                         <th>Mã sản phẩm</th>
                                         <th>Tên sản phẩm</th>
-                                        <th>Số lượng tồn</th>
+                                        <th>Số lượng đã bán</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!-- Example rows, you can dynamically generate these based on your data -->
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Nike1</td>
+                                    <tr ng-repeat="x in listSPbanChay">
+                                        <td>{{$index+1}}</td>
+                                        <td>{{x.maSanPham}}</td>
 
-                                        <td style="width: 300px;">Giày bóng rổ chính hãng Nike Kyrie 8 “Fire and Ice”
-                                            DC9134-001
+                                        <td style="width: 200px;">{{x.tenSanPham}}
                                         </td>
-                                        <td>30</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Nike1</td>
-                                        <td style="width: 200px;">Giày bóng rổ chính hãng Nike Kyrie 8 “Fire and Ice”
-                                            DC9134-001
-                                        </td>
-                                        <td>10</td>
-
+                                        <td>{{x.soLuongTon}}</td>
 
                                     </tr>
 
@@ -202,8 +208,8 @@
 
 
 
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
+
+            <!-- <script>
                 // Sample data for the line chart
                 var data = {
                     labels: [
@@ -247,36 +253,44 @@
                         },
                     },
                 });
-            </script>
+            </script> -->
 
             <div id="danhmucsp" class="hidden">
-                <b style="font-size: 20px;">Tìm kiếm</b>
 
                 <div id="tkLoai">
                     <table style="border: none !important">
                         <tr style="border: none !important">
                             <td style="border: none !important">
-                                <h4>Mã sản phẩm:</h4>
+                                <h4>Mã loại sản phẩm:</h4>
                             </td>
                             <td style="border: none !important">
-                                <input type="text" id="maloai" placeholder="Nhập mã loại sản phẩm">
+                                <input type="text" id="maloai" placeholder="Nhập mã loại sản phẩm" value="{{maaLoai}}"
+                                    ng-model="maaLoai">
                             </td>
                         </tr>
                         <tr style="border: none !important">
                             <td style="border: none !important">
-                                <h4>Tên sản phẩm:</h4>
+                                <h4>Tên loại sản phẩm:</h4>
                             </td>
                             <td style="border: none !important">
-                                <input type="text" id="tenloai" placeholder="Nhập tên loại sản phẩm">
+                                <input type="text" id="tenloai" placeholder="Nhập tên loại sản phẩm"
+                                    value="{{tennLoai}}" ng-model="tennLoai">
+                            </td>
+                        </tr>
+                        <tr style="border: none !important">
+                            <td style="border: none !important">
+                                <h4>Mô tả:</h4>
+                            </td>
+                            <td style="border: none !important">
+                                <input type="text" id="moTaloai" placeholder="Nhập mô tả loại sản phẩm"
+                                    value="{{moTaLoai}}" ng-model="moTaLoai">
                             </td>
                         </tr>
                     </table>
-                    <button id="TkLoaiBtn" onclick="TimKiemLoaiSanPham()"><i class="fa-solid fa-magnifying-glass"></i>
-                        Tìm kiếm</button>
+                    <button id="TkLoaiBtn" ng-click="ThemLoaiSanPham()"
+                        ng-model="btnsubmitLoaiSP">{{btnsubmitLoaiSP}}</button>
                 </div>
                 <hr style="margin-top: 10px;">
-                <button id="ThemLoaiBtn" onclick="showFormThemLoai()"><i class="fa-solid fa-plus"></i> Thêm loại sản
-                    phẩm mới</button>
                 <div class="tablechung">
                     <table id="#tableloai">
                         <thead>
@@ -290,24 +304,82 @@
                         </thead>
                         <tbody id="tbody-loaisanpham">
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>ABC123</td>
-                                <td>Sản phẩm A</td>
-                                <td>Mô tả cho sản phẩm A</td>
+                            <tr ng-repeat="x in listDanhMuc">
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{x.id}}</td>
+                                <td>{{x.name}}</td>
+                                <td>{{x.description}}</td>
                                 <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-regular fa-pen-to-square" ng-click="getLoaiSPbyID(x.id)"></i>
+                                    <i class="fa-solid fa-trash" ng-click="XoaLoaiSP(x.id)"></i>
                                 </td>
                             </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div id="thuonghieusp" class="hidden">
+
+                <div id="tkthghieu">
+                    <table style="border: none !important">
+                        <tr style="border: none !important">
+                            <td style="border: none !important">
+                                <h4>Mã thương hiệu:</h4>
+                            </td>
+                            <td style="border: none !important">
+                                <input type="text" id="mathuonghieu1" placeholder="Nhập mã thương hiệu"
+                                    value="{{maThuongHieu}}" ng-model="maThuongHieu">
+                            </td>
+                        </tr>
+                        <tr style="border: none !important">
+                            <td style="border: none !important">
+                                <h4>Loại sản phẩm:</h4>
+                            </td>
+                            <td style="border: none !important">
+                                <select style="padding: 5px;" id="maloaiview" ng-model="id_loai"
+                                    ng-options="x.id as x.name for x in listDanhMuc">
+                                    <option value="" disabled selected hidden>Chọn loại sản phẩm</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr style="border: none !important">
+                            <td style="border: none !important">
+                                <h4>Tên thương hiệu:</h4>
+                            </td>
+                            <td style="border: none !important">
+                                <input type="text" id="tenthuonghieu1" placeholder="Nhập tên thương hiệu"
+                                    value="{{tenThuongHieu}}" ng-model="tenThuongHieu">
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="TkThgHieuBtn" ng-click="SaveThuongHieu()"
+                        ng-model="btnSubmitThuongHieu">{{btnSubmitThuongHieu}}</button>
+                </div>
+                <hr style="margin-top: 10px;">
+                <div class="tablechung">
+                    <table id="#tableloai">
+                        <thead>
                             <tr>
-                                <td>2</td>
-                                <td>XYZ789</td>
-                                <td>Sản phẩm B</td>
-                                <td>Mô tả cho sản phẩm B</td>
+                                <th>STT</th>
+                                <th>Mã thương hiệu</th>
+                                <th>Tên thương hiệu</th>
+                                <th>Mã loại sản phẩm</th>
+                                <th>Chức năng</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-loaisanpham">
+                            <!-- Example rows, you can dynamically generate these based on your data -->
+                            <tr ng-repeat="x in listThuongHieu">
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{x.id}}</td>
+                                <td>{{x.name}}</td>
+                                <td>{{x.id_loai}}</td>
                                 <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-regular fa-pen-to-square" ng-click="getThuongHieuID(x.id)"></i>
+                                    <i class="fa-solid fa-trash" ng-click="DelThuongHieu(x.id)"></i>
                                 </td>
                             </tr>
                             <!-- Add more rows as needed -->
@@ -327,7 +399,7 @@
                                 <h4>Mã sản phẩm:</h4>
                             </td>
                             <td style="border: none !important">
-                                <input type="text" id="masp" placeholder="Nhập mã sản phẩm">
+                                <input type="text" id="masp" placeholder="Nhập mã sản phẩm" ng-model="maSanPhamTimKiem">
                             </td>
                         </tr>
                         <tr style="border: none !important">
@@ -335,16 +407,18 @@
                                 <h4>Tên sản phẩm:</h4>
                             </td>
                             <td style="border: none !important">
-                                <input type="text" id="tensp" placeholder="Nhập tên sản phẩm">
+                                <input type="text" id="tensp" placeholder="Nhập tên sản phẩm"
+                                    ng-model="tenSanPhamTimKiem">
                             </td>
                         </tr>
                     </table>
 
-                    <button id="TkspBtn" onclick="TimKiemSanPham()"><i class="fa-solid fa-magnifying-glass"></i> Tìm
+                    <button id="TkspBtn" ng-click="TimKiemSanPham()"><i class="fa-solid fa-magnifying-glass"></i> Tìm
                         kiếm</button>
                 </div>
                 <hr style="margin-top: 10px;">
-                <button id="ThemspBtn" onclick="showFormAddSanPham()"><i class="fa-solid fa-plus"></i> Thêm sản phẩm mới</button>
+                <button id="ThemspBtn" onclick="document.getElementById('thongtinsanpham').style.display='block'"><i class="fa-solid fa-plus"></i> Thêm sản phẩm
+                    mới</button>
                 <div class="tablechung table-container">
                     <table id="#tablesanpham">
                         <thead style="position: sticky;">
@@ -353,48 +427,141 @@
                                 <th>Mã sản phẩm</th>
                                 <th>Hình ảnh minh họa</th>
                                 <th>Tên sản phẩm</th>
-                                <th>Mô tả</th>
                                 <th>Chức năng</th>
                             </tr>
                         </thead>
                         <tbody id="tbody-sanpham">
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>2</td>
-                                <td>Nike1</td>
-                                <td><img src="img/GiayNike/giayNike1.1.jpg" alt="" style="width: 80px;height: 80px;">
+                            <tr ng-repeat="x in listSanPham">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maSanPham}}</td>
+                                <td>
+                                    <img ng-src="{{ x.hinhAnhDaiien.includes('https://firebasestorage.googleapis.com/v0') ? x.hinhAnhDaiien : 'http://127.0.0.1/' + x.hinhAnhDaiien }}"
+                                        alt="" style="width: 80px; height: 80px;">
                                 </td>
-                                <td style="width: 200px;">Giày bóng rổ chính hãng Nike Kyrie 8 “Fire and Ice” DC9134-001
-                                </td>
-                                <td style="width: 300px;">
-                                    Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )
+
+                                <td style="width: 200px;">{{x.tenSanPham}}
                                 </td>
                                 <td>
-                                    <i class="fa-regular fa-eye"></i>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Nike1</td>
-                                <td><img src="img/GiayNike/giayNike1.1.jpg" alt="" style="width: 80px;height: 80px;">
-                                </td>
-                                <td style="width: 200px;">Giày bóng rổ chính hãng Nike Kyrie 8 “Fire and Ice” DC9134-001
-                                </td>
-                                <td style="width: 300px;">
-                                    Sản phẩm chính hãng, nhập từ outlet chính hãng ( Cửa hàng thanh lý chính hãng )
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-eye"></i>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-regular fa-pen-to-square" ng-click="GetSanPhamByID(x.maSanPham)"></i>
+                                    <i class="fa-solid fa-trash" ng-click="DelSanPhamByID(x.maSanPham)"></i>
                                 </td>
                             </tr>
 
                             <!-- Add more rows as needed -->
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    <div id="thongtinsanpham" style="
+        display: none;
+    line-height: 25.6px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.3);
+    ">
+
+                        <div style="
+        background-color: white;
+        width: 60%;
+        height: 85%;
+        margin-top: 3%;
+        margin-left: 20%;
+        padding: 10px;
+        position: absolute; overflow-y: auto;">
+                            <div style="    position: fixed;
+            
+            width: 30px;
+            height: 30px;
+            margin-left: 58%;
+            background-color: #ccc;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        " onclick="closeForm2()">×</div>
+                        <h2 style="display: flex; justify-content: center;">Thông tin sản phẩm</h2>
+                            <form id="productForm" style="margin-top: 10px;">
+                                <div class="container">
+                                    <label><strong>maSanPham:</strong> <input type="text" id="maSanPham" 
+                                         ng-model="maSanPham"   value="{{masanpham}}" readonly></label><br>
+                                    <label><strong>maThuongHieu:</strong> 
+                                        <select id="maThuongHieu1" ng-model="maThuongHieu1"
+                                        ng-options="x.id as x.name for x in listThuongHieu">
+                                        <option value="" disabled selected hidden>Chọn thương hiệu</option>
+                                    </select>
+                                    <br>
+                                    <label><strong>tenSanPham:</strong> <input type="text" id="tenSanPham"
+                                         ng-model="tenSanPham"   value="{{tenSanPham}}"></label><br>
+                                    <label><strong>mota:</strong> <input type="text" id="mota"
+                                          ng-model="moTaSanPham"  value="{{moTaSanPham}}"></label><br>
+                                    <label style="display: none;"><strong>hinhAnhDaiien:</strong> <input type="text" id="hinhAnhDaiien"
+                                         value="123"></label>
+
+                                    <div class="nested-container" id="mauContainer">
+                                        <strong>mau:</strong>
+                                        <button onclick="addMau('mauContainer')">Add</button>
+                                        <div class="nested-container" id="mau">
+                                            <label><strong>id:</strong> <input type="text" id="mauId" 
+                                               ng-model="mauID"  value="{{mauID}}" readonly></label><br>
+                                            <label><strong>idsp:</strong> <input type="text" id="mauIdsp"
+                                                 ng-model="MaSanPhamID"   value="{{MaSanPhamID}}" readonly></label><br>
+                                            <label><strong>mausac:</strong> <input type="text" id="mauMausac"
+                                                  ng-model="MauSac"  value="{{MauSac}}"></label>
+
+                                            <div class="nested-container" id="listContainer">
+                                                <strong>list:</strong>
+                                                <button onclick="addSize('listContainer')">Add</button>
+                                                <div class="nested-container" id="list">
+                                                    <label><strong>id:</strong> <input type="text" id="listId"
+                                                        ng-model="listId"    value="{listId}"></label><br>
+                                                    <label><strong>idmau:</strong> <input type="text" id="listIdmau"
+                                                        ng-model="listIdmau"   value="{{listIdmau}}"></label><br>
+                                                    <label><strong>kichthuoc:</strong> <input type="text"
+                                                         ng-model="listKichthuoc"   id="listKichthuoc" value="{listKichthuoc}"></label><br>
+                                                    <label><strong>soluong:</strong> <input type="text" id="listSoluong"
+                                                         ng-model="listSoluong"   value="{{listSoluong}}"></label>
+                                                </div>
+                                                <!-- Additional rows for "list" array -->
+                                            </div>
+
+                                            <div class="nested-container" id="hinhAnhModelsContainer">
+                                                <strong>hinhAnhModels:</strong>
+                                                <button onclick="addHinhAnh('hinhAnhModelsContainer')">Add</button>
+                                                <div class="nested-container" id="frmHA">
+                                                    <label><strong>id:</strong> <input type="text" id="hinhAnhModelsId"
+                                                       ng-model="hinhAnhModelsId"     value="{{hinhAnhModelsId}}" readonly></label><br>
+                                                    <label><strong>idMau:</strong> <input type="text"
+                                                        ng-model="hinhAnhModelsIdMau"    id="hinhAnhModelsIdMau" value="{{hinhAnhModelsIdMau}}"></label><br>
+                                                    <img src="" id="previewImage1" alt=""
+                                                        style="width: 100px;height: 100px;"><br>
+                                                    <label><strong>hinhanh_url:</strong> <input id="fileanh"
+                                                        ng-model="hinhanh_url"   value="{{hinhanh_url}}"    style="display: none;"></label>
+                                                    <input type="file" id="anh1"
+                                                        onchange="previewFile('anh1', 'previewImage1')">
+                                                </div>
+                                                <!-- Additional rows for "hinhAnhModels" array -->
+                                            </div>
+                                        </div>
+                                        <!-- Additional rows for "mau" array -->
+                                    </div>
+
+                                    <label><strong>giaBans:</strong> <input type="text" id="giaBans" ng-model="giaBans"
+                                            value="{{giaBans}}"></label>
+                                </div>
+
+                                <button type="button" style="margin-left: 45%; padding: 7px; color: white;border-radius: 5px;background-color: black;" ng-click="SaveSanPham()" ng-model="submitSanPham">{{submitSanPham}}</button>
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="ncc" class="hidden">
@@ -423,7 +590,8 @@
                         Tìm kiếm</button>
                 </div>
                 <hr style="margin-top: 10px;">
-                <button id="ThemnccBtn" onclick="showFormThemNCC()"><i class="fa-solid fa-plus"></i> Thêm nhà cung cấp
+                <button id="ThemnccBtn" onclick="showFormThemNCC()"><i class="fa-solid fa-plus"></i> Thêm nhà cung
+                    cấp
                     mới</button>
                 <div class="tablechung">
                     <table id="#tablencc">
@@ -439,30 +607,16 @@
                         </thead>
                         <tbody id="tbody-ncc">
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>NCC1</td>
-                                <td>Nam ngu 123</td>
-                                <td style="width: 200px;">0936771257</td>
-                                <td style="width: 300px;">
-                                    Thanh Miện, Hải Dương
+                            <tr ng-repeat="x in listNCC">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maNCC}}</td>
+                                <td>{{x.tenNCC}}</td>
+                                <td style="width: 100px;">{{x.diaChi}}</td>
+                                <td style="width: 300px;">{{x.diaChi}}
                                 </td>
                                 <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>NCC2</td>
-                                <td>Phương rắm 123</td>
-                                <td style="width: 200px;">0376401198</td>
-                                <td style="width: 300px;">
-                                    Duy Tiên, Hà Nam
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-regular fa-pen-to-square" ng-click="GetNCCbyID(x.maNCC)"></i>
+                                    <i class="fa-solid fa-trash" ng-click="XoaNCC(x.maNCC)"></i>
                                 </td>
                             </tr>
                             <!-- Add more rows as needed -->
@@ -542,70 +696,7 @@
                     </table>
                 </div>
             </div>
-            <div id="ctkm" class="visiable">
-                <b style="font-size: 20px;">Tìm kiếm</b>
 
-                <div id="tkhdn">
-                    <table style="border: none !important">
-                        <tr style="border: none !important">
-                            <td style="border: none !important">
-                                <h4>Mã chương trình khuyến mãi:</h4>
-                            </td>
-                            <td style="border: none !important">
-                                <input type="text" id="mactkm" placeholder="Nhập mã hóa đơn nhập">
-                            </td>
-                        </tr>
-                    </table>
-                    <button id="TkctkmBtn" onclick="TimKiemctkm()"><i class="fa-solid fa-magnifying-glass"></i> Tìm
-                        kiếm</button>
-                </div>
-                <hr style="margin-top: 10px;">
-                <button id="ThemctkmBtn" onclick="showFormAddCTKM()"><i class="fa-solid fa-plus"></i> Thêm CTKM
-                    mới</button>
-                <div class="tablechung">
-                    <table id="#tablectkm">
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Mã CTKM</th>
-                                <th>Nội dung khuyến mãi</th>
-                                <th>Thời gian áp dụng</th>
-                                <th>Chức năng</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody-ctkm">
-                            <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>CtKM001</td>
-                                <td style="width: 300px;">
-                                    Giảm 20% cho hóa đơn từ 3 triệu đồng
-                                </td>
-                                <td>12/12/2023 - 31/12/2023</td>
-
-                                <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>CtKM002</td>
-                                <td style="width: 300px;">
-                                    Giảm 10% cho hóa đơn từ 2 triệu đồng
-                                </td>
-                                <td>12/12/2023 - 31/12/2023</td>
-
-                                <td>
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    <i class="fa-solid fa-trash"></i>
-                                </td>
-                            </tr>
-                            <!-- Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
             <div id="donHangChuaXN" class="hidden">
                 <h3 style="display: flex;justify-content: center;">Danh sách đơn hàng chưa xác nhận</h3>
                 <div class="tablechung">
@@ -615,26 +706,24 @@
                                 <th>STT</th>
                                 <th>Mã Đơn hàng</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
-                                <th>Địa chỉ</th>
+                                <th>Ngày tạo</th>
                                 <th>Tổng hóa đơn</th>
                                 <th>Xác nhận</th>
                             </tr>
                         </thead>
                         <tbody id="tbody-dhchuaxn">
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>HD001</td>
+                            <tr ng-repeat="x in listDonHangchuaXN">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maDonHang}}</td>
                                 <td>
-                                    Nguyễn Thị Thanh Thảo
+                                    {{x.tenKhachHang}}
                                 </td>
-                                <td>0912336504</td>
-                                <td style="width: 300px;">Khoái Châu - Hưng Yên</td>
-                                <td>1,200,000đ</td>
-                                <td><a href="">xác nhận</a></td>
+                                <td>{{x.ngayDat}}</td>
+                                <td>{{x.tongHD}}</td>
+                                <td><a href="" ng-click="XacNhanDon(x.maDonHang)">xác nhận</a></td>
                                 <td style="border: none !important;">
-                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
                                 </td>
                             </tr>
 
@@ -652,24 +741,24 @@
                                 <th>STT</th>
                                 <th>Mã Đơn hàng</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
-                                <th>Địa chỉ</th>
+                                <th>Ngày đặt hàng</th>
                                 <th>Tổng hóa đơn</th>
+                                <th>Xác nhận gửi</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbody-dhchuaxn">
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>HD001</td>
+                            <tr ng-repeat="x in listDonHangDaXN">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maDonHang}}</td>
                                 <td>
-                                    Nguyễn Thị Thanh Thảo
+                                    {{x.tenKhachHang}}
                                 </td>
-                                <td>0912336504</td>
-                                <td style="width: 300px;">Khoái Châu - Hưng Yên</td>
-                                <td>1,200,000đ</td>
+                                <td>{{x.ngayDat}}</td>
+                                <td>{{x.tongHD}}</td>
+                                <td><a href="" ng-click="XacNhanGui(x.maDonHang)">xác nhận gửi</a></td>
                                 <td style="border: none !important;">
-                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
                                 </td>
                             </tr>
 
@@ -687,24 +776,24 @@
                                 <th>STT</th>
                                 <th>Mã Đơn hàng</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
-                                <th>Địa chỉ</th>
+                                <th>Ngày đặt</th>
+                                <th>Ngày gửi</th>
                                 <th>Tổng hóa đơn</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>HD001</td>
+                            <tr ng-repeat="x in listDonHangDangGiao">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maDonHang}}</td>
                                 <td>
-                                    Nguyễn Thị Thanh Thảo
+                                    {{x.tenKhachHang}}
                                 </td>
-                                <td>0912336504</td>
-                                <td style="width: 300px;">Khoái Châu - Hưng Yên</td>
-                                <td>1,200,000đ</td>
+                                <td>{{x.ngayDat}}</td>
+                                <td>{{x.ngayGui}}</td>
+                                <td>{{x.tongHD}}đ</td>
                                 <td style="border: none !important;">
-                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
                                 </td>
                             </tr>
 
@@ -722,24 +811,26 @@
                                 <th>STT</th>
                                 <th>Mã Đơn hàng</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
-                                <th>Địa chỉ</th>
+                                <th>Ngày đặt</th>
+                                <th>Ngày gửi</th>
+                                <th>Ngày nhận</th>
                                 <th>Tổng hóa đơn</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>HD001</td>
+                            <tr ng-repeat="x in listDonHangDaGiao">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.maDonHang}}</td>
                                 <td>
-                                    Nguyễn Thị Thanh Thảo
+                                    {{x.tenKhachHang}}
                                 </td>
-                                <td>0912336504</td>
-                                <td style="width: 300px;">Khoái Châu - Hưng Yên</td>
-                                <td>1,200,000đ</td>
+                                <td>{{x.ngayDat}}</td>
+                                <td>{{x.ngayGui}}</td>
+                                <td>{{x.ngayNhan}} </td>
+                                <td>{{x.tongHD}}đ</td>
                                 <td style="border: none !important;">
-                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye" ng-click="XemChiTietDon(x.maDonHang)"></i>
                                 </td>
                             </tr>
 
@@ -748,46 +839,129 @@
                     </table>
                 </div>
             </div>
-            <div id="DonHoanTra" class="hidden">
-                <h3 style="display: flex;justify-content: center;">Danh sách đơn hàng đã hoàn trả</h3>
-                <div class="tablechung">
-                    <table id="#tabledhdatra">
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Mã Đơn hàng</th>
-                                <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
-                                <th>Địa chỉ</th>
-                                <th>Tổng hóa đơn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Example rows, you can dynamically generate these based on your data -->
-                            <tr>
-                                <td>1</td>
-                                <td>HD001</td>
-                                <td>
-                                    Nguyễn Thị Thanh Thảo
-                                </td>
-                                <td>0912336504</td>
-                                <td style="width: 300px;">Khoái Châu - Hưng Yên</td>
-                                <td>1,200,000đ</td>
-                                <td style="border: none !important;">
-                                    <i class="fa-regular fa-eye"></i>
-                                </td>
-                            </tr>
-                            
-                            <!-- Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
         </div>
     </div>
 
-    <div id="panelChung">
-        
+    <div id="panelchung" style="display: none;">
+        <div style="
+        display: block;
+    line-height: 25.6px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.3);
+    ">
+
+            <div style="
+        background-color: white;
+        width: 60%;
+        height: 80%;
+        margin-top: 5%;
+        margin-left: 20%;
+        position: absolute;">
+                <div style="    position: fixed;
+            
+            width: 30px;
+            height: 30px;
+            margin-left: 58%;
+            background-color: #ccc;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        " onclick="closeForm()">×</div>
+                <h2 style="width: 100%; text-align: center; margin-top: 10px;">Thông tin Hóa đơn</h2>
+
+                <!-- Thông tin chung -->
+                <div style="margin-left: 30px;margin-top: 20px;">
+                    <strong style="font-size: 18px;">Mã hóa đơn: </strong> <span style="font-size: 18px;"
+                        id="invoiceCode">{{donhang.maDonHang}}</span>
+                </div>
+
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Tên khách hàng: </strong> <span style="font-size: 18px;"
+                        id="customerName">{{donhang.tenKhachHang}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày đặt: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayDat}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày gửi: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayGui}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Ngày nhận: </strong> <span style="font-size: 18px;"
+                        id="ngayTao">{{donhang.ngayNhan}}</span>
+                </div>
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Số điện thoại: </strong> <span style="font-size: 18px;"
+                        id="phoneNumber">{{donhang.soDienThoai}}</span>
+                </div>
+
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Địa chỉ: </strong> <span style="font-size: 18px;"
+                        id="address">{{donhang.diaChi}}</span>
+                </div>
+
+
+                <!-- Tổng hóa đơn -->
+                <div style="margin-left: 30px;">
+                    <strong style="font-size: 18px;">Tổng hóa đơn: </strong> <span style="font-size: 18px;"
+                        id="totalAmount">{{donhang.tongHD}}đ</span>
+                </div>
+
+                <!-- Danh sách chi tiết hóa đơn -->
+                <h3 style="margin-left: 11%;margin-top: 10px;">Danh sách chi tiết hóa đơn</h3>
+
+                <div id="productList"
+                    style="margin-left: 10px;display: flex;justify-content: center; max-height: 303px; overflow-y: auto;">
+                    <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+                    <table id="#tablesanpham">
+                        <thead style="position: sticky;">
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Màu sắc</th>
+                                <th>Kích thước</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Tổng</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-sanphamHD">
+                            <!-- Example rows, you can dynamically generate these based on your data -->
+
+                            <tr ng-repeat="x in donhang.dssp">
+                                <td>{{$index +1}}</td>
+                                <td style="width: 50px;">{{x.maSanPham}}</td>
+                                <td style="width: 200px;">{{x.tenSanPham}}
+                                </td>
+                                <td>{{x.mauSac}}</td>
+                                <td>{{x.kichThuoc.trim()}}</td>
+                                <td>{{x.soLuong}}</td>
+                                <td>{{x.donGia}}đ</td>
+                                <td>{{x.tong}}đ</td>
+                            </tr>
+
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <div style="display: flex;justify-content: center;">
+
+                </div>
+
+            </div>
+        </div>
     </div>
     <footer class="bottom-footer">
         <div style="width: 25%;">
@@ -846,11 +1020,12 @@
         </div>
     </footer>
     <script>
-        loadDSSP();
-        loaddsLoai();
-        loadDSNCC();
-        loadTTchungHDchuaXn();
-        loadDSCTKM();
-        // showFormAddSanPham();
+        var user = JSON.parse(localStorage.getItem('user-Admin'))
+        if (!user) {
+            window.location.href = 'login.html'
+        }
+        else {
+            document.getElementById('useracc').textContent = user.username
+        }
     </script>
 </body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển Thị Hình Ảnh</title>
+</head>
+    <style>
+        .container {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .nested-container {
+            margin-left: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    </style>
+<body>
+
+    
+
+    <form id="productForm">
+        <div class="container">
+            <label><strong>maSanPham:</strong> <input type="text" name="maSanPham" value="0"></label><br>
+            <label><strong>maThuongHieu:</strong> <input type="text" name="maThuongHieu" value="0"></label><br>
+            <label><strong>tenSanPham:</strong> <input type="text" name="tenSanPham" value="string"></label><br>
+            <label><strong>mota:</strong> <input type="text" name="mota" value="string"></label><br>
+            <label><strong>hinhAnhDaiien:</strong> <input type="text" name="hinhAnhDaiien" value="string"></label>
+
+            <div class="nested-container" id="mauContainer">
+                <strong>mau:</strong>
+                <button onclick="addMau('mauContainer')">Add </button>
+                <div class="nested-container" id="mau">
+                    <label><strong>id:</strong> <input type="text" name="mau[0][id]" value="string"></label><br>
+                    <label><strong>idsp:</strong> <input type="text" name="mau[0][idsp]" value="string"></label><br>
+                    <label><strong>mausac:</strong> <input type="text" name="mau[0][mausac]" value="string"></label>
+
+                    <div class="nested-container" id="listContainer">
+                        <strong>list:</strong>
+                        <button onclick="addSize('listContainer')">Add</button>
+                        <div class="nested-container" >
+                            <label><strong>id:</strong> <input type="text" name="mau[0][list][0][id]"
+                                    value="string"></label><br>
+                            <label><strong>idmau:</strong> <input type="text" name="mau[0][list][0][idmau]"
+                                    value="string"></label><br>
+                            <label><strong>kichthuoc:</strong> <input type="text" name="mau[0][list][0][kichthuoc]"
+                                    value="string"></label><br>
+                            <label><strong>soluong:</strong> <input type="text" name="mau[0][list][0][soluong]"
+                                    value="string"></label>
+                        </div>
+                        <!-- Additional rows for "list" array -->
+                    </div>
+
+                    <div class="nested-container" id="hinhAnhModelsContainer">
+                        <strong>hinhAnhModels:</strong>
+                        <button onclick="addHinhAnh('hinhAnhModelsContainer')">add</button>
+                        <div class="nested-container" id="frmHA">
+                            <label><strong>id:</strong> <input type="text" name="mau[0][hinhAnhModels][0][id]"
+                                    value="string"></label><br>
+                            <label><strong>idMau:</strong> <input type="text" name="mau[0][hinhAnhModels][0][idMau]"
+                                    value="string"></label><br>
+                            <img src="" id="previewImage1" alt="" style="width: 100px;height: 100px;"><br>
+                            <label><strong>hinhanh_url:</strong> <input type="file" id="anh1"
+                                    name="mau[0][hinhAnhModels][0][hinhanh_url]"
+                                    onchange="previewFile('anh1','previewImage1')"></label>
+                        </div>
+                        <!-- Additional rows for "hinhAnhModels" array -->
+                    </div>
+                </div>
+                
+                <!-- Additional rows for "mau" array -->
+            </div>
+
+            <label><strong>giaBans:</strong> <input type="text" name="giaBans" value="string"></label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var formData = new FormData(event.target);
+            var jsonObject = {};
+            formData.forEach(function (value, key) {
+                if (key.includes('[')) {
+                    var keys = key.split(/\[(.+?)\]/g).filter(Boolean);
+                    keys.reduce(function (acc, cur, index, arr) {
+                        if (!acc[cur]) {
+                            acc[cur] = index === arr.length - 1 ? value : {};
+                        }
+                        return acc[cur];
+                    }, jsonObject);
+                } else {
+                    jsonObject[key] = value;
+                }
+            });
+            console.log(JSON.stringify(jsonObject, null, 2));
+        });
+         function removeNullValues(obj) {
+            for (var prop in obj) {
+                if (obj[prop] === null) {
+                    delete obj[prop];
+                } else if (typeof obj[prop] === 'object') {
+                    obj[prop] = removeNullValues(obj[prop]);
+                }
+            }
+            return obj;
+        }
+
+    </script>
+</body>
+</html>

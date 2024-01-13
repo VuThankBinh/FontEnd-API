@@ -4,21 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giày bóng rổ Peak</title>
+    <title>Danh mục sản phẩm</title>
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/sanpham.css">
     <link rel="stylesheet" href="css/TrangChu.css">
     <script src="js/TrangChu.js"></script>
-    <script src="js/loadSP_peak.js"></script>
+    <script src="js/loadSP_giayall.js"></script>
     <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/jquery-ui.js"></script>
+
+    <script src="js/angular/global.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/API-JS/TrangChu.js"></script>
+    <script src="js/angular/danhmuc.js"></script>
+    <script src="js/API-JS/Chung.js"></script>
     
 </head>
 
-<body>
+<body ng-app="AppBanHang" ng-controller="DanhMucCtrl">
     <header>
         <div class="top-banner">
             <ul>
@@ -56,33 +62,32 @@
                 <img src="img/logo.png" alt="logo shop">
             </div>
             <div class="search-sp">
-                <form action="#">
-                    <div style="display: flex;">
-                        <input type="hidden" name="type" value="product">
-                        <form action="#" style="margin:auto;max-width:300px">
-                            <input type="text" placeholder="    Nhập từ khóa sản phẩm cần tìm" name="search2">
-                            <button type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
+
+                <form style="margin:auto; max-width:350px; display: flex;">
+                    <input type="text" id="timsp" onkeypress="timKiem_et(event)"
+                        placeholder="    Nhập từ khóa sản phẩm cần tìm">
+                    <button type="submit" onclick="timKiem()">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </form>
             </div>
 
             <div class="dangnhap-gh">
                 <ul>
                     <li>
-                        <p id="user" style="color: white;"><a href="login.html">
-                                <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
-                                Đăng nhập
-                            </a></p>
+
+                        <a href="login.html" id="user" style="color: white;">
+                            <i class="fa-regular fa-user" style="color: #e1e2e5;"></i>
+                            <span id="useracc">Đăng nhập</span>
+                        </a>
+
                     </li>
-                    <li>
+                    <li style="margin-top: 5px;">
 
                         <a onclick="giohangpage()" title="Giỏ hàng">
                             <i class="fa-solid fa-bag-shopping" style="color: #f5f7fa;"></i>
                             <span>
-                                Giỏ hàng / <span class="cart-price"><span><bdi id="price-cart">0<span>VND</span></bdi></span></span>
+                                Giỏ hàng / <span class="cart-price"><span><bdi>0<span>VND</span></bdi></span></span>
                             </span>
                         </a>
                     </li>
@@ -91,64 +96,28 @@
         </div>
 
         <div style="background-color:black;">
-            <nav id="menu" onclick="clickMenu()">
+            <nav id="menu">
                 <ul>
                     <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
                     <b>Danh mục sản phẩm</b>
-                    <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Giày bóng rổ Replica xả hàng">Giày bóng rổ Replica xả hàng</a></li>
-                            <li><a href="#" title="Giày bóng rổ Brookie Rookie xả khoa">Giày bóng rổ Brookie Bookie xả
-                                    kho</a></li>
-                            <li><a href="#" title="Giày bóng rổ PEAK xả kho">Giảy bóng rổ PEAK xả kho</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Bóng rổ">Bóng rổ</a></li>
-                    <li><a href="GiayBongRo.html"target="_blank" title="Giày bóng rổ">Giày bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <!-- menu con sổ xuống cấp 1 -->
-                        <ul>
-                            <li><a href="GiayNike.html"target="_blank" title="Giày bóng rổ Nike, Adidas chính hãng">Giày bóng rổ Nike, Adidas chính
-                                    hãng</a>
-                            </li>
-                            <li><a href="GiayNBA.html"target="_blank" title="Giày bóng rổ NBA">Giày bóng rổ NBA</a></li>
-                            <li><a href="#" title="Giày bóng rổ PEAK chính hãng">Giày bóng rổ PEAK chính hãng</a></li>
-                            <li><a href="GiayAnTa.html"target="_blank" title="Giày bóng rổ ANTA chính hãng">Giày bóng rổ ANTA chính hãng</a></li>
-                            <li><a href="GiayTreEm.html"target="_blank" title="Giày bóng rổ trẻ em">Giày bóng rổ trẻ em</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Quần áo bóng rổ">Quần áo bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Bộ quần áo bóng rổ">Bộ quần áo bóng rổ</a></li>
-                            <li><a href="#" title="Áo bóng rổ">Áo bóng rổ</a></li>
-                            <li><a href="#" title="Quần bóng rổ">Quần bóng rổ</a></li>
-                            <li><a href="#" title="Pro Combat">Pro combat</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Phụ kiện bóng rổ">Phụ kiện bóng rổ
-                            <i class="fa-solid fa-caret-right"
-                                style="color: #9297a0; float: right;margin-top: 20px;"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" title="Tất vớ bóng rổ">Tất vớ bóng rổ</a></li>
-                            <li><a href="#" title="Balo, túi bóng rổ">Balo, túi bóng rổ</a></li>
-                            <li><a href="#" title="Phụ kiện bảo hộ">Phụ kiện bảo hộ</a></li>
-                            <li><a href="#" title="Bình nước bóng rổ">Bình nước bóng rổ</a></li>
-                        </ul>
-                    </li>
+                    <li ng-repeat="x1 in listDanhMuc">
 
+                        <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}" target="_blank"
+                            ng-click="LoadSanPhamPhanTrang(x1.tenLoai)">{{x1.tenLoai}}</a>
+
+                        <ul>
+                            <li ng-repeat="x in x1.dsth">
+
+                                <a ng-href="Dannhmuc.html#/?Maloai={{x1.maLoai}}&MaThuongHieu={{x.maThuongHieu}}"
+                                    target="_blank" ng-click="LoadSanPhamPhanTrang(x.tenThuongHieu)">{{x.tenThuongHieu}}</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
                 </ul>
             </nav>
     </header>
-    
     <div style="display: flex;justify-content: center;width: 100%;">
         <div class="silde">
             <img class="silde-div" style="display: block;" src="img/bn1.webp" alt="" width="90%">
@@ -167,8 +136,8 @@
 
     <div class="linkCTSP">
         <ul>
-            <li><a href="TrangChu.html">TRANG CHỦ </a></li> / <li> <a href="GiayBongRo.html">GIÀY BÓNG RỔ </a></li>/
-            <li> <a>GIÀY BÓNG RỔ PEAK</a></li>
+            <li><a href="TrangChu.html">TRANG CHỦ </a></li> / <li> <a id="loaispp">GIÀY BÓNG RỔ </a></li>
+
         </ul>
     </div>
     <div style="width: 100%;; display:flex ;">
@@ -180,8 +149,8 @@
             </p>
 
             <div id="slider-range" style="width: 240px; margin-top: 15px;"></div>
-            <button
-                onclick="loadSP($('#slider-range').slider('values', 0), $('#slider-range').slider('values', 1))">Lọc</button>
+            <button post
+                onclick="loadSP($('#slider-range').slider('values', 0), $('#slider-range').slider('values', 1)) ">Lọc</button>
             <p>
                 <label for="amount">Sắp xếp</label>
             </p>
@@ -191,35 +160,65 @@
                 <option value="Tang">Sắp xếp theo giá tăng dần</option>
                 <option value="Giam">Sắp xếp theo giá giảm dần</option>
             </select>
-
+            <p>
+                <label for="amount">Tìm kiếm theo thương hiệu</label>
+            </p>
+            <select id="loaiSP"
+                onchange="chonLoai($('#slider-range').slider('values', 0), $('#slider-range').slider('values', 1))">
+                <option value="select">-select-</option>
+                <option value="all">Thương hiệu bất kỳ</option>
+                
+            </select>
             <div id="sp-xem">
                 <p>
                     <label for="amount" style="font-weight: bold;">Sản phẩm đã xem</label>
                 </p>
+                <div id="spSeen" >
+                    <!-- <div style="display: flex;" onclick="chitet('Ma1')">
+                        <img src="img/GiayAdidas/giayAdidas1.1.jpg" alt="" style="width: 80px; height: 80px;margin-top: 15px;">
+                        <p style="margin-top: 30px;width: 150px;color: #1f1f20; margin-left: 10px; word-wrap: break-word;">Giày nikejkwhfs jfhsdi ukjlgkoldfgjhnodsflkjgdklfgjkldsgkjlnsdfkol;g</p>
+                    </div> -->
+                </div>
             </div>
             <script>loc();</script>
         </div>
 
         <div id="sanpham" style=" width: 70%;">
+            <div ng-repeat="x in listSanPhamMoi" >
 
+                <div class="col-3 col-s-6"><br>
+                    <div class="sanpham ">
+                        <div class="img-sanpham">
+                            <div class="box-img">
+        
+                                <img src="{{x.hinhAnhDaiien}}" alt="">
+                            </div>
+        
+                        </div>
+                        <h4 class="ten-sanpham"><a style="color: black;text-decoration: none;"
+                            href="ChiTietSanPham.html?id={{x.maSanPham}}">{{x.tenSanPham}}</a></h4>
+                        <p class="gia-tien">{{x.donGia}} ₫</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div style="width: 100%; display: flex;justify-content: center; margin-top: 30px;">
-        <button id="backbt" onclick="backPage()">&lt</button>
-        <div class="page-info"> <span id="current"><input id="pe"type="text" placeholder="1"></span> / <span id="total">1</span>
-        </div>
-        <button id="nextbt" onclick="nextPage()">&gt</button>
+    <div id="page" style="width: 100%; display: flex; justify-content: center !important; margin-top: 30px;">
+        <button id="backbt" ng-click="backPage1()">&lt;</button>
+        <div id="page-info"> <span id="current"><span id="total">{{ pagenum }}</span></span></div>
+        <button id="nextbt" ng-click="nextPage1()">&gt;</button>
     </div>
+    
 
 
     <script>
-        showSlideBody1TimeOut();
-       showProducts(0);
-       showLoginData();
-       tinh_tienCart();
+        // loadsp();
+        // showProducts(0);
+        showSlideBody1TimeOut();load_user();
+        document.getElementById('loaispp').textContent=localStorage.getItem('loai');
     </script>
     </div>
-    <div id="div-quick" >
+    <div id="div-quick">
 
 
     </div>
@@ -279,9 +278,6 @@
             </ul>
         </div>
     </footer>
-</body>
-
-</html>
 </body>
 
 </html>

@@ -17,11 +17,11 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/angular/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
+
     <script src="js/angular/timkiem.js"></script>
     <script src="js/angular/global.js"></script>
     <script src="js/API-JS/timkiem.js"></script>
-    
+
 </head>
 
 <body ng-app="AppBanHang" ng-controller="HomeCtrl">
@@ -63,7 +63,7 @@
             </div>
             <div class="search-sp">
 
-                <form style="margin:auto; max-width:350px; display: flex; margin-left: 0px !important;">
+                <form style="margin:auto; max-width:350px; display: flex;">
                     <input type="text" id="timsp" onkeypress="timKiem_et(event)"
                         placeholder="    Nhập từ khóa sản phẩm cần tìm">
                     <button type="submit" onclick="timKiem()">
@@ -98,6 +98,24 @@
                 <ul>
                     <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
                     <b>Danh mục sản phẩm</b>
+                    <li ng-repeat="x1 in listDanhMuc">
+
+                        <a>{{x1.tenLoai}}</a>
+
+                        <ul>
+                            <li ng-repeat="x in x1.dsth">
+
+                                <a>{{x.tenThuongHieu}}</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- <ul ng-repeat="x in listDanhMuc">
+                    <i class="fa-solid fa-bars" style="margin-left: -10px;"></i>
+                    <b>Danh mục sản phẩm</b>
                     <li><a href="#" title="Xả kho giảm giá">Xả kho giảm giá
                             <i class="fa-solid fa-caret-right"
                                 style="color: #9297a0; float: right;margin-top: 20px;"></i>
@@ -114,7 +132,6 @@
                             <i class="fa-solid fa-caret-right"
                                 style="color: #9297a0; float: right;margin-top: 20px;"></i>
                         </a>
-                        <!-- menu con sổ xuống cấp 1 -->
                         <ul>
                             <li><a href="GiayNike.html" title="Giày bóng rổ Adidas chính hãng">Giày bóng rổ Adidas chính
                                     hãng</a>
@@ -150,87 +167,87 @@
                         </ul>
                     </li>
 
-                </ul>
+                </ul> -->
             </nav>
     </header>
     <h3 id="kqsearch" style="display: flex;justify-content: center;margin-top: 30px;">
 
     </h3>
-    <div>
-        <div ng-repeat="x in listSanPhamMoi" id="sanpham" style=" width: 70%; margin-left: 20%;height: auto;" >
-           
-            <div class="col-3 col-s-6"><br>
-                <div class="sanpham ">
-                    <div class="img-sanpham">
-                        <div class="box-img">
+    <div ng-repeat="x in listSanPhamMoi" id="sanpham" style=" width: 70%; margin-left: 20%;height: auto;">
 
-                            <img src="{{x.hinhAnhDaiien}}" alt="">
-                        </div>
+        <div class="col-3 col-s-6"><br>
+            <div class="sanpham ">
+                <div class="img-sanpham">
+                    <div class="box-img">
 
+                        <img src="{{x.hinhAnhDaiien}}" alt="">
                     </div>
-                    <h4 class="ten-sanpham"><a style="color: black;text-decoration: none;" href="ChiTietSanPham.html/?id={{x.maSanPham}}">{{x.tenSanPham}}</a></h4>
-                    <p class="gia-tien">{{x.donGia}} ₫</p>
+
                 </div>
+                <h4 class="ten-sanpham"><a style="color: black;text-decoration: none;"
+                    href="ChiTietSanPham.html?id={{x.maSanPham}}">{{x.tenSanPham}}</a></h4>
+                <p class="gia-tien">{{x.donGia}} ₫</p>
             </div>
         </div>
+    </div>
 
-        <footer class="bottom-footer">
-            <div style="width: 25%;">
-                <ul><span>THÔNG TIN CỬA HÀNG</span>
+    <footer class="bottom-footer">
+        <div style="width: 25%;">
+            <ul><span>THÔNG TIN CỬA HÀNG</span>
 
-                    <li>Hộ kinh doanh Giày bóng rổ – Choibongro.vn</li>
-                    <li>Giấy phép đăng ký kinh doanh: 01F8015621</li>
-                    <li>Đăng ký lần đầu ngày: 12-06-2020</li>
-                    <li>Địa điểm: Số 22 Ngõ 332 đường Nguyễn Trãi, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành Phố
-                        Hà
-                        Nội</li>
-                    <li>Người đại diện: Phạm Anh Tuấn</li>
-                    <li>Điện thoại: 0899178993</li>
-                    <li>Mã số thuế: 0109376875</li>
-                    <li>Ngày cấp: 13-10-2020</li>
-                    <li>Quản lý bởi: Chi cục Thuế Quận Thanh Xuân</li>
-                </ul>
-            </div>
-            <div style="width: 25%;">
-                <ul><span>ĐỊA CHỈ CỬA HÀNG</span>
-                    <LI>Số 22 Ngõ 332 Nguyễn Trãi, Thanh Xuân, Hà Nội</LI>
-                    <li>Cửa hàng nằm trong ngõ 332 Nguyễn Trãi – ngõ cạnh trường Đại Học Khoa Học Tự Nhiên, đầu ngõ có
-                        cây
-                        ATM BIDV
-                    </li>
-                    <li>
-                        <div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div style="width: 25%;">
-                <ul><span>FACEBOOK FANPAGE</span></ul>
+                <li>Hộ kinh doanh Giày bóng rổ – Choibongro.vn</li>
+                <li>Giấy phép đăng ký kinh doanh: 01F8015621</li>
+                <li>Đăng ký lần đầu ngày: 12-06-2020</li>
+                <li>Địa điểm: Số 22 Ngõ 332 đường Nguyễn Trãi, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành Phố
+                    Hà
+                    Nội</li>
+                <li>Người đại diện: Phạm Anh Tuấn</li>
+                <li>Điện thoại: 0899178993</li>
+                <li>Mã số thuế: 0109376875</li>
+                <li>Ngày cấp: 13-10-2020</li>
+                <li>Quản lý bởi: Chi cục Thuế Quận Thanh Xuân</li>
+            </ul>
+        </div>
+        <div style="width: 25%;">
+            <ul><span>ĐỊA CHỈ CỬA HÀNG</span>
+                <LI>Số 22 Ngõ 332 Nguyễn Trãi, Thanh Xuân, Hà Nội</LI>
+                <li>Cửa hàng nằm trong ngõ 332 Nguyễn Trãi – ngõ cạnh trường Đại Học Khoa Học Tự Nhiên, đầu ngõ có
+                    cây
+                    ATM BIDV
+                </li>
                 <li>
                     <div>
-                        <p>
-                            <iframe style="width: 80%; margin-left: 45px; margin-top: -20px;" loading="lazy"
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchoibongro%2F&amp;tabs=timeline&amp;width=340&amp;height=800&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
-                                frameborder="0" scrolling="no">
-                            </iframe>
-                        </p>
+
                     </div>
                 </li>
-            </div>
+            </ul>
+        </div>
 
-            <div>
-                <ul>
-                    <span>HƯỚNG DẪN MUA HÀNG</span>
-                    <li><a href="#">Hướng dẫn mua hàng</a></li>
-                    <li><a href="#">Hướng dẫn mua hàng Freeship trên Shopee</a></li>
-                    <li><a href="#">Chính sách đổi trả</a></li>
+        <div style="width: 25%;">
+            <ul><span>FACEBOOK FANPAGE</span></ul>
+            <li>
+                <div>
+                    <p>
+                        <iframe style="width: 80%; margin-left: 45px; margin-top: -20px;" loading="lazy"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchoibongro%2F&amp;tabs=timeline&amp;width=340&amp;height=800&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            frameborder="0" scrolling="no">
+                        </iframe>
+                    </p>
+                </div>
+            </li>
+        </div>
 
-                </ul>
-            </div>
-        </footer>
-        <!-- <script>TimKiemSP()</script> -->
+        <div>
+            <ul>
+                <span>HƯỚNG DẪN MUA HÀNG</span>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Hướng dẫn mua hàng Freeship trên Shopee</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+
+            </ul>
+        </div>
+    </footer>
+    <!-- <script>TimKiemSP()</script> -->
 </body>
 
 </html>
